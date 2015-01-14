@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>ILLiad - Electronic Delivery</title>
+<#INCLUDE filename="include_head.html">
+</head>
+<body id="type-b">
+<div id="wrap">
+  <#INCLUDE filename="include_header.html">
+  <div id="content-wrap">
+  	<#INCLUDE filename="include_menu.html">
+    <div id="content">
+		Articles posted to this page will remain accessible by the requestor for <b>30 days from the date of posting</b>.<br />
+ 		If, prior to this time, you no longer require the use of an article, you may delete it using the &quot;Delete&quot; link to the right of the article information.</p>
+    	<p>In the event that you accidentally delete an article from this web page, you may <a href="<#ACTION action="10" form="65">">undelete</a> articles or e-mail us at <#LOCALINFO field="GeneralEMailAddress"> to have them reset.</p>
+		
+		<div class="default-table">
+			<#TABLE name="ElectronicDelivery" headerText="Electronically Received Articles" column="TransactionNumber:Transaction" column="View" column="Size" column="Title" column="Author" column="Expires" column="Delete">
+			<br />					
+		</div>
+								
+		<#INCLUDE filename="include_footer.html">
+    </div>    
+  </div>
+</div>
+</body>
+</html>
