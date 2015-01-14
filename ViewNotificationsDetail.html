@@ -1,21 +1,20 @@
-<html>
+<html lang="en">
 <head>
-<title>ILLiad - Notification</title>
-<#INCLUDE filename="include_head.html">
-</head>
+	<title>ILLiad - Notification</title>
+	<#INCLUDE filename="include_head.html"></head>
 <body id="type-b">
-<div id="wrap">
-  <#INCLUDE filename="include_header.html">
-  <div id="content-wrap">
-  	<#INCLUDE filename="include_menu.html">
-    <div id="content">		
-        <div class="default-table simple-table">
-            <#TABLE name="NotificationInformation" headerText="Notification Information" hideColumnHeaders="true"><br />					
-        </div>
-                
-        <#INCLUDE filename="include_footer.html">
-    </div>    
-  </div>
-</div>
+	<div id="wrap">
+		<#INCLUDE filename="include_header.html">
+		<div id="content-wrap">
+			<#INCLUDE filename="include_menu.html">
+			<main role="main">
+				<div class="default-table simple-table">
+					<#TABLE name="NotificationInformation" headerText="Notification Information" hideColumnHeaders="true">
+					<br />
+				</div>
+			</main>
+		</div>
+		<#INCLUDE filename="include_footer.html">
+	</div>
 </body>
 </html>

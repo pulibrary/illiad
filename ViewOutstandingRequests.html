@@ -1,21 +1,19 @@
-<html>
+<html lang="en">
 <head>
-<title>ILLiad - Outstanding Request</title>
-<#INCLUDE filename="include_head.html">
-</head>
+	<title>ILLiad - Outstanding Request</title>
+	<#INCLUDE filename="include_head.html"></head>
 <body id="type-b">
-<div id="wrap">
-	<#INCLUDE filename="include_header.html">
-  	<div id="content-wrap">
-  		<#INCLUDE filename="include_menu.html">
-    	<div id="content">
-			<div class="default-table">			
-				<#TABLE name="ViewOutstandingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" 
-				 column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
-			</div>
-      		<#INCLUDE filename="include_footer.html">
-    	</div>    
-  	</div>
-</div>
+	<div id="wrap">
+		<#INCLUDE filename="include_header.html">
+		<div id="content-wrap">
+			<#INCLUDE filename="include_menu.html">
+			<main role="main">
+				<div class="default-table">
+					<#TABLE name="ViewOutstandingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" 
+				 column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status"></div>
+			</main>
+		</div>
+		<#INCLUDE filename="include_footer.html">
+	</div>
 </body>
 </html>
