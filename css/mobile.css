@@ -85,19 +85,15 @@
     }
 
     /* LAYOUT - HEADER */
-    #header
+    header
     {
         margin: 0 0 10px;
     }
-    #header #site-name
+    header .site-name
     {
         margin: 0px 0 0 5px;
     }
-    #header #title-name
-    {
-        margin: 0px 0 0 5px;
-    }
-    #header #title-name a
+    header .site-name a
     {
         color: #000066;
     }
@@ -116,7 +112,7 @@
         max-width: inherit;
     }
     
-    #utility
+    nav
     {
         position:static;
         top:0px;
@@ -126,7 +122,7 @@
         padding-bottom: 40px
     }
     
-    #sidebar
+    aside
     {
         display: none;
     }
@@ -139,15 +135,15 @@
     
     /* LAYOUT TYPE B */
     #type-b #content-wrap {background: none}
-    #type-b #content {margin: 0px}
-    #type-b #utility
+    #type-b main {margin: 0px}
+    #type-b nav
     {
         display:none;
     }
     
     /* LAYOUT TYPE C */
     #type-c #content-wrap {background: none}
-    #type-c #content {margin: 0px}
+    #type-c main {margin: 0px}
 
     /* NAVIGATION */
     

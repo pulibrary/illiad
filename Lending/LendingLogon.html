@@ -10,14 +10,12 @@
 </head>
 <body id="type-a">
 	<div id="wrap">
-		<div id="header">
-			<span id="site-name">ILLiad</span>
+		<header role="banner">
+			<h1 class="site-name">ILLiad</h1>
 			<div id="status">
-				Enter your user information below.
-				<br />
-				Then press the Logon to ILLiad button to continue.
+				Enter your user information below. Then press the Logon to ILLiad button to continue.
 			</div>
-		</div>
+		</header>
 		<div id="content-wrap">
 			<main role="main">
 				<form action="illiadlending.dll" method="post" name="LendingLogon" class="f-wrap-1">
@@ -27,13 +25,12 @@
 							Indicates required field
 						</div>
 						<fieldset>
-							<h3>ILLiad Logon</h3>
+							<legend>ILLiad Logon</legend>
 							<label for="username">
 								<span class="field">
 									<span class="req">*</span> <b>Username</b>
 								</span>
 								<input id="username" name="Username" type="text" class="f-name" tabindex="1" />
-								<br />
 							</label>
 							<label for="password">
 								<span class="field">
@@ -41,19 +38,15 @@
 									<b>Password</b>
 								</span>
 								<input id="password" name="Password" type="password" class="f-name" tabindex="2" />
-								<br />
 							</label>
 
 							<div class="f-submit-wrap">
 								<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" tabindex="12" />
-								<br />
 							</div>
 						</fieldset>
 					</div>
 				</form>
-
 				<a href="illiadlending.dll?Action=10&Form=84">Forgot Password?</a>
-				<br />
 				<a href="LendingFirstTime.html">First Time Users</a>
 			</main>
 		</div>

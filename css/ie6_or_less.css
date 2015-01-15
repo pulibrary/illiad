@@ -6,7 +6,7 @@ License: Released Under the "Common Public License 1.0", http://www.opensource.o
 Version: 010306
 */
 
-#header {width:100%}
+header {width:100%}
 
 #nav a {width:143px}
 
@@ -17,5 +17,5 @@ Version: 010306
 I've added position:relative to these items below to fix the IE Peakaboo bug. 
 more about it here: http://www.positioniseverything.net/explorer/peekaboo.html 
 */
-ol.code, .featurebox, #content ul, #sidebar ul {position:relative}
+ol.code, .featurebox, main ul, aside ul {position:relative}
 	

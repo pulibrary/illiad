@@ -1,5 +1,5 @@
 <header role="banner">
-	<div id="title-name">ILLiad</div>	
+	<h1 class="site-name">ILLiad</h1>	
 	<div id="status"></div>
 	<form role="search" action="illiadlending.dll" name="Search" method="post">
 		<input type="hidden" name="IlliadForm" value="Search" />
@@ -8,9 +8,10 @@
 			<input id="SearchCriteria" name="SearchCriteria" type="text" class="f-criteria" />				
 		</label>
 		<input type="submit" name="SubmitButton" value="Search" class="f-submit" />
-		<div id="searchType">
+		<fieldset id="searchType">
+			<legend>Search Type</legend>
 			<input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" /><label for="SearchTypeActive">Active</label>
 			<input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" /><label for="SearchTypeAll">All</label>
-		</div>
+		</fieldset>
 	</form>
 </header>

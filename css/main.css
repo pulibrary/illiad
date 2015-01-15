@@ -194,10 +194,9 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 .clear {clear:both;position:relative;font-size:0px;height:0px;line-height:0px} 
 
 /* LAYOUT - HEADER */
-#header {background-color: #efefef; border-left: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC; border-top: 5px solid #000066;border-bottom: 5px solid #000066;margin: 0 0 25px;padding: 6px 0 0 2px}
-#header #site-name {font: 265% arial;letter-spacing: -.05em;margin:0px 0 0 40px;padding:3px;color:#000066;border:none}
-#header #title-name {font: 265% arial;letter-spacing: -.05em;margin:0px 0 0 40px;padding:3px;color:#000066;border:none}
-#header #user-name {font: 100% ariel;margin:0px 0 0 0;padding:3px;color:#333333;border:none}
+header {background-color: #efefef; border-left: 1px solid #CCCCCC;border-right: 1px solid #CCCCCC; border-top: 5px solid #000066;border-bottom: 5px solid #000066;margin: 0 0 25px;padding: 6px 0 0 2px}
+header .site-name {font: 265% arial;letter-spacing: -.05em;margin:0px 0 0 40px;padding:3px;color:#000066;border:none}
+header #user-name {font: 100% ariel;margin:0px 0 0 0;padding:3px;color:#333333;border:none}
 	
 /* SEARCH */
 #search {color:#000066;font-weight:bold;position:absolute;top:17px;right:10px}
@@ -214,13 +213,13 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 /* LAYOUT - main body of page */
 #wrap {min-width:770px;max-width:1200px;margin: 0 auto;position:relative}
 #content-wrap {position:relative;width:100%}
-#utility {position:absolute;top:0;left:25px;width:165px;border-top: 0px solid #999;padding-bottom: 40px}
-#sidebar {position:absolute;top:0;right:25px;width:20%;border-top: 5px solid #999;padding-top: 1px;padding-bottom: 40px}
+nav {position:absolute;top:0;left:25px;width:165px;border-top: 0px solid #999;padding-bottom: 40px}
+aside {position:absolute;top:0;right:25px;width:20%;border-top: 5px solid #999;padding-top: 1px;padding-bottom: 40px}
 
-#content {margin: 0 50px}
-#content #breadcrumb {margin-top:-5px;font-size:93%;font-weight:bold}
-#content #breadcrumb a:link, #content #breadcrumb a:visited {text-decoration:none}
-#content #breadcrumb a:hover, #content #breadcrumb a:active {text-decoration:underline}
+main {margin: 0 50px}
+main #breadcrumb {margin-top:-5px;font-size:93%;font-weight:bold}
+main #breadcrumb a:link, main #breadcrumb a:visited {text-decoration:none}
+main #breadcrumb a:hover, main #breadcrumb a:active {text-decoration:underline}
 	
 .featurebox {color:#333;padding: 15px 20px 20px;border-top: 1px solid #d7d7d7;margin: 0 0 1.5em;background: #f6f6f6 url("images/featurebox_bg.gif") no-repeat 100% 100%}
 .featurebox p, .featurebox h1, .featurebox h2, .featurebox h3, .featurebox h4, .featurebox h5, .featurebox h6 {margin: 0 0 .3em;border-bottom: 1px solid #333399;color:#333399}
@@ -264,19 +263,19 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 	
 /* LAYOUT TYPE B */
 #type-b #content-wrap {background: transparent url("images/content_wrap_bg.gif") repeat-y 30px 0}
-#type-b #content {margin: 0 23px 0 235px}
+#type-b main {margin: 0 23px 0 235px}
 
 /* LAYOUT TYPE C */
 #type-c #content-wrap {background: transparent url("images/content_wrap_bg.gif") repeat-y 30px 0}
-#type-c #content {margin: 0 25% 0 235px}
+#type-c main {margin: 0 25% 0 235px}
 
 /* LAYOUT TYPE D */
-#type-d #content {margin: 0 25% 0 50px}
+#type-d main {margin: 0 25% 0 50px}
 
 /* LAYOUT TYPE E */
 #type-e #content-wrap {background: transparent url("images/content_wrap_e_bg.gif") repeat-y 100% 0}
-#type-e #utility {position:absolute;top:0;left:auto;right:25px;width:165px;border-top: 5px solid #999}
-#type-e #content {margin: 0 243px 0 50px}
+#type-e nav {position:absolute;top:0;left:auto;right:25px;width:165px;border-top: 5px solid #999}
+#type-e main {margin: 0 243px 0 50px}
 
 /* NAVIGATION */
 #nav, #nav ul {position:static}
@@ -327,9 +326,9 @@ hr {margin: 1em 0;background:#f2f2f2;height:1px;color:#f2f2f2;border:none;clear:
 #nav li.active li.active li.active li.active a:active {font-weight:bold}
 
 /* LAYOUT - FOOTER */
-#footer {clear:both;border-top: 1px solid #E3E8EE;padding: 10px 0 30px;font-size:86%;color:#999; text-align: left}
-#footer p {margin:0}
-#footer a:link {color:#999}
+footer {clear:both;border-top: 1px solid #E3E8EE;padding: 10px 0 30px;font-size:86%;color:#999; text-align: left}
+footer p {margin:0}
+footer a:link {color:#999}
 
 /* DEFAULT TABLE */
 
