@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+	<title>ILLiad - Other Request</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+<body id="type-b">
+	<div id="wrap">
+		<#INCLUDE filename="include_header_request.html">
+		<div id="content-wrap">
+			<#INCLUDE filename="include_menu.html">
+			<main role="main">
+				<form action="illiad.dll" method="post" name="OtherRequest" class="f-wrap-request">
+					<input type="hidden" name="ILLiadForm" value="OtherRequest">
+					<input type="hidden" name="RequestType" value="Loan">
+					<input type="hidden" name="Username" value="<#PARAM name="Username">">
+					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+					<div class="req"> <b>*</b>
+						Indicates required field
+					</div>
+					<fieldset>
+						<legend>Other Request</legend>
+						<#STATUS>
+						<h2>Describe the item you want</h2>
+
+						<label for="Other">
+							<span class="field">
+								<span class="req">*</span>
+								<span class="<#ERROR name="ERROROther">"> <b>Citation</b>
+								</span>
+								
+								<span class="note">Please paste any citation information you have here.</span>
+							</span>
+							<textarea id="Other" name="Other" rows="10" cols="60" class="f-name" tabindex="1">
+								<#PARAM name="Other"></textarea>
+						</label>
+
+						<label for="NotWantedAfter">
+							<span class="field">
+								<span class="req">*</span>
+								<span class="<#ERROR name="ERRORNotWantedAfter">">
+									<b>Not Wanted After Date</b>
+								</span>
+								
+								<span class="note">(MM/DD/YYYY)</span>
+							</span>
+							<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="NotWantedAfter">">
+						</label>
+
+						<label for="AcceptNonEnglish">
+							<span class="field">
+								<span class="<#ERROR name="ERRORAcceptNonEnglish">">
+									<b>Will you accept the item in a language other than English?</b>
+								</span>
+								
+								<span class="note">If yes, specify acceptable languages in the notes field.</span>
+							</span>
+							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" tabindex="3">
+								<option selected>
+									<#PARAM name="AcceptNonEnglish"></option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</label>
+
+						<label for="AccountNo">
+							<span class="field">
+								<span class="<#ERROR name="ERRORAccountNo">">
+									<b>Account Number</b>
+								</span>
+							</span>
+							<select id="AccountNo" name="AccountNo" size="1" class="f-name" tabindex="4">
+								<#OPTION name="ValidAccounts"></select>
+						</label>
+
+						<label for="Notes">
+							<span class="field">
+								<span class="<#ERROR name="ERRORNotes">">
+									<b>Notes</b>
+								</span>
+								
+								<span class="note">
+									Put any information here that may help us find the item, as well as any other pertinent information.
+								</span>
+							</span>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="5">
+								<#PARAM name="Notes"></textarea>
+						</label>
+
+						<#INCLUDE filename="include_request_cited.html">
+						<#INCLUDE filename="include_request_buttons.html"></fieldset>
+				</form>
+			</main>
+		</div>
+		<#INCLUDE filename="include_footer.html">
+	</div>
+</body>
+</html>
