@@ -8,7 +8,7 @@
 	<link rel="apple-touch-icon" href="iphone-icon.png" />
 
 	<link rel="stylesheet" type="text/css" href="css/pul-base.normalize.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="css/pul-base.illiad.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/pul-base.illiad.min.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="only screen and (max-device-width: 480px)" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.16.custom.css" />
@@ -177,19 +177,18 @@ table {
 			</div>
 		</div>
 	</header>
-	<section class="panel-display--three_six_three l-page">
-		<section class="l-main">
-			<div class="three_six_three-region--first">
-			</div>
-			<main role="main" class="three_six_three-region--middle">
-				<div id="status">
+	<section class="panel-display--six_six l-page">
+		<main role="main" class="l-main">
+			<h1>Article Express (ae) and Interlibrary Loan (ILL)</h1>
+			<section class="six_six-region--first">
+				<!-- <div id="status">
 					Enter your user information below. Then press the Logon to ILLiad button to continue.
-				</div>
+				</div> -->
 				<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
 					<input type="hidden" name="ILLiadForm" value="Logon">
 					<div id="logonform">
 						<fieldset>
-							<legend>ILLiad Logon</legend>
+							<legend><h2>Login To Your Account</h2></legend>
 							<label for="username">
 								<span class="field"> Username
 								</span>
@@ -200,21 +199,21 @@ table {
 								</span>
 								<input id="password" name="Password" type="password" class="f-name" />
 							</label>
-
 							<div class="f-submit-wrap">
 								<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" />
 							</div>
 						</fieldset>
 					</div>
 				</form>
-
-				<a href="illiad.dll?Action=10&Form=84">Forgot Password?</a>
-				
-				<a href="illiad.dll?Action=10&Form=79">First Time Users</a>
-			</main>
-			<div class="three_six_three-region--second">
-			</div>
-		</section>
+				<a href="illiad.dll?Action=10&Form=84">Forgot Password?</a> | <a href="illiad.dll?Action=10&Form=79">First Time Users</a>
+			</section>
+			<aside role="complementary" class="six_six-region--second">
+			<h2>Existing Users</h2>
+			<p>If your ILS account username is the same as your Princeton Net ID account you will now login to the system with your Princeton Net ID Account Password. If your ILS account username is different than your Princeton Net ID or you don't have a Princeton Net ID you will login to the system you login with the same credentials you've used before.</p>
+			<h2>New Users</h2>
+			<p>If your are a Princeton Net ID account holder login to the system with your Princeton Net ID Account Password. You will be taken to a brief registration form that will ask you to fill in your campus contact details. If you do not have a Princeton Net ID account use the ILS self-registration form. If you have any questions about these changes or problems logging into the system contact ILS services via email [ilsborr@princeton.edu] at anytime or via phone [609-258-3272] during the office's business hours.</p>
+			</aside>
+		</main>
 	</section>
 	<footer role="contentinfo">
 		<section class="l-region--footer">
