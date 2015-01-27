@@ -7,38 +7,40 @@
 <body id="type-a">
 	<div id="wrap">
 		<#INCLUDE filename="include_header.html">
-		<div id="content-wrap">
-			<main role="main">
-				<form action="<#DLL>
-					" method="post" name="Logon" class="f-wrap-1">
-					<input type="hidden" name="ILLiadForm" value="Logon">
-					<#FORMSTATE>
-					<div id="logonform">
-						<fieldset>
-							<legend>ILLiad Logon</legend>
-							<label for="username">
-								<span class="field"> <b>Username</b>
-								</span>
-								<input id="username" name="Username" type="text" class="f-name" tabindex="1" />
-							</label>
-							<label for="password">
-								<span class="field"> <b>Password</b>
-								</span>
-								<input id="password" name="Password" type="password" class="f-name" tabindex="2" />
-							</label>
+		<div id="content-wrap" class="panel-display--three_nine l-page">
+			<section class="l-main">
+				<main role="main" class="three_nine-region--second">
+					<form action="<#DLL>
+						" method="post" name="Logon" class="f-wrap-1">
+						<input type="hidden" name="ILLiadForm" value="Logon">
+						<#FORMSTATE>
+						<div id="logonform">
+							<fieldset>
+								<legend>ILLiad Logon</legend>
+								<label for="username">
+									<span class="field"> Username
+									</span>
+									<input id="username" name="Username" type="text" class="f-name" tabindex="1" />
+								</label>
+								<label for="password">
+									<span class="field"> Password
+									</span>
+									<input id="password" name="Password" type="password" class="f-name" tabindex="2" />
+								</label>
 
-							<div class="f-submit-wrap">
-								<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" tabindex="12" />
-							</div>
-						</fieldset>
-					</div>
-				</form>
+								<div class="f-submit-wrap">
+									<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" tabindex="12" />
+								</div>
+							</fieldset>
+						</div>
+					</form>
 
-				<form action="illiad.dll?Action=10&Form=79" method="post" name="RegisterForm" id="RegisterForm">
-					<#FORMSTATE>
-					<a href="#" onclick="RegisterForm.submit(); return false;">First Time Users</a>
-				</form>
-			</main>
+					<form action="illiad.dll?Action=10&Form=79" method="post" name="RegisterForm" id="RegisterForm">
+						<#FORMSTATE>
+						<a href="#" onclick="RegisterForm.submit(); return false;">First Time Users</a>
+					</form>
+				</main>
+			</section>
 		</div>
 		<#INCLUDE filename="include_footer.html">
 	</div>

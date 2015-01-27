@@ -85,15 +85,19 @@
     }
 
     /* LAYOUT - HEADER */
-    header
+    #header
     {
         margin: 0 0 10px;
     }
-    header .site-name
+    #header #site-name
     {
         margin: 0px 0 0 5px;
     }
-    header .site-name a
+    #header #title-name
+    {
+        margin: 0px 0 0 5px;
+    }
+    #header #title-name a
     {
         color: #000066;
     }
@@ -112,7 +116,7 @@
         max-width: inherit;
     }
     
-    nav
+    #utility
     {
         position:static;
         top:0px;
@@ -122,7 +126,7 @@
         padding-bottom: 40px
     }
     
-    aside
+    #sidebar
     {
         display: none;
     }
@@ -135,15 +139,15 @@
     
     /* LAYOUT TYPE B */
     #type-b #content-wrap {background: none}
-    #type-b main {margin: 0px}
-    #type-b nav
+    #type-b #content {margin: 0px}
+    #type-b #utility
     {
         display:none;
     }
     
     /* LAYOUT TYPE C */
     #type-c #content-wrap {background: none}
-    #type-c main {margin: 0px}
+    #type-c #content {margin: 0px}
 
     /* NAVIGATION */
     

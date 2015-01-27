@@ -3,7 +3,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <link rel="apple-touch-icon" href="iphone-icon.png" />
 
-<link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/pul-base.normalize.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/pul-base.illiad.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="css/mobile.css" media="only screen and (max-device-width: 480px)" />
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
 <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.16.custom.css" />
@@ -15,3 +16,55 @@
 <!--[if lte IE 6]>
 <link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
 <![endif]-->
+
+<style>
+#nav > li {
+	font-size: 1.1rem;
+	font-weight: bold;
+	padding: 0.5em 0;
+}
+
+#nav > li > ul {
+	font-weight: normal;
+	font-size: 0.9rem;
+	padding: 1em 0 0 1em;
+}
+
+.site-title--child {
+	font-size: 2em;
+}
+
+#searchType {
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+#searchType label {
+	display: inline;
+}
+
+fieldset {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.row-header th {
+	font-size: 1.7em;
+	font-weight: normal;
+	padding: 0 0 1em 0;
+}
+
+table {
+	margin: 0;
+}
+.hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+</style>

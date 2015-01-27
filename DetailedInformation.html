@@ -7,29 +7,31 @@
 <body id="type-b">
 	<div id="wrap">
 		<#INCLUDE filename="include_header.html">
-		<div id="content-wrap">
-			<#INCLUDE filename="include_menu.html">
-			<div id="content">
-				<#MENU name="transaction" separator="|">
-				<div class="default-table simple-table">
-					<#TABLE name="DetailedInformation" headerText="Transaction Information" hideColumnHeaders="true">
-				</div>
+		<div id="content-wrap" class="panel-display--three_nine l-page">
+			<section class="l-main">
+				<#INCLUDE filename="include_menu.html">
+				<main role="main" class="three_nine-region--second">
+					<#MENU name="transaction" separator="|">
+					<div class="default-table simple-table">
+						<#TABLE name="DetailedInformation" headerText="Transaction Information" hideColumnHeaders="true">
+					</div>
 
-				<div class="default-table">
-					<#TABLE name="NotesInformation" headerText="Notes" noDataAction="ShowMessageRow" noDataMessage="No Notes" column="NoteDate:Date/Time" column="AddedBy:Added By" column="Note">
-				</div>
+					<div class="default-table">
+						<#TABLE name="NotesInformation" headerText="Notes" noDataAction="ShowMessageRow" noDataMessage="No Notes" column="NoteDate:Date/Time" column="AddedBy:Added By" column="Note">
+					</div>
 
-				<div class="default-table">
-					<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking" 
-			 column="DateTime:Date/Time" column="ChangedTo:Status" column="ChangedBy:Changed By">
-				</div>
+					<div class="default-table">
+						<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking" 
+				 column="DateTime:Date/Time" column="ChangedTo:Status" column="ChangedBy:Changed By">
+					</div>
 
-				<div class="default-table">
-					<#TABLE name="BillingInformation" headerText="Billing" noDataAction="ShowMessageRow" noDataMessage="No Billing"
-			 column="ChargeDate:Date/Time" column="ChargeName:Charge" column="ChargeBase:Base" column="ChargeUnit:Unit" 
-			 column="ChargeQty:Quantity" column="ChargeAmount:Amount" column="ChargeDesc:Description" column="ChargeNote:Note">
-				</div>
-			</main>
+					<div class="default-table">
+						<#TABLE name="BillingInformation" headerText="Billing" noDataAction="ShowMessageRow" noDataMessage="No Billing"
+				 column="ChargeDate:Date/Time" column="ChargeName:Charge" column="ChargeBase:Base" column="ChargeUnit:Unit" 
+				 column="ChargeQty:Quantity" column="ChargeAmount:Amount" column="ChargeDesc:Description" column="ChargeNote:Note">
+					</div>
+				</main>
+			</section>
 		</div>
 		<#INCLUDE filename="include_footer.html">
 	</div>
