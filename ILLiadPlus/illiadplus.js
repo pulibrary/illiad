@@ -294,6 +294,14 @@ function illplus_requests() {
 
 			appendSection("past");
 
+		} else if (formNumber == 66) {  // canceled items
+
+			appendSection("checkedout");
+
+		} else if (formNumber == 62) {  // canceled items
+
+			appendSection("inprocess");
+
 		} else { // main menu
 
 			appendSection("checkedout");

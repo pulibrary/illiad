@@ -14,17 +14,10 @@
 					<#INCLUDE filename="include_menu.html">
 				</nav>
 				<main role="main" class="three_nine-region--second">
-					
-					<div id="ill_requests">
-					    <h1>Notifications</h1>
-
-					    <a href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">">Subscribe to Notifications Feed</a>
-
-					    <script type="text/javascript"> illplus_requests(); </script>
-
-					    <section class="tabledata">
-							<#TABLE name="ViewNotifications" >
-						</section>
+					<h1>Notifications</h1>
+					<p><a href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">">Subscribe to Notifications Feed</a></p>
+					<div class="default-table">
+						<#TABLE name="ViewNotifications" maxRows="20" noDataAction="ShowMessageRow" noDataMessage="No Notifications">
 					</div>
 				</main>
 			</section>
