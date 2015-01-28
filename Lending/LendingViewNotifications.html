@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>ILLiad - Notifications</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
+<![endif]-->
+<link href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">" rel="alternate" type="application/rss+xml" title="ILLiad Notifications" />
+</head>
+<body id="type-b">
+<div id="wrap">
+	<#INCLUDE filename="include_header.html">
+  	<div id="content-wrap">
+  		<#INCLUDE filename="include_menu.html">
+    	<div id="content">
+			<a href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="true" includeSessionID="false">">Subscribe to Notifications Feed</a><br />			
+			<div class="default-table">			
+				<#TABLE name="ViewNotifications" headerText="Notifications" noDataAction="ShowMessageRow" noDataMessage="No Notifications">
+			</div>
+      		<#INCLUDE filename="include_footer.html">
+    	</div>    
+  	</div>
+</div>
+</body>
+</html>

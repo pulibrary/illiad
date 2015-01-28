@@ -1,0 +1,18 @@
+<div id="header">
+	<div id="title-name">ILLiad</div>	
+	<div id="status"></div>
+	<div id="search">
+		<form action="illiadlending.dll" name="Search" method="post">
+			<input type="hidden" name="IlliadForm" value="Search" />
+			<input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
+			<label for="SearchCriteria">
+				<input id="SearchCriteria" name="SearchCriteria" type="text" class="f-criteria" />				
+			</label>
+			<input type="submit" name="SubmitButton" value="Search" class="f-submit" />
+			<div id="searchType">
+				<input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" /><label for="SearchTypeActive">Active</label>
+				<input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" /><label for="SearchTypeAll">All</label>
+			</div>
+		</form>
+	</div>
+</div>

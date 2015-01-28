@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>ILLiad - Transaction <#PARAM name="TransactionNumber"></title>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
+<![endif]-->
+</head>
+<body id="type-b">
+<div id="wrap">
+  <#INCLUDE filename="include_header.html">
+  <div id="content-wrap">
+  	<#INCLUDE filename="include_menu.html">
+    <div id="content">
+		<#MENU name="transaction" separator="|">
+		
+		<div class="default-table">
+			<#TABLE name="DetailedInformation" headerText="Transaction Information" hideColumnHeaders="true"><br />					
+		</div>
+		
+		<div class="default-table">
+			<#TABLE name="NotesInformation" headerText="Notes" noDataAction="ShowMessageRow" noDataMessage="No Notes" column="NoteDate:Date/Time" column="AddedBy:Added By" column="Note"><br />
+		</div>
+		
+		<div class="default-table">
+			<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking" 
+			 column="DateTime:Date/Time" column="ChangedTo:Status" column="ChangedBy:Changed By"><br />
+		</div>
+		
+		<#INCLUDE filename="include_footer.html">
+    </div>    
+  </div>
+</div>
+</body>
+</html>
