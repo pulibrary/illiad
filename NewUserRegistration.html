@@ -23,7 +23,7 @@
 									<span class="<#ERROR name="ERRORFirstName">"> First Name
 									</span>
 								</span>
-								<input id="FirstName" name="FirstName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="FirstName">">
+								<input id="FirstName" name="FirstName" type="text" size="40" class="f-name"  value="<#PARAM name="FirstName">">
 							</label>
 
 							<label for="LastName">
@@ -33,7 +33,7 @@
 										Last Name
 									</span>
 								</span>
-								<input id="LastName" name="LastName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LastName">">
+								<input id="LastName" name="LastName" type="text" size="40" class="f-name"  value="<#PARAM name="LastName">">
 							</label>
 
 							<label for="SSN">
@@ -43,7 +43,7 @@
 										ID Number
 									</span>
 								</span>
-								<input id="SSN" name="SSN" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SSN">">
+								<input id="SSN" name="SSN" type="text" size="40" class="f-name"  value="<#PARAM name="SSN">">
 							</label>
 
 							<label for="NotifyGroup">
@@ -52,7 +52,7 @@
 										Preferred Notification Method
 									</span>
 								</span>
-								<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name" tabindex="4">
+								<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name" >
 									<option selected>
 										<#PARAM name="NotifyGroup"></option>
 									<option>Phone</option>
@@ -67,7 +67,7 @@
 										E-Mail Address
 									</span>
 								</span>
-								<input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="EMailAddress">">
+								<input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name"  value="<#PARAM name="EMailAddress">">
 							</label>
 
 							<label for="Phone">
@@ -77,7 +77,7 @@
 										Daytime Phone
 									</span>
 								</span>
-								<input id="Phone" name="Phone" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Phone">">
+								<input id="Phone" name="Phone" type="text" size="40" class="f-name"  value="<#PARAM name="Phone">">
 							</label>
 
 							<label for="DeliveryGroup">
@@ -86,7 +86,7 @@
 										Preferred Article Delivery Method
 									</span>
 								</span>
-								<select id="DeliveryGroup" name="DeliveryGroup" size="1" class="f-name" tabindex="4">
+								<select id="DeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >
 									<option selected>
 										<#PARAM name="DeliveryGroup"></option>
 									<option>Hold for Pickup</option>
@@ -100,7 +100,7 @@
 										Preferred Loan Delivery Method
 									</span>
 								</span>
-								<select id="DeliveryGroup" name="LoanDeliveryGroup" size="1" class="f-name" tabindex="4">
+								<select id="DeliveryGroup" name="LoanDeliveryGroup" size="1" class="f-name" >
 									<option selected>
 										<#PARAM name="LoanDeliveryGroup"></option>
 									<option>Hold for Pickup</option>
@@ -114,7 +114,7 @@
 										Preferred Electronic Delivery if Possible (PDF file via web)
 									</span>
 								</span>
-								<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" tabindex="4">
+								<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" >
 									<option selected>
 										<#PARAM name="WebDeliveryGroup"></option>
 									<option>Yes</option>
@@ -129,7 +129,7 @@
 										Primary Address Line 1
 									</span>
 								</span>
-								<input id="Address" name="Address" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Address">">
+								<input id="Address" name="Address" type="text" size="40" class="f-name"  value="<#PARAM name="Address">">
 							</label>
 
 							<label for="Address2">
@@ -138,7 +138,7 @@
 										Primary Address Line 2
 									</span>
 								</span>
-								<input id="Address2" name="Address2" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Address2">">
+								<input id="Address2" name="Address2" type="text" size="40" class="f-name"  value="<#PARAM name="Address2">">
 							</label>
 
 							<label for="City">
@@ -148,7 +148,7 @@
 										Primary Address City
 									</span>
 								</span>
-								<input id="City" name="City" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="City">">
+								<input id="City" name="City" type="text" size="40" class="f-name"  value="<#PARAM name="City">">
 							</label>
 
 							<label for="State">
@@ -158,7 +158,7 @@
 										Primary Address State
 									</span>
 								</span>
-								<select id="State" name="State" size="1" class="f-name" tabindex="3">
+								<select id="State" name="State" size="1" class="f-name" >
 									<#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=State>" defaultValue="" defaultName="" /></select>
 							</label>
 
@@ -169,7 +169,7 @@
 										Primary Address Zip
 									</span>
 								</span>
-								<input id="Zip" name="Zip" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Zip">">
+								<input id="Zip" name="Zip" type="text" size="40" class="f-name"  value="<#PARAM name="Zip">">
 							</label>
 
 							<label for="SAddress">
@@ -178,7 +178,7 @@
 										Secondary Address Line 1
 									</span>
 								</span>
-								<input id="SAddress" name="SAddress" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SAddress">">
+								<input id="SAddress" name="SAddress" type="text" size="40" class="f-name"  value="<#PARAM name="SAddress">">
 							</label>
 
 							<label for="SAddress2">
@@ -187,7 +187,7 @@
 										Secondary Address Line 2
 									</span>
 								</span>
-								<input id="SAddress2" name="SAddress2" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SAddress2">">
+								<input id="SAddress2" name="SAddress2" type="text" size="40" class="f-name"  value="<#PARAM name="SAddress2">">
 							</label>
 
 							<label for="SCity">
@@ -196,7 +196,7 @@
 										Secondary Address City
 									</span>
 								</span>
-								<input id="SCity" name="SCity" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SCity">">
+								<input id="SCity" name="SCity" type="text" size="40" class="f-name"  value="<#PARAM name="SCity">">
 							</label>
 
 							<label for="SState">
@@ -205,7 +205,7 @@
 										Secondary Address State
 									</span>
 								</span>
-								<select id="SState" name="SState" size="1" class="f-name" tabindex="3">
+								<select id="SState" name="SState" size="1" class="f-name" >
 									<#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=SState>" defaultValue="" defaultName="" /></select>
 							</label>
 
@@ -215,7 +215,7 @@
 										Secondary Address Zip
 									</span>
 								</span>
-								<input id="SZip" name="SZip" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SZip">">
+								<input id="SZip" name="SZip" type="text" size="40" class="f-name"  value="<#PARAM name="SZip">">
 							</label>
 
 							<label for="StatusGroup">
@@ -225,7 +225,7 @@
 										Status
 									</span>
 								</span>
-								<select id="StatusGroup" name="StatusGroup" size="1" class="f-name" tabindex="4">
+								<select id="StatusGroup" name="StatusGroup" size="1" class="f-name" >
 									<#OPTION name="custom" groupname="StatusGroup" selectedValue="<#PARAM name=StatusGroup>" defaultValue="" defaultName="" /></select>
 							</label>
 
@@ -236,7 +236,7 @@
 										Department
 									</span>
 								</span>
-								<select id="Department" name="Department" size="1" class="f-name" tabindex="4">
+								<select id="Department" name="Department" size="1" class="f-name" >
 									<#OPTION name="custom" groupname="Department" selectedValue="<#PARAM name=Department>" defaultValue="" defaultName=""/></select>
 							</label>
 
@@ -252,7 +252,7 @@
 										An ID will be REQUIRED to pick items up.
 									</span>
 								</span>
-								<textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" tabindex="15">
+								<textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" >
 									<#PARAM name="AuthorizedUsers"></textarea>
 							</label>
 
@@ -262,7 +262,7 @@
 										Delivery Location
 									</span>
 								</span>
-								<select id="NVTGC" name="NVTGC" size="1" class="f-name" tabindex="4">
+								<select id="NVTGC" name="NVTGC" size="1" class="f-name" >
 									<#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name=NVTGC>" defaultValue="" defaultName=""/></select>
 							</label>
 
@@ -275,7 +275,7 @@
 									
 									<span class="note">Case sensitive</span>
 								</span>
-								<input id="Username" name="Username" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Username">">
+								<input id="Username" name="Username" type="text" size="40" class="f-name"  value="<#PARAM name="Username">">
 							</label>
 
 							<label for="Password1">
@@ -287,7 +287,7 @@
 									
 									<span class="note">Case sensitive</span>
 								</span>
-								<input id="Password1" name="Password1" type="password" size="40" class="f-name" tabindex="3" value="<#PARAM name="Password1">">
+								<input id="Password1" name="Password1" type="password" size="40" class="f-name"  value="<#PARAM name="Password1">">
 							</label>
 
 							<label for="Password2">
@@ -299,13 +299,13 @@
 									
 									<span class="note">Case sensitive</span>
 								</span>
-								<input id="Password2" name="Password2" type="password" size="40" class="f-name" tabindex="3" value="<#PARAM name="Password2">">
+								<input id="Password2" name="Password2" type="password" size="40" class="f-name"  value="<#PARAM name="Password2">">
 							</label>
 
 							<div class="f-submit-wrap" align="right">
-								<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" tabindex="60" />
-								<input type="reset" name="ResetButton" value="Clear Form" class="f-submit" tabindex="61" />
-								<input type="submit" name="SubmitButton" value="Cancel - Exit ILLiad System" class="f-submit" tabindex="62" />
+								<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit"  />
+								<input type="reset" name="ResetButton" value="Clear Form" class="f-submit"  />
+								<input type="submit" name="SubmitButton" value="Cancel - Exit ILLiad System" class="f-submit"  />
 							</div>
 						</fieldset>
 					</form>

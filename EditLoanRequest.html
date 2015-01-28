@@ -30,7 +30,7 @@
 									<span class="<#ERROR name="ERRORLoanAuthor">"> Author/Editors
 									</span>
 								</span>
-								<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name" tabindex="1" value="<#PARAM name="LoanAuthor">">
+								<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
 							</label>
 
 							<label for="LoanTitle">
@@ -42,7 +42,7 @@
 									
 									<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 								</span>
-								<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" tabindex="2">
+								<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" >
 									<#PARAM name="LoanTitle"></textarea>
 							</label>
 
@@ -52,7 +52,7 @@
 										Publisher
 									</span>
 								</span>
-								<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="LoanPublisher">">
+								<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
 							</label>
 
 							<label for="LoanPlace">
@@ -61,7 +61,7 @@
 										Place of Publication
 									</span>
 								</span>
-								<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="LoanPlace">">
+								<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPlace">">
 							</label>
 
 							<label for="LoanDate">
@@ -70,7 +70,7 @@
 										Date of Publication
 									</span>
 								</span>
-								<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name" tabindex="5" value="<#PARAM name="LoanDate">">
+								<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
 							</label>
 
 							<label for="LoanEdition">
@@ -79,7 +79,7 @@
 										Edition
 									</span>
 								</span>
-								<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name" tabindex="6" value="<#PARAM name="LoanEdition">">
+								<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
 							</label>
 
 							<label for="ISSN">
@@ -90,7 +90,7 @@
 									
 									<span class="note">If given will speed request processing</span>
 								</span>
-								<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" tabindex="7" value="<#PARAM name="ISSN">">
+								<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
 							</label>
 
 							<label for="CallNumber">
@@ -99,7 +99,7 @@
 										Call Number
 									</span>
 								</span>
-								<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name" tabindex="8" value="<#PARAM name="CallNumber">">
+								<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name"  value="<#PARAM name="CallNumber">">
 							</label>
 
 							<label for="ESPNumber">
@@ -108,7 +108,7 @@
 										OCLC or Docline UI Number
 									</span>
 								</span>
-								<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name" tabindex="9" value="<#PARAM name="ESPNumber">">
+								<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
 							</label>
 
 							<label for="NotWantedAfter">
@@ -120,7 +120,7 @@
 									
 									<span class="note">(MM/DD/YYYY)</span>
 								</span>
-								<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" tabindex="10" value="<#PARAM name="NotWantedAfter">">
+								<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
 							</label>
 
 							<label for="AcceptNonEnglish">
@@ -131,7 +131,7 @@
 									
 									<span class="note">If yes, specify acceptable languages in the notes field.</span>
 								</span>
-								<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" tabindex="11">
+								<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
 									<option selected>
 										<#PARAM name="AcceptNonEnglish"></option>
 									<option>No</option>
@@ -145,7 +145,7 @@
 										Will you accept an alternate edition of this item?
 									</span>
 								</span>
-								<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" tabindex="12">
+								<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" >
 									<option selected>
 										<#PARAM name="AcceptAlternateEdition"></option>
 									<option>No</option>
@@ -159,7 +159,7 @@
 										Account Number
 									</span>
 								</span>
-								<select id="AccountNo" name="AccountNo" size="1" class="f-name" tabindex="13">
+								<select id="AccountNo" name="AccountNo" size="1" class="f-name" >
 									<#OPTION name="ValidAccounts"></select>
 							</label>
 
@@ -173,7 +173,7 @@
 										Put any information here that may help us find the item, as well as any other pertinent information.
 									</span>
 								</span>
-								<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="14">
+								<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" >
 									<#PARAM name="Notes"></textarea>
 							</label>
 
