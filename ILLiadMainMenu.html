@@ -12,9 +12,14 @@
 					<#INCLUDE filename="include_menu.html">
 				</nav>
 				<main role="main" class="three_six_three-region--middle">
-					<h1>Outstanding Requests</h1>
-					<div class="default-table" id="table-main-outstanding-requests">
-						<#TABLE name="ViewOutstandingRequests"noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+					<div id="ill_requests">
+					    <h1>Outstanding Requests</h1>
+
+					    <script type="text/javascript"> illplus_requests(); </script>
+
+					    <section class="tabledata">
+							<#TABLE name="ViewOutstandingRequests"noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+						</section>
 					</div>
 				</main>
 				<aside role="complementary" class="three_six_three-region--second">

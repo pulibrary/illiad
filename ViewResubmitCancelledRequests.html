@@ -12,8 +12,14 @@
 					<#INCLUDE filename="include_menu.html">
 				</nav>
 				<main role="main" class="three_nine-region--second">
-					<div class="default-table">
-						<#TABLE name="ViewResubmitCancelledItems" headerText="Cancelled Requests" noDataAction="ShowMessageRow" noDataMessage="No Cancelled Requests">
+					<div id="ill_requests">
+					    <h1>Cancelled Requests</h1>
+
+					    <script type="text/javascript"> illplus_requests(); </script>
+
+					    <section class="tabledata">
+							<#TABLE name="ViewResubmitCancelledItems" >
+						</section>
 					</div>
 				</main>
 			</section>

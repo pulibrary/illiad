@@ -107,23 +107,21 @@
 				<h2 class="site-title--child">Article Express (ae) and Interlibrary Loan (ILL)</h2>
 			</div>
 			<div class="pul_base_nine_three-region--second">
-				<form role="search" action="illiad.dll" name="Search" method="post">
+				<form role="search" action="illiad.dll" name="Search" method="post" class="search-bar">
 					<input type="hidden" name="IlliadForm" value="Search" />
 					<input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
 					<label for="SearchCriteria" class="hidden">
 						Search Your Requests		
 					</label>
 
-					<div class="search-bar">
-						<input id="SearchCriteria" name="SearchCriteria" type="text" class="f-criteria" />
-						<input type="submit" name="SubmitButton" value="Search" class="f-submit" />
-					</div>
+					<input id="SearchCriteria" name="SearchCriteria" type="text" class="f-criteria" />
+					<input type="submit" name="SubmitButton" value="Search" class="f-submit" />
 
-					<fieldset id="searchType">
+					<!-- <fieldset id="searchType">
 						<legend class="hidden">Search Type</legend>
 						<input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" /><label for="SearchTypeActive">Active</label>
 						<input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" /><label for="SearchTypeAll">All</label>
-					</fieldset>
+					</fieldset> -->
 				</form>
 			</div>
 		</div>

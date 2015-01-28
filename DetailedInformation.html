@@ -9,11 +9,14 @@
 		<#INCLUDE filename="include_header.html">
 		<div id="content-wrap" class="panel-display--three_nine l-page">
 			<section class="l-main">
-				<#INCLUDE filename="include_menu.html">
+				<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+					<#INCLUDE filename="include_menu.html">
+				</nav>
 				<main role="main" class="three_nine-region--second">
+					<h1>Transaction Information</h1>
 					<#MENU name="transaction" separator="|">
 					<div class="default-table simple-table">
-						<#TABLE name="DetailedInformation" headerText="Transaction Information" hideColumnHeaders="true">
+						<#TABLE name="DetailedInformation" hideColumnHeaders="true">
 					</div>
 
 					<div class="default-table">

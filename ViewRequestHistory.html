@@ -12,9 +12,15 @@
 					<#INCLUDE filename="include_menu.html">
 				</nav>
 				<main role="main" class="three_nine-region--second">
-					<div class="default-table">
-						<#TABLE name="ViewRequestHistory" headerText="Request History" noDataAction="ShowMessageRow" noDataMessage="No Requests">
-					</div>
+					<div id="ill_requests">
+					    <h1>Request History</h1>
+
+					    <script type="text/javascript"> illplus_requests(); </script>
+
+					    <section class="tabledata">
+					        <#TABLE name="ViewRequestHistory" column="TransactionNumber:Request #" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status" column="Date" orderBy="TransactionNumber DESC">
+					    </section>
+					</div> 
 				</main>
 			</section>
 		</div>

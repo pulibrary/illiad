@@ -34,7 +34,7 @@
 .ill_requests .ill_request_author,
 .ill_requests .ill_request_journal					{ color: #777; font-size: 11px; font-style: italic; white-space: nowrap; }
 
-.ill_requests .ill_request_options					{ font-size: 11px; margin: 10px 0 0; color: #999; position: absolute; bottom: 10px; }
+.ill_requests .ill_request_options					{ font-size: 11px; margin: 10px 0 0; color: #999; bottom: 10px; }
 .ill_requests .ill_request_options a				{ color: #000; border-bottom: 1px dotted #999; font-weight: bold; text-decoration: none; }
 .ill_requests .ill_request_options a:hover			{ color: #999; }
 .ill_requests .ill_request_status					{ font-weight: bold; color: #aaa; border-left: 4px solid #bbb; padding: 0 0 0 5px; width: 160px; display: inline-block; }
