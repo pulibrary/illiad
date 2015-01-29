@@ -4,123 +4,121 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
-	<div id="wrap">
-		<#INCLUDE filename="include_header_request.html">
-		<div id="content-wrap" class="panel-display--three_nine l-page">
-			<section class="l-main">
-				<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-					<#INCLUDE filename="include_menu.html">
-				</nav>
-				<main role="main" class="three_nine-region--second">
-					<form action="illiad.dll" method="post" name="GenericRequestTesting" class="f-wrap-request">
-						<input type="hidden" name="ILLiadForm" value="GenericRequestTesting">
-						<input type="hidden" name="Username" value="<#PARAM name="Username">">
-						<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-						<input name="RequestType" type="hidden" id="RequestType" value="Loan">
-						<input name="DocumentType" type="hidden" id="DocumentType" value="Testing">
-						<fieldset>
-							<legend><h1>Newspaper Loan Request</h1></legend>
-							<#STATUS>
-							<h2>Describe the item you want</h2>
-							<label for="LoanAuthor">
-								<span class="<#ERROR name="ERRORLoanAuthor">">Author/Editors</span>
-								<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
-							</label>
+	<#INCLUDE filename="include_header_request.html">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
+			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+				<#INCLUDE filename="include_menu.html">
+			</nav>
+			<main role="main" class="three_nine-region--second">
+				<form action="illiad.dll" method="post" name="GenericRequestTesting" class="f-wrap-request">
+					<input type="hidden" name="ILLiadForm" value="GenericRequestTesting">
+					<input type="hidden" name="Username" value="<#PARAM name="Username">">
+					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+					<input name="RequestType" type="hidden" id="RequestType" value="Loan">
+					<input name="DocumentType" type="hidden" id="DocumentType" value="Testing">
+					<fieldset>
+						<legend><h1>Newspaper Loan Request</h1></legend>
+						<#STATUS>
+						<h2>Describe the item you want</h2>
+						<label for="LoanAuthor">
+							<span class="<#ERROR name="ERRORLoanAuthor">">Author/Editors</span>
+							<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
+						</label>
 
-							<label for="LoanTitle">
-								<span class="<#ERROR name="ERRORLoanTitle">">Title</span>
-									
-									<span class="note">Please do not abbreviate unless your citation is abbreviated</span> 
-								<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" >
-									<#PARAM name="LoanTitle"></textarea>
-							</label>
+						<label for="LoanTitle">
+							<span class="<#ERROR name="ERRORLoanTitle">">Title</span>
+								
+								<span class="note">Please do not abbreviate unless your citation is abbreviated</span> 
+							<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" >
+								<#PARAM name="LoanTitle"></textarea>
+						</label>
 
-							<label for="LoanPublisher">
-								<span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span>
-								<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
-							</label>
+						<label for="LoanPublisher">
+							<span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span>
+							<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
+						</label>
 
-							<label for="LoanPlace">
-								<span class="<#ERROR name="ERRORLoanPlace">">Place of Publication</span>
-								<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPlace">">
-							</label>
+						<label for="LoanPlace">
+							<span class="<#ERROR name="ERRORLoanPlace">">Place of Publication</span>
+							<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPlace">">
+						</label>
 
-							<label for="LoanDate">
-								<span class="<#ERROR name="ERRORLoanDate">">Date of Publication</span>
-								<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
-							</label>
+						<label for="LoanDate">
+							<span class="<#ERROR name="ERRORLoanDate">">Date of Publication</span>
+							<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
+						</label>
 
-							<label for="LoanEdition">
-								<span class="<#ERROR name="ERRORLoanEdition">">Edition</span>
-								<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
-							</label>
+						<label for="LoanEdition">
+							<span class="<#ERROR name="ERRORLoanEdition">">Edition</span>
+							<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
+						</label>
 
-							<label for="ISSN">
-								<span class="<#ERROR name="ERRORISSN">">ISBN (International Standard Book Number)</span>
-									
-								<span class="note">If given will speed request processing</span>
-								<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
-							</label>
+						<label for="ISSN">
+							<span class="<#ERROR name="ERRORISSN">">ISBN (International Standard Book Number)</span>
+								
+							<span class="note">If given will speed request processing</span>
+							<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
+						</label>
 
-							<label for="CallNumber">
-								<span class="<#ERROR name="ERRORCallNumber">">Call Number</span>
-								<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name"  value="<#PARAM name="CallNumber">">
-							</label>
+						<label for="CallNumber">
+							<span class="<#ERROR name="ERRORCallNumber">">Call Number</span>
+							<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name"  value="<#PARAM name="CallNumber">">
+						</label>
 
-							<label for="ESPNumber">
-								<span class="<#ERROR name="ERRORESPNumber">">OCLC or Docline UI Number</span>
-								<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
-							</label>
+						<label for="ESPNumber">
+							<span class="<#ERROR name="ERRORESPNumber">">OCLC or Docline UI Number</span>
+							<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
+						</label>
 
-							<label for="NotWantedAfter">
-								<span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span>
-								<span class="note">(MM/DD/YYYY)</span>
-								<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
-							</label>
+						<label for="NotWantedAfter">
+							<span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span>
+							<span class="note">(MM/DD/YYYY)</span>
+							<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
+						</label>
 
-							<label for="AcceptNonEnglish">
-								<span class="<#ERROR name="ERRORAcceptNonEnglish">">Will you accept the item in a language other than English?</span>
-									
-								<span class="note">If yes, specify acceptable languages in the notes field.</span>
-								<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
-									<option selected>
-										<#PARAM name="AcceptNonEnglish"></option>
-									<option>No</option>
-									<option>Yes</option>
-								</select>
-							</label>
+						<label for="AcceptNonEnglish">
+							<span class="<#ERROR name="ERRORAcceptNonEnglish">">Will you accept the item in a language other than English?</span>
+								
+							<span class="note">If yes, specify acceptable languages in the notes field.</span>
+							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
+								<option selected>
+									<#PARAM name="AcceptNonEnglish"></option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</label>
 
-							<label for="AcceptAlternateEdition">
-								<span class="<#ERROR name="ERRORAcceptAlternateEdition">">Will you accept an alternate edition of this item?</span>
-								<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" >
-									<option selected>
-										<#PARAM name="AcceptAlternateEdition"></option>
-									<option>No</option>
-									<option>Yes</option>
-								</select>
-							</label>
+						<label for="AcceptAlternateEdition">
+							<span class="<#ERROR name="ERRORAcceptAlternateEdition">">Will you accept an alternate edition of this item?</span>
+							<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" >
+								<option selected>
+									<#PARAM name="AcceptAlternateEdition"></option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</label>
 
-							<label for="AccountNo">
-								<span ="<#ERROR name="ERRORAccountNo">">Account Number</span>
-								<select id="AccountNo" name="AccountNo" size="1" class="f-name" >
-									<#OPTION name="ValidAccounts"></select>
-							</label>
+						<label for="AccountNo">
+							<span ="<#ERROR name="ERRORAccountNo">">Account Number</span>
+							<select id="AccountNo" name="AccountNo" size="1" class="f-name" >
+								<#OPTION name="ValidAccounts"></select>
+						</label>
 
-							<label for="Notes">
-								<span class="<#ERROR name="ERRORNotes">">Notes</span>
-									
-								<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
-								<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" >
-									<#PARAM name="Notes"></textarea>
-							</label>
+						<label for="Notes">
+							<span class="<#ERROR name="ERRORNotes">">Notes</span>
+								
+							<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" >
+								<#PARAM name="Notes"></textarea>
+						</label>
 
-							<#INCLUDE filename="include_request_cited.html">
-							<#INCLUDE filename="include_request_buttons.html"></fieldset>
-					</form>
-				</main>
-			</section>
-		</div>
-		<#INCLUDE filename="include_footer.html">
+						<#INCLUDE filename="include_request_cited.html">
+						<#INCLUDE filename="include_request_buttons.html"></fieldset>
+				</form>
+			</main>
+		</section>
 	</div>
+	<#INCLUDE filename="include_footer.html">
 </body>
 </html>
