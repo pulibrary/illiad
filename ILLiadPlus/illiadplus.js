@@ -212,7 +212,7 @@ function illplus_requests() {
 					result += "<div class='ill_type " + records[i].typeClass + "'>" + records[i].type + "</div>";
 					result += "<h3><a href='illiad.dll?Action=10&Form=63&Value=" + records[i].id + "'>" + records[i].title + "</a></h3>";
 					if(records[i].author.trim() !== "") {
-						result += "<div class='ill_request_author'>by <b>" + records[i].author + "</b></div>";
+						result += "<div class='ill_request_author'>by <strong>" + records[i].author + "</strong></div>";
 					} else { }
 					result += "<div class='ill_request_options'><span class='ill_request_status'>" + records[i].status + "</span> " + getOptions(records[i].status, records[i].id) + "</div>";
 					if (records[i].date !== "") {
@@ -225,7 +225,7 @@ function illplus_requests() {
 							case "Pick-up at Circulation Desk":
 								dateType = "due"; break;
 						}
-						result += '<div class="ill_request_date">' + dateType + ' <b>' + records[i].date + '</b></div>';
+						result += '<div class="ill_request_date">' + dateType + ' <strong>' + records[i].date + '</strong></div>';
 					}
 					result += "<div class='ill_request_number'>#" + records[i].id + "</div>";
 				}
@@ -298,10 +298,6 @@ function illplus_requests() {
 
 			appendSection("checkedout");
 
-		} else if (formNumber == 62) {  // canceled items
-
-			appendSection("inprocess");
-
 		} else { // main menu
 
 			appendSection("checkedout");
@@ -320,13 +316,13 @@ function illplus_requests() {
 			$("nav#ill_filters").prepend(html);
 
 			// Count requests and show number in Total filter
-			$("#ill_filters a[href='#all']").prepend("<b>" + count + "</b> ");
+			$("#ill_filters a[href='#all']").prepend("<strong>" + count + "</strong> ");
 
 			// Count requests for each section and show in respective filter
 			$("#ill_requests .ill_requests").each(function() {
 				var id = $(this).attr("id");
 				var num = $(this).find("li").length;
-				$("#ill_filters a[href='#" + id + "']").prepend("<b>" + num + "</b> ");
+				$("#ill_filters a[href='#" + id + "']").prepend("<strong>" + num + "</strong> ");
 			});
 
 			// Filter sections by filter buttons

@@ -1,26 +1,19 @@
-<ul id="nav">
+<ul id="nav" class="nav">
 	<li class="active">
-		<a href="<#ACTION action="99">"><button>Logoff
-			<#PARAM name="Username"></button></a>
-	</li>
-	<li class="active">
-		<a href="<#ACTION action="10" form="10">">Main Menu</a>
-	</li>
-	<li class="active">
-		Article Express Request
+		<a href="#" class="nav-group">Article Express Request</a>
 		<ul>
 			<li>
-				<a href="<#ACTION action="10" form="20" value="GenericRequestArticleRequest">">Article /Book Chapter /Conference Paper</a>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestArticleRequest">">Article, Book Chapter, or Conference Paper</a>
 			</li>
 			<li>
-				<a href="<#ACTION action="10" form="20" value="GenericRequestWorkingPaper">">Working Paper</a>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestWorkingPaper">">Working Paper</a> 
 			</li>
 		</ul>
 	<li class="active">
-		Interlibrary Loan Request
+		<a href="#" class="nav-group">Interlibrary Loan Request</a>
 		<ul>
 			<li>
-				<a href="<#ACTION action="10" form="21">">Book /Journal/Proceedings Loan</a>
+				<a href="<#ACTION action="10" form="21">">Book, Journal, or Proceedings Loan</a>
 			</li>
 			<li>
 				<a href="<#ACTION action="10" form="27">">Dissertation or Thesis</a>
@@ -44,11 +37,11 @@
 		</ul>
 	</li>
 	<li class="active">
-		View
+		<a href="#" class="nav-group">View</a>
 		<ul>
-			<li class="first">
+			<!-- <li class="first">
 				<a href="<#ACTION action="10" form="62">">Outstanding Requests</a>
-			</li>
+			</li> -->
 			<li>
 				<a href="<#ACTION action="10" form="64">">Electronically Received Articles</a>
 			</li>
@@ -70,7 +63,7 @@
 		</ul>
 	</li>
 	<li class="active">
-		Tools
+		<a href="#" class="nav-group">Tools</a>
 		<ul>
 			<li class="first">
 				<a href="<#ACTION action="10" form="81">">Change User Information</a>
@@ -84,12 +77,13 @@
 		</ul>
 	</li>
 	<li class="active">
-		<a href="http://www.princeton.edu/" target="_blank">Princeton University</a>
+		<a href="http://library.princeton.edu/services/borrowdirect" target="_blank" class="nav-group">Borrow Direct</a>
 	</li>
 	<li class="active">
-		<a href="http://library.princeton.edu/" target="_blank">Princeton University Library</a>
+		<a href="<#ACTION action="10" form="10">" class="nav-group">ILLiad Home</a>
 	</li>
 	<li class="active">
-		<a href="http://library.princeton.edu/services/borrowdirect" target="_blank">Borrow Direct</a>
+		<a href="<#ACTION action="99">" class="nav-group">Logoff
+			<#PARAM name="Username"></a>
 	</li>
 </ul>

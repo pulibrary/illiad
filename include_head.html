@@ -18,16 +18,44 @@
 <![endif]-->
 
 <style>
-#nav > li {
-	font-size: 1.1rem;
+.nav {
+  text-align: left;
+  /*width: 234px;*/
+  list-style: none;
+  padding: 0px;
+  position: relative;
+  border: 1px solid #ddd;
+  /*font-family: 'Droid Serif', serif;*/
+  border-radius: 3px;
+  margin-bottom: 2em;
+}
+.nav-group {
 	font-weight: bold;
-	padding: 0.5em 0;
+	color: black;
+	background: #f5f4f1;
+	font-family: 'Droid Serif', serif;
 }
 
-#nav > li > ul {
-	font-weight: normal;
-	font-size: 0.9rem;
-	padding: 1em 0 0 1em;
+.nav a {
+  display: block;
+  font-size: 14px;
+  padding: 15px 5px 15px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav > li > ul > li > a, .nav-group{
+  /*border-left: 4px solid #f1f1f1;*/
+}
+
+.nav > li > ul > li > a:hover, .nav-group:hover {
+  /*border-left: 4px solid blue;*/
+  background: #f5f4f1;
+}
+
+.arrow {
+  float: right;
+  padding: 0px 10px
 }
 
 .site-title--child {
@@ -92,5 +120,8 @@ aside h2 {
 }
 section.ill_requests li:nth-child(even) {
 	background: #f1f1f1;
+}
+label {
+	font-weight: normal;
 }
 </style>
