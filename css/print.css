@@ -29,9 +29,9 @@ a:active {color:#0066cc}
 
 .sponsors img {margin: .5em 0}
 
-footer {margin: 1em 0}
+#footer {margin: 1em 0}
 
-header {border-bottom: 3px solid #c00}
+#header {border-bottom: 3px solid #c00}
 
 /* TABLES */
 table {font-size: 9pt;margin: 0 0 1em;border-collapse:collapse}

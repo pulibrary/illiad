@@ -1,5 +1,5 @@
 function reconstructTables() {
-    $('.default-table').each(function (index, defaultTable) {
+    $('.tabledata').each(function (index, defaultTable) {
         $(this).find('table').each(function (index, table) {
             $(this).hide();
 
@@ -42,7 +42,7 @@ function reconstructTables() {
                 $(root).append(row);
             }
             else {
-                console.log('default-table');
+                console.log('tabledata');
 
                 var columns = new Array();
 

@@ -8,7 +8,7 @@
 	<link rel="apple-touch-icon" href="iphone-icon.png" />
 
 	<link rel="stylesheet" type="text/css" href="css/pul-base.normalize.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="css/pul-base.illiad.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="css/pul-base.illiad.min.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="only screen and (max-device-width: 480px)" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.16.custom.css" />
@@ -20,17 +20,75 @@
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
 	<![endif]-->
+	<style>
+#nav > li {
+	font-size: 1.1rem;
+	font-weight: bold;
+	padding: 0.5em 0;
+}
+
+#nav > li > ul {
+	font-weight: normal;
+	font-size: 0.9rem;
+	padding: 1em 0 0 1em;
+}
+
+.site-title--child {
+	font-size: 2em;
+}
+
+#searchType {
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+#searchType label {
+	display: inline;
+}
+
+fieldset {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+fieldset legend {
+	margin-bottom: 1.25em;
+}
+
+.row-header th {
+	font-size: 1.7em;
+	font-weight: normal;
+	padding: 0 0 1em 0;
+}
+
+table {
+	margin: 0;
+}
+.hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+.six_six-region--first form {
+	margin-top: 1.25em;
+}
+</style>
 </head>
 <body id="type-a">
 	<header role="banner" class="wrapper--branding">
 		<section class="l-branding">
-			<a href="/" title="Home" rel="home" class="site-logo"><img src="https://library-stage.princeton.edu/sites/all/themes/pul_base/logo.png" alt="Home"></a>
-			<h1 class="site-name">Princeton University Library - Illiad</h1>
+			<a href="/" title="Home" rel="home" class="site-logo"><img src="http://library.princeton.edu/sites/all/themes/pul_base/logo.png" alt="Home"></a>
+			<h2 class="site-name hidden">Princeton University Library - Illiad</h2>
 		</section>
 		<div class="wrapper wrapper--navigation">
 			<div class="l-region l-region--navigation">
 				<a href="#" class="centered-navigation-menu-button">MENU</a>
-				<nav id="block-system-main-menu" role="navigation" class="block block--system block--menu block--system-main-menu centered-navigation-menu pul-processed">
+				<nav id="block-system-main-menu" role="navigation" aria-label="main library navigation" class="block block--system block--menu block--system-main-menu centered-navigation-menu pul-processed">
 					<ul class="menu">
 						<li class="first expanded">
 							<a href="http://library.princeton.edu/research" title="Find library materials">Research Tools</a>
@@ -126,39 +184,44 @@
 			</div>
 		</div>
 	</header>
-	<main role="main" class="l-page">
-		<section class="l-main">
-			<div id="status">
-				Enter your user information below. Then press the Logon to ILLiad button to continue.
-			</div>
-			<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
-				<input type="hidden" name="ILLiadForm" value="Logon">
-				<div id="logonform">
-					<fieldset>
-						<legend>ILLiad Logon</legend>
-						<label for="username">
-							<span class="field"> <b>Username</b>
-							</span>
-							<input id="username" name="Username" type="text" class="f-name" />
-						</label>
-						<label for="password">
-							<span class="field"> <b>Password</b>
-							</span>
-							<input id="password" name="Password" type="password" class="f-name" />
-						</label>
-
-						<div class="f-submit-wrap">
-							<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" />
-						</div>
-					</fieldset>
-				</div>
-			</form>
-
-			<a href="illiad.dll?Action=10&Form=84">Forgot Password?</a>
-			
-			<a href="illiad.dll?Action=10&Form=79">First Time Users</a>
-		</section>
-	</main>
+	<section class="panel-display--six_six l-page">
+		<main role="main" class="l-main">
+			<h1>Article Express (ae) and Interlibrary Loan (ILL)</h1>
+			<section class="six_six-region--first">
+				<!-- <div id="status">
+					Enter your user information below. Then press the Logon to ILLiad button to continue.
+				</div> -->
+				<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
+					<input type="hidden" name="ILLiadForm" value="Logon">
+					<div id="logonform">
+						<fieldset>
+							<legend><h1>Login To Your Account</h1></legend>
+							<label for="username">
+								<span class="field"> Username
+								</span>
+								<input id="username" name="Username" type="text" class="f-name" />
+							</label>
+							<label for="password">
+								<span class="field"> Password
+								</span>
+								<input id="password" name="Password" type="password" class="f-name" />
+							</label>
+							<div class="f-submit-wrap">
+								<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" />
+							</div>
+						</fieldset>
+					</div>
+				</form>
+				<a href="illiad.dll?Action=10&Form=84">Forgot Password?</a> | <a href="illiad.dll?Action=10&Form=79">First Time Users</a>
+			</section>
+			<aside role="complementary" class="six_six-region--second">
+			<h2>Existing Users</h2>
+			<p>If your ILS account username is the same as your Princeton Net ID account you will now login to the system with your Princeton Net ID Account Password. If your ILS account username is different than your Princeton Net ID or you don't have a Princeton Net ID you will login to the system you login with the same credentials you've used before.</p>
+			<h2>New Users</h2>
+			<p>If your are a Princeton Net ID account holder login to the system with your Princeton Net ID Account Password. You will be taken to a brief registration form that will ask you to fill in your campus contact details. If you do not have a Princeton Net ID account use the ILS self-registration form. If you have any questions about these changes or problems logging into the system contact ILS services via email [ilsborr@princeton.edu] at anytime or via phone [609-258-3272] during the office's business hours.</p>
+			</aside>
+		</main>
+	</section>
 	<footer role="contentinfo">
 		<section class="l-region--footer">
 			&copy; 2014 <a href="http://www.atlas-sys.com">Atlas Systems, Inc.</a> All Rights Reserved.

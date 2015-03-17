@@ -4,21 +4,27 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-c">
-	<div id="wrap">
-		<#INCLUDE filename="include_header.html">
-		<div id="content-wrap">
-			<#INCLUDE filename="include_menu.html">
-			<main role="main">
-				<div class="default-table" id="table-main-outstanding-requests">
-					<#TABLE name="ViewOutstandingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+	<#INCLUDE filename="include_header.html">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
+			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+				<#INCLUDE filename="include_menu.html">
+			</nav>
+			<main role="main" class="three_nine-region--second">
+				<div id="ill_requests">
+				    <h1>Outstanding Requests</h1>
+
+				    <nav id="ill_filters" role="navigation"></nav>
+
+				    <script type="text/javascript"> illplus_requests(); </script>
+
+				    <section class="tabledata">
+						<#TABLE name="ViewOutstandingRequests"noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+					</section>
 				</div>
-				<#INCLUDE filename="include_footer.html">
 			</main>
-			<aside role="complementary">
-				<a href="<#ACTION action="2" type="40" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">">Subscribe to Alerts Feed</a>
-				<#ALERTS>
-			</aside>
-		</div>
+		</section>
 	</div>
+	<#INCLUDE filename="include_footer.html">
 </body>
 </html>

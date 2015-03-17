@@ -4,15 +4,15 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
-	<div id="wrap">
-		<#INCLUDE filename="include_header.html">
-		<div id="content-wrap">
+	<#INCLUDE filename="include_header.html">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
 			<#INCLUDE filename="include_menu.html">
-			<main role="main">
+			<main role="main" class="three_nine-region--second">
 				<form action="illiad.dll" method="post" name="NewAuthRegistration" class="f-wrap-request">
 					<input type="hidden" name="ILLiadForm" value="NewAuthRegistration">
 					<#FORMSTATE>
-					<div class="req"> <b>*</b>
+					<div class="req"> *
 						Indicates required field
 					</div>
 					<fieldset>
@@ -20,39 +20,39 @@
 						<label for="FirstName">
 							<span class="field">
 								<span class="req">*</span>
-								<span class="<#ERROR name="ERRORFirstName">"> <b>First Name</b>
+								<span class="<#ERROR name="ERRORFirstName">"> First Name
 								</span>
 							</span>
-							<input id="FirstName" name="FirstName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="FirstName">">
+							<input id="FirstName" name="FirstName" type="text" size="40" class="f-name"  value="<#PARAM name="FirstName">">
 						</label>
 
 						<label for="LastName">
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORLastName">">
-									<b>Last Name</b>
+									Last Name
 								</span>
 							</span>
-							<input id="LastName" name="LastName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LastName">">
+							<input id="LastName" name="LastName" type="text" size="40" class="f-name"  value="<#PARAM name="LastName">">
 						</label>
 
 						<label for="SSN">
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORSSN">">
-									<b>ID Number</b>
+									ID Number
 								</span>
 							</span>
-							<input id="SSN" name="SSN" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SSN">">
+							<input id="SSN" name="SSN" type="text" size="40" class="f-name"  value="<#PARAM name="SSN">">
 						</label>
 
 						<label for="NotifyGroup">
 							<span class="field">
 								<span class="<#ERROR name="ERRORNotifyGroup">">
-									<b>Preferred Notification Method</b>
+									Preferred Notification Method
 								</span>
 							</span>
-							<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name" tabindex="4">
+							<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name" >
 								<option selected>
 									<#PARAM name="NotifyGroup"></option>
 								<option>Phone</option>
@@ -64,29 +64,29 @@
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERROREMailAddress">">
-									<b>E-Mail Address</b>
+									E-Mail Address
 								</span>
 							</span>
-							<input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="EMailAddress">">
+							<input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name"  value="<#PARAM name="EMailAddress">">
 						</label>
 
 						<label for="Phone">
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORPhone">">
-									<b>Daytime Phone</b>
+									Daytime Phone
 								</span>
 							</span>
-							<input id="Phone" name="Phone" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Phone">">
+							<input id="Phone" name="Phone" type="text" size="40" class="f-name"  value="<#PARAM name="Phone">">
 						</label>
 
 						<label for="DeliveryGroup">
 							<span class="field">
 								<span class="<#ERROR name="ERRORDeliveryGroup">">
-									<b>Preferred Article Delivery Method</b>
+									Preferred Article Delivery Method
 								</span>
 							</span>
-							<select id="DeliveryGroup" name="DeliveryGroup" size="1" class="f-name" tabindex="4">
+							<select id="DeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >
 								<option selected>
 									<#PARAM name="DeliveryGroup"></option>
 								<option>Hold for Pickup</option>
@@ -97,10 +97,10 @@
 						<label for="LoanDeliveryGroup">
 							<span class="field">
 								<span class="<#ERROR name="ERRORLoanDeliveryGroup">">
-									<b>Preferred Loan Delivery Method</b>
+									Preferred Loan Delivery Method
 								</span>
 							</span>
-							<select id="DeliveryGroup" name="LoanDeliveryGroup" size="1" class="f-name" tabindex="4">
+							<select id="DeliveryGroup" name="LoanDeliveryGroup" size="1" class="f-name" >
 								<option selected>
 									<#PARAM name="LoanDeliveryGroup"></option>
 								<option>Hold for Pickup</option>
@@ -111,10 +111,10 @@
 						<label for="WebDeliveryGroup">
 							<span class="field">
 								<span class="<#ERROR name="ERRORWebDeliveryGroup">">
-									<b>Preferred Electronic Delivery if Possible (PDF file via web)</b>
+									Preferred Electronic Delivery if Possible (PDF file via web)
 								</span>
 							</span>
-							<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" tabindex="4">
+							<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" >
 								<option selected>
 									<#PARAM name="WebDeliveryGroup"></option>
 								<option>Yes</option>
@@ -126,39 +126,39 @@
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORAddress">">
-									<b>Primary Address Line 1</b>
+									Primary Address Line 1
 								</span>
 							</span>
-							<input id="Address" name="Address" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Address">">
+							<input id="Address" name="Address" type="text" size="40" class="f-name"  value="<#PARAM name="Address">">
 						</label>
 
 						<label for="Address2">
 							<span class="field">
 								<span class="<#ERROR name="ERRORAddress2">">
-									<b>Primary Address Line 2</b>
+									Primary Address Line 2
 								</span>
 							</span>
-							<input id="Address2" name="Address2" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Address2">">
+							<input id="Address2" name="Address2" type="text" size="40" class="f-name"  value="<#PARAM name="Address2">">
 						</label>
 
 						<label for="City">
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORCity">">
-									<b>Primary Address City</b>
+									Primary Address City
 								</span>
 							</span>
-							<input id="City" name="City" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="City">">
+							<input id="City" name="City" type="text" size="40" class="f-name"  value="<#PARAM name="City">">
 						</label>
 
 						<label for="State">
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORState">">
-									<b>Primary Address State</b>
+									Primary Address State
 								</span>
 							</span>
-							<select id="State" name="State" size="1" class="f-name" tabindex="3">
+							<select id="State" name="State" size="1" class="f-name" >
 								<#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=State>" defaultValue="" defaultName="" /></select>
 						</label>
 
@@ -166,66 +166,66 @@
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORZip">">
-									<b>Primary Address Zip</b>
+									Primary Address Zip
 								</span>
 							</span>
-							<input id="Zip" name="Zip" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Zip">">
+							<input id="Zip" name="Zip" type="text" size="40" class="f-name"  value="<#PARAM name="Zip">">
 						</label>
 
 						<label for="SAddress">
 							<span class="field">
 								<span class="<#ERROR name="ERRORSAddress">">
-									<b>Secondary Address Line 1</b>
+									Secondary Address Line 1
 								</span>
 							</span>
-							<input id="SAddress" name="SAddress" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SAddress">">
+							<input id="SAddress" name="SAddress" type="text" size="40" class="f-name"  value="<#PARAM name="SAddress">">
 						</label>
 
 						<label for="SAddress2">
 							<span class="field">
 								<span class="<#ERROR name="ERRORSAddress2">">
-									<b>Secondary Address Line 2</b>
+									Secondary Address Line 2
 								</span>
 							</span>
-							<input id="SAddress2" name="SAddress2" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SAddress2">">
+							<input id="SAddress2" name="SAddress2" type="text" size="40" class="f-name"  value="<#PARAM name="SAddress2">">
 						</label>
 
 						<label for="SCity">
 							<span class="field">
 								<span class="<#ERROR name="ERRORSCity">">
-									<b>Secondary Address City</b>
+									Secondary Address City
 								</span>
 							</span>
-							<input id="SCity" name="SCity" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SCity">">
+							<input id="SCity" name="SCity" type="text" size="40" class="f-name"  value="<#PARAM name="SCity">">
 						</label>
 
 						<label for="SState">
 							<span class="field">
 								<span class="<#ERROR name="ERRORSState">">
-									<b>Secondary Address State</b>
+									Secondary Address State
 								</span>
 							</span>
-							<select id="SState" name="SState" size="1" class="f-name" tabindex="3">
+							<select id="SState" name="SState" size="1" class="f-name" >
 								<#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=SState>" defaultValue="" defaultName="" /></select>
 						</label>
 
 						<label for="SZip">
 							<span class="field">
 								<span class="<#ERROR name="ERRORSZip">">
-									<b>Secondary Address Zip</b>
+									Secondary Address Zip
 								</span>
 							</span>
-							<input id="SZip" name="SZip" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SZip">">
+							<input id="SZip" name="SZip" type="text" size="40" class="f-name"  value="<#PARAM name="SZip">">
 						</label>
 
 						<label for="StatusGroup">
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORStatus">">
-									<b>Status</b>
+									Status
 								</span>
 							</span>
-							<select id="StatusGroup" name="StatusGroup" size="1" class="f-name" tabindex="4">
+							<select id="StatusGroup" name="StatusGroup" size="1" class="f-name" >
 								<#OPTION name="custom" groupname="StatusGroup" selectedValue="<#PARAM name=StatusGroup>" defaultValue="" defaultName="" /></select>
 						</label>
 
@@ -233,17 +233,17 @@
 							<span class="field">
 								<span class="req">*</span>
 								<span class="<#ERROR name="ERRORDepartment">">
-									<b>Department</b>
+									Department
 								</span>
 							</span>
-							<select id="Department" name="Department" size="1" class="f-name" tabindex="4">
+							<select id="Department" name="Department" size="1" class="f-name" >
 								<#OPTION name="custom" groupname="Department" selectedValue="<#PARAM name=Department>"  defaultValue="" defaultName=""/></select>
 						</label>
 
 						<label for="AuthorizedUsers">
 							<span class="field">
 								<span class="<#ERROR name="ERRORAuthorizedUsers">">
-									<b>Authorized Users</b>
+									Authorized Users
 								</span>
 								
 								<span class="note">
@@ -252,29 +252,29 @@
 									An ID will be REQUIRED to pick items up.
 								</span>
 							</span>
-							<textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" tabindex="15">
+							<textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" >
 								<#PARAM name="AuthorizedUsers"></textarea>
 						</label>
 
 						<label for="NVTGC">
 							<span class="field">
 								<span class="<#ERROR name="ERRORNVTGC">">
-									<b>Delivery Location</b>
+									Delivery Location
 								</span>
 							</span>
-							<select id="NVTGC" name="NVTGC" size="1" class="f-name" tabindex="4">
+							<select id="NVTGC" name="NVTGC" size="1" class="f-name" >
 								<#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name=NVTGC>"  defaultValue="" defaultName=""/></select>
 						</label>
 
 						<div class="f-submit-wrap" align="right">
-							<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" tabindex="60" />
-							<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit" tabindex="62" />
+							<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit"  />
+							<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit"  />
 						</div>
 					</fieldset>
 					<input type="hidden" id="BillingCategory" name="BillingCategory" value="<#PARAM name="BillingCategory">"></form>
 			</main>
-		</div>
-		<#INCLUDE filename="include_footer.html">
+		</section>
 	</div>
+	<#INCLUDE filename="include_footer.html">
 </body>
 </html>
