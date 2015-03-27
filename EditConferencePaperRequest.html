@@ -4,8 +4,10 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
+	<#INCLUDE filename="include_header_request.html">
 	<div id="content-wrap" class="panel-display--three_nine l-page">
 		<section class="l-main">
+			<#INCLUDE filename="include_menu.html">
 			<main role="main" class="three_nine-region--second">
 				<form action="illiad.dll" method="post" name="EditConferencePaperRequest" class="f-wrap-request">
 					<input type="hidden" name="ILLiadForm" value="EditConferencePaperRequest">
@@ -16,7 +18,7 @@
 						Indicates required field
 					</div>
 					<fieldset>
-						<legend>Edit Working Papers Request</legend>
+						<legend>Edit Conference Paper Request</legend>
 						<#STATUS>
 						<h2>Describe the item you want</h2>
 						<label for="PhotoJournalTitle">
