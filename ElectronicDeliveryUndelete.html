@@ -4,11 +4,11 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
-	<div id="wrap">
-		<#INCLUDE filename="include_header.html">
-		<div id="content-wrap">
+	<#INCLUDE filename="include_header.html">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
 			<#INCLUDE filename="include_menu.html">
-			<main role="main">
+			<main role="main" class="three_nine-region--second">
 				<p>
 					In the event that you accidentally deleted an article and it no longer appears here, e-mail us at
 					<#LOCALINFO field="GeneralEMailAddress">.
@@ -17,8 +17,8 @@
 					<#TABLE name="ElectronicDeliveryUndelete" headerText="Deleted Electronically Received Articles">
 				</div>
 			</main>
-		</div>
-		<#INCLUDE filename="include_footer.html">
+		</section>
 	</div>
+	<#INCLUDE filename="include_footer.html">
 </body>
 </html>

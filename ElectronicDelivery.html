@@ -4,24 +4,34 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
-	<div id="wrap">
-		<#INCLUDE filename="include_header.html">
-		<div id="content-wrap">
-			<#INCLUDE filename="include_menu.html">
-			<main role="main">
-				<p>
-					Articles posted to this page will remain accessible by the requestor for <b>30 days from the date of posting</b>. If, prior to this time, you no longer require the use of an article, you may delete it using the &quot;Delete&quot; link to the right of the article information.
-				</p>
-				<p>
-					In the event that you accidentally delete an article from this web page, you may <a href="<#ACTION action="10" form="65">">undelete</a> articles or e-mail us at <#LOCALINFO field="GeneralEMailAddress">to have them reset.
-				</p>
+	<#INCLUDE filename="include_header.html">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
+			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+				<#INCLUDE filename="include_menu.html">
+			</nav>
+			<main role="main" class="three_nine-region--second">
+				<div id="ill_requests">
+				    <h1>Electronically Received Articles</h1>
 
-				<div class="default-table">
-					<#TABLE name="ElectronicDelivery" headerText="Electronically Received Articles" column="TransactionNumber:Transaction" column="View" column="Size" column="Title" column="Author" column="Expires" column="Delete">
+				    <p>
+						Articles posted to this page will remain accessible by the requestor for 30 days from the date of posting. If, prior to this time, you no longer require the use of an article, you may delete it using the &quot;Delete&quot; link to the right of the article information.
+					</p>
+					<p>
+						In the event that you accidentally delete an article from this web page, you may <a href="<#ACTION action="10" form="65">">undelete</a> articles or e-mail us at <#LOCALINFO field="GeneralEMailAddress">to have them reset.
+					</p>
+				
+				    <script type="text/javascript"> illplus_requests(); </script>
+
+				    <section class="tabledata">
+				        <#TABLE name="ElectronicDelivery" 
+
+				        column="TransactionNumber:Transaction" column="View" column="Size" column="Title" column="Author" column="Expires" column="Delete">
+				    </section>
 				</div>
 			</main>
-		</div>
-		<#INCLUDE filename="include_footer.html">
+		</section>
 	</div>
+	<#INCLUDE filename="include_footer.html">
 </body>
 </html>

@@ -5,15 +5,15 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-a">
-	<div id="wrap">
-		<header role="banner">
-			<h1 class="site-name">ILLiad</h1>
-			<div id="status">
-				By pressing the button below, you acknowledge and agree to all of the terms and conditions below. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading this information, you can press the "First Time Users Click Here" button below.
-			</div>
-		</header>
-		<div id="content-wrap">
-			<main role="main">
+	<header role="banner">
+		<h1 class="site-name">ILLiad</h1>
+		<div id="status">
+			By pressing the button below, you acknowledge and agree to all of the terms and conditions below. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading this information, you can press the "First Time Users Click Here" button below.
+		</div>
+	</header>
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
+			<main role="main" class="three_nine-region--second">
 				<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
 					<input type="hidden" name="ILLiadForm" value="Logon">
 					<#FORMSTATE>
@@ -44,10 +44,10 @@
 							<h2>About your Username and Password</h2>
 							<p>
 								During registration, you will be asked to choose a Username and Password. You will use this Username and Password when logging on to the ILLiad system in the future.
-							</p> <b>Username</b>
+							</p> Username
 							
 							Choose anything you like, such as your name, abbreviations, or an alphanumeric code.
-							 <b>Password</b>
+							 Password
 							
 							Choose anything you like. We recommend that you follow good security practice and choose a password that is different from those you use to access other systems.
 							
@@ -83,15 +83,15 @@
 							</p>
 
 							<div class="f-submit-wrap">
-								<input type="submit" name="SubmitButton" value="First Time Users Click Here" class="f-submit" tabindex="12" />
+								<input type="submit" name="SubmitButton" value="First Time Users Click Here" class="f-submit"  />
 								
 							</div>
 						</fieldset>
 					</div>
 				</form>
 			</main>
-		</div>
-		<#INCLUDE filename="include_footer.html">
+		</section>
 	</div>
+	<#INCLUDE filename="include_footer.html">
 </body>
 </html>

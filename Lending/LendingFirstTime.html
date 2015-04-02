@@ -1,100 +1,84 @@
-<html lang="en">
+<html>
 <head>
-	<meta http-equiv="Pragma" content="no-cache">
-	<title>ILLiad Logon</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-	<!--[if lte IE 6]>
-	<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
-	<![endif]-->
+<meta http-equiv="Pragma" content="no-cache">
+<title>ILLiad Logon</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
+<![endif]-->
 </head>
 <body id="type-a">
-	<div id="wrap">
-		<header role="banner">
-			<h1 class="site-name">ILLiad</h1>
-			<div id="status">
-				By pressing the button below, you acknowledge and agree to all of the terms and conditions below. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading this information, you can press the "First Time Users Click Here" button below.
-			</div>
-		</header>
-		<div id="content-wrap">
-			<main role="main">
-				<form action="illiadlending.dll" method="post" name="Logon" class="f-wrap-1">
-					<input type="hidden" name="ILLiadForm" value="Logon">
-					<div id="logonform">
-						<fieldset>
-							<legend>First Time User Registration for Interlibrary Loan</legend>
-
-							<p>
-								To request an item through Interlibrary Loan, you must first identify yourself to the library's ILLiad system. To do this you fill out a registration form using your Web browser.
-								
-								Registration has three purposes:
-							</p>
-
-							<ul>
-								<li>
-									Entering your personal information into the ILLiad system means you will not have to supply the information again when making future requests.
-								</li>
-								<li>
-									Having your e-mail and regular mail addresses on file with Interlibrary Loan enables us to notify you promptly and deliver materials accurately when 
-							your request arrives in the library.
-								</li>
-								<li>
-									By specifying a Username and Password of your choosing, you will have secure access to information about your requests. You will also be able to review
-							the list of items you have requested in the past.
-								</li>
-							</ul>
-
-							<h2>About your Username and Password</h2>
-							<p>
-								During registration, you will be asked to choose a Username and Password. You will use this Username and Password when logging on to the ILLiad system in the future.
-							</p> <b>Username</b>
-							
-							Choose anything you like, such as your name, abbreviations, or an alphanumeric code.
-							 <b>Password</b>
-							
-							Choose anything you like. We recommend that you follow good security practice and choose a password that is different from those you use to access other systems.
-							
-							ILLiad will encrypt your password, so it will remain secure. Only you will know your password.
-							<hr />
-
-							<h2>Important Copyright Information</h2>
-							<p>WARNING CONCERNING COPYRIGHT RESTRICTIONS</p>
-							<p>
-								The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted materials.
-							</p>
-							<p>
-								Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specified conditions is that the
-					   photocopy or reproduction is not to be &quot;used for any purpose other than private study, scholarship, or research&quot;. If a user makes a request for, or later uses,
-					   a photocopy or reproduction for purposes in excess of &quot;fair use&quot;, that user may be liable for copyright infringement.
-							</p>
-							<p>
-								This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.
-							</p>
-
-							<hr />
-
-							<h2>ILLiad FAQ (Frequently Asked Questions)</h2>
-							<p>
-								Before registering, you may wish to read the ILLiad
-								<a href="LendingFAQ.html" target="_self">FAQ</a>
-								. The FAQ may answer other questions you have about the ILLiad interlibrary loan system.
-							</p>
-
-							<p>
-								By pressing this button you acknowledge and agree to all of the terms and conditions above. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading
-					   this information, you can press the &quot;First Time Users Click Here&quot; button to continue.
-							</p>
-
-							<div class="f-submit-wrap">
-								<input type="submit" name="SubmitButton" value="First Time Users Click Here" class="f-submit" tabindex="12" />
-								
-							</div>
-						</fieldset>
-					</div>
-				</form>
-			</main>
-		</div>
-		<#INCLUDE filename="include_footer.html">
+<div id="wrap">
+  <div id="header"> <span id="site-name">ILLiad</span>
+    <div id="status">
+		By pressing the button below, you acknowledge and agree to all of the terms and conditions below.<br />
+		Please pay particular attention to the copyright statement and the ILLiad FAQ.<br />
+		After reading this information, you can press the "First Time Users Click Here" button below.
 	</div>
+  </div>
+  <div id="content-wrap">
+    <div id="content">		
+		<form action="illiadlending.dll" method="post" name="Logon" class="f-wrap-1">
+			<input type="hidden" name="ILLiadForm" value="Logon">
+			<div id="logonform">				
+				<fieldset>			
+					<h3>First Time User Registration for Interlibrary Loan</h3>			
+					
+					<p>
+					To request an item through Interlibrary Loan, you must first identify yourself to the library's ILLiad system. To do this you fill out a registration form using your Web browser.<br />
+    				Registration has three purposes:
+					</p>
+    				
+					<ul>
+        				<li>Entering your personal information into the ILLiad system means you will not have to supply the information again when making future requests.</li>
+        				<li>Having your e-mail and regular mail addresses on file with Interlibrary Loan enables us to notify you promptly and deliver materials accurately when 
+							your request arrives in the library.</li>
+        				<li>By specifying a Username and Password of your choosing, you will have secure access to information about your requests. You will also be able to review
+            				the list of items you have requested in the past.</li>
+    				</ul>
+					
+    				<h2>About your Username and Password</h2>
+    				<p>
+					During registration, you will be asked to choose a Username and Password. You will use this Username and Password when logging on to the ILLiad system in the future.</p>
+    				
+					<strong>Username</strong><br />
+					Choose anything you like, such as your name, abbreviations, or an alphanumeric code.<br />
+					
+					<strong>Password</strong><br />
+					Choose anything you like. We recommend that you follow good security practice and choose a password that is different from those you use to access other systems.<br />
+					ILLiad will encrypt your password, so it will remain secure. Only you will know your password.
+					
+    				<hr />
+    				
+					<h2>Important Copyright Information</h2>
+    				<p>WARNING CONCERNING COPYRIGHT RESTRICTIONS</p>
+    				<p>The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted materials.</p>
+					<p>Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specified conditions is that the
+    				   photocopy or reproduction is not to be &quot;used for any purpose other than private study, scholarship, or research&quot;. If a user makes a request for, or later uses,
+    				   a photocopy or reproduction for purposes in excess of &quot;fair use&quot;, that user may be liable for copyright infringement.</p>
+    				<p>This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p>
+    				
+					<hr />
+    				
+					<h2>ILLiad FAQ (Frequently Asked Questions)</h2>
+    				<p>Before registering, you may wish to read the ILLiad <a href="LendingFAQ.html" target="_self">FAQ</a>. The FAQ may answer other questions you have about the ILLiad interlibrary loan system.</p>
+			
+					<p>By pressing this button you acknowledge and agree to all of the terms and conditions above. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading
+    				   this information, you can press the &quot;First Time Users Click Here&quot; button to continue.</p>
+					   
+					<div class="f-submit-wrap">
+						<input type="submit" name="SubmitButton" value="First Time Users Click Here" class="f-submit"  /><br />
+					</div>
+				</fieldset>
+			</div>
+		</form>
+
+      	<div id="footer">
+			Copyright &copy; 2011 <a href="http://www.atlas-sys.com">Atlas Systems, Inc.</a> All Rights Reserved.
+      	</div>
+    </div>    
+  </div>
+</div>
 </body>
 </html>

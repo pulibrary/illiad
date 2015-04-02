@@ -4,17 +4,19 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
-	<div id="wrap">
-		<#INCLUDE filename="include_header.html">
-		<div id="content-wrap">
-			<#INCLUDE filename="include_menu.html">
-			<main role="main">
+	<#INCLUDE filename="include_header.html">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
+			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+				<#INCLUDE filename="include_menu.html">
+			</nav>
+			<main role="main" class="three_nine-region--second">
 				<div class="default-table simple-table">
 					<#TABLE name="NotificationInformation" headerText="Notification Information" hideColumnHeaders="true">
 				</div>
 			</main>
-		</div>
-		<#INCLUDE filename="include_footer.html">
+		</section>
 	</div>
+	<#INCLUDE filename="include_footer.html">
 </body>
 </html>

@@ -1,38 +1,89 @@
-<nav role="navigation">
-	<ul id="nav">
-		<li class="active"><a href="<#ACTION action="99">">Logoff <#PARAM name="Username"></a></li>
-		<li class="active"><a href="<#ACTION action="10" form="10">">Main Menu</a></li>
-		<li class="active"><a href="#">New Request</a>
-			<ul>
-				<li class="first"><a href="<#ACTION action="10" form="22">">Photocopy</a></li>
-				<li><a href="<#ACTION action="10" form="21">">Book</a></li>
-				<li><a href="<#ACTION action="10" form="23">">Book Chapter</a></li>
-				<li><a href="<#ACTION action="10" form="24">">Conference Paper</a></li>
-				<li><a href="<#ACTION action="10" form="25">">Patent</a></li>
-				<li><a href="<#ACTION action="10" form="26">">Report</a></li>
-				<li><a href="<#ACTION action="10" form="27">">Thesis</a></li>
-				<li><a href="<#ACTION action="10" form="28">">Standards Document</a></li>
-				<li class="last"><a href="<#ACTION action="10" form="29">">Other (Free Text)</a></li>
-			</ul>
-		</li>
-		<li class="active"><a href="#">View</a>
-			<ul>
-				<li class="first"><a href="<#ACTION action="10" form="62">">Outstanding Requests</a></li>
-				<li><a href="<#ACTION action="10" form="64">">Electronically Received Articles</a></li>
-				<li><a href="<#ACTION action="10" form="66">">Checked Out Items</a></li>
-				<li><a href="<#ACTION action="10" form="70">">Cancelled Requests</a></li>
-				<li><a href="<#ACTION action="10" form="68">">History Requests</a></li>
-				<li><a href="<#ACTION action="10" form="60">">All Requests</a></li>
-				<li class="last"><a href="<#ACTION action="10" form="73">">Notifications</a></li>
-			</ul>
-		</li>
-		<li class="active"><a href="#">Tools</a>
-			<ul>
-				<li class="first"><a href="<#ACTION action="10" form="81">">Change User Information</a></li>
-				<li><a href="<#ACTION action="10" form="82">">Change Accounts</a></li>
-				<li class="last"><a href="<#ACTION action="10" form="83">">Change Password</a></li>
-			</ul>
-		</li>
-		<li class="active"><a href="<#ACTION action="10" form="1">">About ILLiad</a></li>
-	</ul>
-</nav>
+<ul id="nav" class="nav">
+	<li class="active">
+		<a href="#" class="nav-group">Article Express Request</a>
+		<ul>
+			<li>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestArticleRequest">">Article, Book Chapter, or Conference Paper</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestWorkingPaper">">Working Paper</a> 
+			</li>
+		</ul>
+	<li class="active">
+		<a href="#" class="nav-group">Interlibrary Loan Request</a>
+		<ul>
+			<li>
+				<a href="<#ACTION action="10" form="21">">Book, Journal, or Proceedings Loan</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="27">">Dissertation or Thesis</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestAudiovisual">">AudioVisual Materials</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestNewspaperLoanRequest">">Newspaper Loan</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestConferenceProceedingRe">">Conference Proceedings</a>
+			</li>
+
+			<li>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestScoreRequest">">Musical Score</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="20" value="GenericRequestArchival">">Archival or Manuscript</a>
+			</li>
+		</ul>
+	</li>
+	<li class="active">
+		<a href="#" class="nav-group">View</a>
+		<ul>
+			<!-- <li class="first">
+				<a href="<#ACTION action="10" form="62">">Outstanding Requests</a>
+			</li> -->
+			<li>
+				<a href="<#ACTION action="10" form="64">">Electronically Received Articles</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="66">">Checked Out Items</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="70">">Cancelled Requests</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="68">">History Requests</a>
+			</li>
+			<li>
+				<a href="<#ACTION action="10" form="60">">All Requests</a>
+			</li>
+			<li class="last">
+				<a href="<#ACTION action="10" form="73">">Notifications</a>
+			</li>
+		</ul>
+	</li>
+	<li class="active">
+		<a href="#" class="nav-group">Tools</a>
+		<ul>
+			<li class="first">
+				<a href="<#ACTION action="10" form="81">">Change User Information</a>
+			</li>
+			<li class="last">
+				<a href="<#ACTION action="10" form="83">">Change Password</a>
+			</li>
+			<li>
+				<a href="mailto:ILSBORR@princeton.edu">Contact Us at: ILSBORR@princeton.edu</a>
+			</li>
+		</ul>
+	</li>
+	<li class="active">
+		<a href="http://library.princeton.edu/services/borrowdirect" target="_blank" class="nav-group">Borrow Direct</a>
+	</li>
+	<li class="active">
+		<a href="<#ACTION action="10" form="10">" class="nav-group">ILLiad Home</a>
+	</li>
+	<li class="active">
+		<a href="<#ACTION action="99">" class="nav-group">Logoff
+			<#PARAM name="Username"></a>
+	</li>
+</ul>
