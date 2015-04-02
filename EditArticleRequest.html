@@ -18,7 +18,7 @@
 						Indicates required field
 					</div>
 					<fieldset>
-						<legend>Edit Photocopy Request</legend>
+						<legend>Edit Article Express Request</legend>
 						<#STATUS>
 						<h2>Describe the item you want</h2>
 						<label for="PhotoJournalTitle">
@@ -31,6 +31,39 @@
 							<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" >
 								<#PARAM name="PhotoJournalTitle"></textarea>
 						</label>
+
+						<label for="ISSN">
+							<span class="field">
+								<span class="<#ERROR name="ERRORISSN">">
+									ISSN/ISBN (International Standard Serial/Book Number)
+								</span>
+								
+								<span class="note">If given will speed request processing</span>
+							</span>
+							<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
+							
+						</label>
+
+							<label for="PhotoArticleTitle">
+							<span class="field">
+								<span class="req">*</span>
+								<span class="<#ERROR name="ERRORPhotoArticleTitle">">
+									Article Title
+								</span>
+							</span>
+							<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" >
+								<#PARAM name="PhotoArticleTitle"></textarea>
+						</label>
+
+						<label for="PhotoArticleAuthor">
+							<span class="field">
+								<span class="<#ERROR name="ERRORPhotoArticleAuthor">">
+									Article Author
+								</span>
+							</span>
+							<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoArticleAuthor">">
+						</label>
+
 
 						<label for="PhotoJournalVolume">
 							<span class="field">
@@ -77,17 +110,7 @@
 							<input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoJournalInclusivePages">">
 						</label>
 
-						<label for="ISSN">
-							<span class="field">
-								<span class="<#ERROR name="ERRORISSN">">
-									ISSN/ISBN (International Standard Serial/Book Number)
-								</span>
-								
-								<span class="note">If given will speed request processing</span>
-							</span>
-							<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
-							
-						</label>
+						
 
 						<label for="CallNumber">
 							<span class="field">
@@ -98,33 +121,16 @@
 							<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name"  value="<#PARAM name="CallNumber">">
 						</label>
 
-						<label for="ESPNumber">
+						<label for="CitedTitle">
 							<span class="field">
-								<span class="<#ERROR name="ERRORESPNumber">">
-									OCLC or Docline UI Number
+								<span class="<#ERROR name="ERRORCitedTitle">">
+									OCLC (WorldCat Accession) Number
 								</span>
+								
 							</span>
-							<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
-						</label>
-
-						<label for="PhotoArticleAuthor">
-							<span class="field">
-								<span class="<#ERROR name="ERRORPhotoArticleAuthor">">
-									Article Author
-								</span>
-							</span>
-							<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoArticleAuthor">">
-						</label>
-
-						<label for="PhotoArticleTitle">
-							<span class="field">
-								<span class="req">*</span>
-								<span class="<#ERROR name="ERRORPhotoArticleTitle">">
-									Article Title
-								</span>
-							</span>
-							<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" >
-								<#PARAM name="PhotoArticleTitle"></textarea>
+							<select id="CitedTitle" name="CitedTitle" size="1" class="f-name">
+								<#OPTION name="ValidAccounts">
+							</select>
 						</label>
 
 						<label for="NotWantedAfter">
@@ -136,33 +142,45 @@
 								
 								<span class="note">(MM/DD/YYYY)</span>
 							</span>
-							<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
+							<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" value="<#PARAM name="NotWantedAfter">">
 						</label>
+
+
+						<label for="WantedBy">
+							<span class="field">
+								<span class="req">*</span>
+								<span class="<#ERROR name="ERRORWantedBy">">
+									Shall we rush this to you in 1-2 days?
+								</span>
+								
+								<span class="note">Some requests may take longer due to item availability</span>
+							</span>
+							<select id="WantedBy" name="WantedBy" size="1" class="f-name">
+							<option selected>
+									<#PARAM name="WantedBy"></option>
+								<option>YES!</option>
+								<option>No, I need it faster than that.</option>
+							</select>	
+						</label>
+
 
 						<label for="AcceptNonEnglish">
 							<span class="field">
 								<span class="<#ERROR name="ERRORAcceptNonEnglish">">
 									Will you accept the item in a language other than English?
 								</span>
+								
 								<span class="note">If yes, specify acceptable languages in the notes field.</span>
 							</span>
-							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
-								<option selected>
+							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
+								<option selected>YES!</option>
 									<#PARAM name="AcceptNonEnglish"></option>
 								<option>No</option>
-								<option>Yes</option>
+				
 							</select>
 						</label>
 
-						<label for="AccountNo">
-							<span class="field">
-								<span class="<#ERROR name="ERRORAccountNo">">
-									Account Number
-								</span>
-							</span>
-							<select id="AccountNo" name="AccountNo" size="1" class="f-name" >
-								<#OPTION name="ValidAccounts"></select>
-						</label>
+						
 
 						<label for="Notes">
 							<span class="field">
@@ -174,16 +192,18 @@
 									Put any information here that may help us find the item, as well as any other pertinent information.
 								</span>
 							</span>
-							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" >
-								<#PARAM name="Notes"></textarea>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name">
+								<#PARAM name="Notes">
+							</textarea>
 						</label>
 
 						<#INCLUDE filename="include_request_cited.html">
-						<#INCLUDE filename="include_request_buttons.html"></fieldset>
+						<#INCLUDE filename="include_request_buttons.html">
+					</fieldset>
 				</form>
 			</main>
 		</section>
 	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>
-</html>
+</html><!-- unused -->
