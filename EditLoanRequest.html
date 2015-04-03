@@ -15,15 +15,13 @@
 					<input type="hidden" name="ILLiadForm" value="EditLoanRequest">
 					<input type="hidden" name="Username" value="<#PARAM name="Username">">
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-					<input type="hidden" name="TransactionNumber" value="<#PARAM name="TransactionNumber">">
-					
 					<fieldset>
-						<legend><h1>Book or Journal Loan Request</h1></legend>
+						<legend><h1>Edit Book or Journal Loan Request</h1></legend>
+						<#STATUS>
+						<h2>Describe the item you want</h2>
 						<div class="req"> *
 							Indicates required field
 						</div>
-						<#STATUS>
-						<h2>Describe the item you want</h2>
 						<label for="LoanAuthor">
 							<span class="field">
 								<span class="req">*</span>
@@ -67,8 +65,9 @@
 						<label for="LoanDate">
 							<span class="field">
 								<span class="<#ERROR name="ERRORLoanDate">">
-									Date of Publication
-								</span>
+									Date
+								<br /></span>
+							<span class="note">(Date of publication for book, Date span needed for journal loan)</span>
 							</span>
 							<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
 						</label>
@@ -86,7 +85,7 @@
 							<span class="field">
 								<span class="<#ERROR name="ERRORISSN">">
 									ISBN (International Standard Book Number)
-								</span>
+								</span><br />
 								
 								<span class="note">If given will speed request processing</span>
 							</span>
@@ -105,7 +104,7 @@
 						<label for="ESPNumber">
 							<span class="field">
 								<span class="<#ERROR name="ERRORESPNumber">">
-									OCLC or Docline UI Number
+									OCLC (WorldCat Accession) Number
 								</span>
 							</span>
 							<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
@@ -117,11 +116,30 @@
 								<span class="<#ERROR name="ERRORNotWantedAfter">">
 									Not Wanted After Date
 								</span>
-								
+								<br />
 								<span class="note">(MM/DD/YYYY)</span>
 							</span>
 							<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
 						</label>
+
+
+					<label for="Wantedby">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORWantedby">">If we cannot obtain the material by the date listed 
+			above, should we continue to try and for how long?</span><br />
+							<span class="note">Select a reason from the list on the right.</span>
+						</span>
+					<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name"> 
+						<option selected><#PARAM name="WantedBy"></option>
+							<option>Yes, until the semester's end</option>
+							<option>Yes, until this academic year's end</option>
+							<option>Yes, indefinitely</option>
+							<option>No, please cancel the request</option>	
+						</select><br />
+					</label>
+
+
 
 						<label for="AcceptNonEnglish">
 							<span class="field">
@@ -153,15 +171,6 @@
 							</select>
 						</label>
 
-						<label for="AccountNo">
-							<span class="field">
-								<span class="<#ERROR name="ERRORAccountNo">">
-									Account Number
-								</span>
-							</span>
-							<select id="AccountNo" name="AccountNo" size="1" class="f-name" >
-								<#OPTION name="ValidAccounts"></select>
-						</label>
 
 						<label for="Notes">
 							<span class="field">
