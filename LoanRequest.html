@@ -15,6 +15,7 @@
 					<input type="hidden" name="ILLiadForm" value="LoanRequest">
 					<input type="hidden" name="Username" value="<#PARAM name="Username">">
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+					<input name="DocumentType" type="hidden" id="DocumentType" value="Book">
 					<fieldset>
 						<legend><h1>Book or Journal Loan Request</h1></legend>
 						<#STATUS>
@@ -92,15 +93,7 @@
 							<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
 						</label>
 
-						<label for="CallNumber">
-							<span class="field">
-								<span class="<#ERROR name="ERRORCallNumber">">
-									Call Number
-								</span>
-							</span>
-							<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name"  value="<#PARAM name="CallNumber">">
-						</label>
-
+						
 						<label for="ESPNumber">
 							<span class="field">
 								<span class="<#ERROR name="ERRORESPNumber">">

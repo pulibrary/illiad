@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+	<title>ILLiad - Conference Proceedings Request</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+<body id="type-b">
+	<#INCLUDE filename="include_header_request.html">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
+		<section class="l-main">
+			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+				<#INCLUDE filename="include_menu.html">
+			</nav>
+			<main role="main" class="three_nine-region--second">
+				<form action="illiad.dll" method="post" name="GenericRequestConferenceRequest" class="f-wrap-request">
+					<input type="hidden" name="ILLiadForm" value="GenericRequestConferenceRequest">
+					<input type="hidden" name="Username" value="<#PARAM name="Username">">
+					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+					<input name="RequestType" type="hidden" id="RequestType" value="Loan">
+					<input name="DocumentType" type="hidden" id="DocumentType" value="Conference Proceedings">
+					<fieldset>
+						<legend><h1>Conference Proceedings Request</h1></legend>
+						<#STATUS>
+						<h2>Describe the item you want</h2>
+						
+
+						<label for="LoanTitle">
+						<span class="req">*</span>
+							<span class="<#ERROR name="ERRORLoanTitle">">Conference Name</span>
+								
+								
+							<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" >
+								<#PARAM name="LoanTitle"></textarea>
+						</label>
+
+
+
+
+						<label for="LoanPlace">
+						<span class="req">*</span>
+
+						
+                			<span class="<#ERROR name="ERRORLoanPlace">">Title of Proceedings</span>
+						</span>
+                		<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name" value="<#PARAM name="LoanPlace">"><br />
+                	</label>
+
+						
+						
+
+
+
+
+						<label for="LoanAuthor">
+						<span class="req">*</span>
+							<span class="<#ERROR name="ERRORLoanAuthor">">Editors</span>
+							<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
+						</label>
+
+						<label for="LoanPublisher">
+							<span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span>
+							<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
+						</label>
+
+						<label for="LoanPlace">
+							<span class="<#ERROR name="ERRORLoanPlace">">Place of Publication</span>
+							<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPlace">">
+						</label>
+
+						<label for="LoanDate">
+							<span class="<#ERROR name="ERRORLoanDate">">Place and Date of Conference</span>
+							<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
+						</label>
+
+
+						<label for="ISSN">
+							<span class="<#ERROR name="ERRORISSN">">ISBN (International Standard Book Number)</span>
+								
+							<span class="note">If given will speed request processing</span>
+							<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
+						</label>
+
+						
+
+						<label for="ESPNumber">
+							<span class="<#ERROR name="ERRORESPNumber">">OCLC (WorldCatAccession) Number</span>
+							<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
+						</label>
+
+						<label for="NotWantedAfter">
+							<span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span>
+							<span class="note">(MM/DD/YYYY)</span>
+							<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
+						</label>
+
+						<label for="AcceptNonEnglish">
+							<span class="<#ERROR name="ERRORAcceptNonEnglish">">Will you accept the item in a language other than English?</span>
+								
+							<span class="note">If yes, specify acceptable languages in the notes field.</span>
+							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
+								<option selected>
+									<#PARAM name="AcceptNonEnglish"></option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</label>
+
+						<label for="AcceptAlternateEdition">
+							<span class="<#ERROR name="ERRORAcceptAlternateEdition">">Will you accept an alternate edition of this item?</span>
+							<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" >
+								<option selected>
+									<#PARAM name="AcceptAlternateEdition"></option>
+								<option>No</option>
+								<option>Yes</option>
+							</select>
+						</label>
+
+						
+
+						<label for="Notes">
+							<span class="<#ERROR name="ERRORNotes">">Notes</span>
+								
+							<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" >
+								<#PARAM name="Notes"></textarea>
+						</label>
+						
+						<label for="Wantedby">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORWantedby">">If we cannot obtain the material by the date listed 
+			above, should we continue to try and for how long?</span><br />
+							<span class="note">Select a reason from the list on the right.</span>
+						</span>
+					<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name"> 
+						<option selected><#PARAM name="WantedBy"></option>
+							<option>Yes, until the semester's end</option>
+							<option>Yes, until this academic year's end</option>
+							<option>Yes, indefinitely</option>
+							<option>No, please cancel the request</option>	
+						</select><br />
+					</label>
+						
+
+						<#INCLUDE filename="include_request_cited.html">
+						<#INCLUDE filename="include_request_buttons.html"></fieldset>
+				</form>
+			</main>
+		</section>
+	</div>
+	<#INCLUDE filename="include_footer.html">
+</body>
+</html>
