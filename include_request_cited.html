@@ -2,29 +2,26 @@
 					
 <label for="CitedIn">
 	<span class="field">
-		<span class="<#ERROR name="ERRORCitedIn">">Where did you find this item cited?</span>
-		<span class="note">Examples are Dissertation Abstracts, Dialog (specify which database), or a specific journal or book.</span>
+		<span class="<#ERROR name="ERRORCitedIn">"><b>Where did you find this item cited?</b></span><br />
+
+		<span class="note">Examples are WorldCat, Science Direct, Google Books, or a specific journal or book.</br><font size=1><font color="#CC0000">This note field contains a maximum of 34 characters. Please use note field if pasting a URL.</font></font></span></span>
 	</span>
-	<textarea id="CitedIn" name="CitedIn" rows="2" cols="40" class="f-name" ><#PARAM name="CitedIn"></textarea>
+	<textarea id="CitedIn" name="CitedIn" rows="2" cols="40" class="f-name" tabindex="40"><#PARAM name="CitedIn"></textarea><br />
 </label>
 
-<label for="CitedDate">
-	<span class="field">
-		<span class="<#ERROR name="ERRORCitedDate">">Date of the work that cited the item.</span>
-	</span>
-	<input id="CitedDate" name="CitedDate" type="text" size="40" class="f-name"  value="<#PARAM name="CitedDate">">						
-</label>
-
-<label for="CitedVolume">
-	<span class="field">
-		<span class="<#ERROR name="ERRORCitedVolume">">Volume number of the work that cited the item.</span>
-	</span>
-	<input id="CitedVolume" name="CitedVolume" type="text" size="40" class="f-name"  value="<#PARAM name="CitedVolume">">						
-</label>
 
 <label for="CitedPages">
 	<span class="field">
-		<span class="<#ERROR name="ERRORCitedPages">">Pages where the item is cited.</span>
+	<span class="req">*</span>
+	<span class="<#ERROR name="ERRORCitedPages">"><b>Why are you making this request?</b></span>
 	</span>
-	<input id="CitedPages" name="CitedPages" type="text" size="40" class="f-name"  value="<#PARAM name="CitedPages">">						
+	<select id="CitedPages" name="CitedPages" type="text" size="1" class="f-name" tabindex="41"> 
+		<option selected><#PARAM name="CitedPages"></option>
+							<option>Princeton does not own this item </option>
+							<option>Item's status is missing or lost in the Main Catalog </option>
+							<option>Princeton owns this title, but lacks the volume/issue I need </option>
+							<option>Princeton owns this title, but it is checked out </option>
+							<option>Item's status is on order in the Main Catalog </option>
+
+						</select><br />				
 </label>
