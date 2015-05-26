@@ -5,21 +5,16 @@
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-a">
-	<header role="banner">
-		<h1 class="site-name">ILLiad</h1>
-		<div id="status">
-			By pressing the button below, you acknowledge and agree to all of the terms and conditions below. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading this information, you can press the "First Time Users Click Here" button below.
-		</div>
-	</header>
-	<div id="content-wrap" class="panel-display--three_nine l-page">
+	<#INCLUDE filename="include_header.html">
+	<div id="content-wrap" class="single-region l-page">
 		<section class="l-main">
-			<main role="main" class="three_nine-region--second">
+			<main role="main" class="single-region--middle">
 				<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
 					<input type="hidden" name="ILLiadForm" value="Logon">
 					<#FORMSTATE>
 					<div id="logonform">
 						<fieldset>
-							<legend>First Time User Registration for Interlibrary Loan</legend>
+							<legend><h1>First Time User Registration for Interlibrary Loan</h1></legend>
 
 							<p>
 								To request an item through Interlibrary Loan, you must first identify yourself to the library's ILLiad system. To do this you fill out a registration form using your Web browser.
@@ -73,13 +68,12 @@
 							<h2>ILLiad FAQ (Frequently Asked Questions)</h2>
 							<p>
 								Before registering, you may wish to read the ILLiad
-								<a href="FAQ.html" target="_self">FAQ</a>
+								<a href="http://library.princeton.edu/services/interlibrary-services/user-faq">FAQ</a>
 								. The FAQ may answer other questions you have about the ILLiad interlibrary loan system.
 							</p>
 
 							<p>
-								By pressing this button you acknowledge and agree to all of the terms and conditions above. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading
-					   this information, you can press the &quot;First Time Users Click Here&quot; button to continue.
+								By pressing this button you acknowledge and agree to all of the terms and conditions above. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading this information, you can press the &quot;First Time Users Click Here&quot; button to continue.
 							</p>
 
 							<div class="f-submit-wrap">

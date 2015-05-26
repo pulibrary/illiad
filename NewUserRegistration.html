@@ -5,9 +5,9 @@
 </head>
 <body id="type-a">
 	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
+	<div id="content-wrap" class="single-region l-page">
 		<section class="l-main">
-			<main role="main" class="three_nine-region--second">
+			<main role="main" class="single-region--middle">
 				<form action="illiad.dll" method="post" name="Registration" class="f-wrap-request">
 					<input type="hidden" name="ILLiadForm" value="Registration">
 					<#FORMSTATE>
@@ -15,7 +15,7 @@
 						Indicates required field
 					</div>
 					<fieldset>
-						<legend>New User Registration for ILLiad</legend>
+						<legend><h1>New User Registration for ILLiad</h1></legend>
 						<label for="FirstName">
 							<span class="field">
 								<span class="req">*</span>
@@ -302,7 +302,6 @@
 
 						<div class="f-submit-wrap" align="right">
 							<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit"  />
-							<input type="reset" name="ResetButton" value="Clear Form" class="f-submit"  />
 							<input type="submit" name="SubmitButton" value="Cancel - Exit ILLiad System" class="f-submit"  />
 						</div>
 					</fieldset>
