@@ -18,7 +18,7 @@
 						<legend>Edit Conference Paper Request</legend>
 						<#STATUS>
 						<h2>Describe the item you want</h2>
-						<div class="req">* Indicates required field</div>
+						<div class="req"><span class="req">*</span> Indicates required field</div>
 						<label for="PhotoJournalTitle">
 							<span class="field">
 								<span class="req">*</span>
@@ -143,10 +143,8 @@
 								<span class="note">If yes, specify acceptable languages in the notes field.</span>
 							</span>
 							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="AcceptNonEnglish"></option>
+								<option selected>Yes</option>
 								<option>No</option>
-								<option>Yes</option>
 							</select>
 						</label>
 

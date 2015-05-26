@@ -22,7 +22,7 @@
 						<legend><h1>Article Express Request</h1></legend>
 						<#STATUS>
 						<h2>Describe the item you want</h2>
-						<div class="req">* Indicates required field</div>
+						<div class="req"><span class="req">*</span> Indicates required field</div>
 						<label for="PhotoJournalTitle">
 							<span class="field">
 								<span class="req">*</span>
@@ -134,8 +134,6 @@
 								
 							</span>
 							<input id="CitedTitle" name="CitedTitle" type="text" size="20" class="f-name" value="<#PARAM name="CitedTitle">">
-				
-							</select>
 						</label>
 
 						<label for="NotWantedAfter">
@@ -161,9 +159,7 @@
 								<span class="note">Some requests may take longer due to item availability</span>
 							</span>
 							<select id="WantedBy" name="WantedBy" size="1" class="f-name">
-							<option selected>YES!</option>
-									<#PARAM name="WantedBy"></option>
-								
+								<option selected>YES!</option>
 								<option>No, I need it faster than that.</option>
 							</select>	
 						</label>
@@ -179,13 +175,9 @@
 							</span>
 							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
 								<option selected>Yes</option>
-									<#PARAM name="AcceptNonEnglish"></option>
 								<option>No</option>
-				
 							</select>
 						</label>
-
-						
 
 						<label for="Notes">
 							<span class="field">

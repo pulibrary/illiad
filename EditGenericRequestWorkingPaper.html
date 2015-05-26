@@ -22,7 +22,7 @@
 						<legend><h1>Edit Working Paper Request</h1></legend>
 						<#STATUS>
 						<h2>Describe the item you want</h2>
-						<div class="req">* Indicates required field</div>
+						<div class="req"><span class="req">*</span> Indicates required field</div>
 						<label for="PhotoArticleAuthor">
 							<span class="field">
 								<span class="<#ERROR name="ERRORPhotoArticleAuthor">">
@@ -97,9 +97,7 @@
 								<span class="note">Some requests may take longer due to item availability</span>
 							</span>
 							<select id="WantedBy" name="WantedBy" size="1" class="f-name">
-							<option selected>YES!</option>
-									<#PARAM name="WantedBy"></option>
-								
+								<option selected>YES!</option>
 								<option>No, I need it faster than that.</option>
 							</select>	
 						</label>
@@ -115,9 +113,7 @@
 							</span>
 							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
 								<option selected>Yes</option>
-									<#PARAM name="AcceptNonEnglish"></option>
 								<option>No</option>
-				
 							</select>
 						</label>
 

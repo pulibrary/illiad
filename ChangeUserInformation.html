@@ -18,7 +18,7 @@
 					<#FORMSTATE>
 					<fieldset>
 						<legend><h1>Change Personal Information</h1></legend>
-						<div class="req">* Indicates required field</div>
+						<div class="req"><span class="req">*</span> Indicates required field</div>
 						<label for="FirstName">
 							<span class="field">
 								<span class="req">*</span>
@@ -55,9 +55,7 @@
 								</span>
 							</span>
 							<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name">
-								<option selected>
-									<#PARAM name="NotifyGroup"></option>
-								<option>Phone</option>
+								<option selected>Phone</option>
 								<option>E-Mail</option>
 							</select>
 						</label>
@@ -88,10 +86,8 @@
 									Preferred Article Delivery Method
 								</span>
 							</span>
-							<select id="ArticleDeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="DeliveryGroup"></option>
-								<option>Hold for Pickup</option>
+							<select id="ArticleDeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >								
+								<option selected>Hold for Pickup</option>
 								<option>Mail to Address</option>
 							</select>
 						</label>
@@ -103,9 +99,7 @@
 								</span>
 							</span>
 							<select id="LoanDeliveryGroup" name="LoanDeliveryGroup" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="LoanDeliveryGroup"></option>
-								<option>Hold for Pickup</option>
+								<option selected>Hold for Pickup</option>
 								<option>Mail to Address</option>
 							</select>
 						</label>
@@ -117,9 +111,7 @@
 								</span>
 							</span>
 							<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="WebDeliveryGroup"></option>
-								<option>Yes</option>
+								<option selected>Yes</option>
 								<option>No</option>
 							</select>
 						</label>
