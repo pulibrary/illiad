@@ -165,7 +165,7 @@ function illplus_requests() {
 					result += view + " | " + cancel; break;
 				case "Checked out to you":
 					result += view + " | " + renew; break;
-				case "In HBLL processing":
+				case "In processing":
 					result += view; break;
 				case "Available for download":
 					result += view + " | " + download + " | " + deleteDownload; break;

@@ -1,14 +1,13 @@
-<ul id="nav" class="nav">
+<div class="active button--logoff">
+	<a href="<#ACTION action="99">">Logoff
+		<#PARAM name="Username"></a>
+</div>
+<ul id="nav" class="nav ac-container">
 	<li class="active">
-		<a href="<#ACTION action="99">" class="nav-group">Logoff
-			<#PARAM name="Username"></a>
-	</li>
-	<li class="active">
-		<a href="<#ACTION action="10" form="10">" class="nav-group">ILLiad Home</a>
-	</li>
-	<li class="active">
-		<a href="#" class="nav-group">Article Express Request</a>
-		<ul>
+		<input type="radio" id="ac-1" name="accordion-1">
+		<label for="ac-1">Article Express Request</label>
+		<!-- <a href="#" class="nav-group">Article Express Request</a> -->
+		<ul class="ac-group li-2">
 			<li>
 				<a href="<#ACTION action="10" form="20" value="GenericRequestArticleRequest">">Article, Book Chapter, or Conference Paper</a>
 			</li>
@@ -17,8 +16,10 @@
 			</li>
 		</ul>
 	<li class="active">
-		<a href="#" class="nav-group">Interlibrary Loan Request</a>
-		<ul>
+		<!-- <a href="#" class="nav-group">Interlibrary Loan Request</a> -->
+		<input type="radio" id="ac-2" name="accordion-1">
+		<label for="ac-2">Interlibrary Loan Request</label>
+		<ul class="ac-group li-7">
 			<li>
 				<a href="<#ACTION action="10" form="21">">Book, Journal, or Proceedings Loan</a>
 			</li>
@@ -44,8 +45,10 @@
 		</ul>
 	</li>
 	<li class="active">
-		<a href="#" class="nav-group">View</a>
-		<ul>
+		<!-- <a href="#" class="nav-group">View</a> -->
+		<input type="radio" id="ac-3" name="accordion-1">
+		<label for="ac-3">View Status</label>
+		<ul class="ac-group li-6">
 			<!-- <li class="first">
 				<a href="<#ACTION action="10" form="62">">Outstanding Requests</a>
 			</li> -->
@@ -70,8 +73,10 @@
 		</ul>
 	</li>
 	<li class="active">
-		<a href="#" class="nav-group">Tools</a>
-		<ul>
+		<!-- <a href="#" class="nav-group">Tools</a> -->
+		<input type="radio" id="ac-4" name="accordion-1">
+		<label for="ac-4">Tools</label>
+		<ul class="ac-group li-3">
 			<li class="first">
 				<a href="<#ACTION action="10" form="81">">Change User Information</a>
 			</li>
@@ -85,5 +90,8 @@
 	</li>
 	<li class="active">
 		<a href="http://library.princeton.edu/services/borrowdirect" target="_blank" class="nav-group">Borrow Direct</a>
+	</li>
+	<li class="active">
+		<a href="<#ACTION action="10" form="10">" class="nav-group">ILLiad Home</a>
 	</li>
 </ul>
