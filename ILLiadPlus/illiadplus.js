@@ -210,7 +210,7 @@ function illplus_requests() {
 				if(records[i].section == section) {
 					result += "<li id='" + records[i].id + "' class='ill_request'>";
 					result += "<div class='ill_type " + records[i].typeClass + "'>" + records[i].type + "</div>";
-					result += "<h3><a href='illiad.dll?Action=10&Form=63&Value=" + records[i].id + "'>" + records[i].title + "</a></h3>";
+					result += "<p class='record--title'><a href='illiad.dll?Action=10&Form=63&Value=" + records[i].id + "'>" + records[i].title + "</a></p>";
 					if(records[i].author.trim() !== "") {
 						result += "<div class='ill_request_author'>by <strong>" + records[i].author + "</strong></div>";
 					} else { }
@@ -297,6 +297,80 @@ function illplus_requests() {
 		} else if (formNumber == 66) {  // canceled items
 
 			appendSection("checkedout");
+
+		} else if (formNumber == 60) { // main menu
+
+			appendSection("checkedout");
+			appendSection("available");
+			appendSection("inprocess");
+			appendSection("cancelled");
+
+			var html = "";
+
+			html += '<ul>';
+			html += '<li><a class="selected" href="#all">Total Requests</a></li>';
+			html += '<li><a href="#checkedout">Checked Out</a></li>';
+			html += '<li><a href="#available">Available</a></li>';
+			html += '<li><a href="#inprocess">In Process</a></li>';
+			html += '<li><a href="#cancelled">Cancelled</a></li>';
+			html += '</ul>';
+
+			$("nav#ill_filters").prepend(html);
+
+			// Count requests and show number in Total filter
+			$("#ill_filters a[href='#all']").prepend("<strong>" + count + "</strong> ");
+
+			// Count requests for each section and show in respective filter
+			$("#ill_requests .ill_requests").each(function() {
+				var id = $(this).attr("id");
+				var num = $(this).find("li").length;
+				$("#ill_filters a[href='#" + id + "']").prepend("<strong>" + num + "</strong> ");
+			});
+
+			// Filter sections by filter buttons
+			$("#ill_filters a").click(function() {
+
+				var section = $(this).attr("href");
+
+				if (!$(this).hasClass("selected")) {
+					$("#ill_filters a").removeClass("selected");
+					$(this).addClass("selected");
+					
+					if (section != "#all") {
+						$("#ill_requests section").hide();
+						$("#ill_requests " + section).show();
+					} else {
+						$("#ill_requests .ill_requests").show();
+					}
+				}
+
+				return false;
+			});
+
+			// Confirm cancel link
+			$(".cancel_link").click(function() {
+				var conf = confirm('Are you sure you want to cancel this request?\nClick OK to continue with cancellation.');
+				if (conf === true) {
+					return true;
+				} else {
+					return false;
+				}
+			});
+
+			// Highlight added item
+			if ($("#status span").has("a").length) {
+				var status = $('#status span').text();
+				var statusRequestNumber = status.match(/\d{7}/)[0];
+
+				$(".ill_request").each(function() {
+					var requestNumber = $(this).attr('id');
+
+					if(statusRequestNumber == requestNumber) {
+						$(this).addClass('highlight');
+					}
+				});
+			}
+
 
 		} else { // main menu
 
