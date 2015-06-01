@@ -20,9 +20,7 @@
 						<legend><h1>Thesis Request</h1></legend>
 						<#STATUS>
 						<h2>Describe the item you want</h2>
-						<div class="req"> *
-							Indicates required field
-						</div>
+						<div class="req"><span class="req">*</span> Indicates required field</div>
 						<label for="LoanTitle">
 							<span class="field">
 								<span class="req">*</span>
@@ -31,9 +29,7 @@
 								
 								<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 							</span>
-							<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" >
-								<#PARAM name="LoanTitle">
-							</textarea>
+							<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" ><#PARAM name="LoanTitle"></textarea>
 						</label>
 
 						<label for="LoanAuthor">
@@ -109,21 +105,9 @@
 								<span class="note">If yes, specify acceptable languages in the notes field.</span>
 							</span>
 							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="AcceptNonEnglish"></option>
+								<option selected>Yes</option>
 								<option>No</option>
-								<option>Yes</option>
 							</select>
-						</label>
-
-						<label for="AccountNo">
-							<span class="field">
-								<span class="<#ERROR name="ERRORAccountNo">">
-									Account Number
-								</span>
-							</span>
-							<select id="AccountNo" name="AccountNo" size="1" class="f-name" >
-								<#OPTION name="ValidAccounts"></select>
 						</label>
 
 						<label for="Notes">
@@ -135,8 +119,7 @@
 									Put any information here that may help us find the item, as well as any other pertinent information.
 								</span>
 							</span>
-							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" >
-								<#PARAM name="Notes"></textarea>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" ><#PARAM name="Notes"></textarea>
 						</label>
 
 						<#INCLUDE filename="include_request_cited.html">

@@ -17,13 +17,11 @@
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 					<input type="hidden" name="RequestType" type="hidden" value="Article">
 					<input type="hidden" name="DocumentType" type="hidden" value="ArticleExpress">
-					<div class="req"> *
-						Indicates required field
-					</div>
 					<fieldset>
 						<legend><h1>Edit Article Express Request</h1></legend>
 						<#STATUS>
 						<h2>Describe the item you want</h2>
+						<div class="req"><span class="req">*</span> Indicates required field</div>
 						<label for="PhotoJournalTitle">
 							<span class="field">
 								<span class="req">*</span>
@@ -56,8 +54,7 @@
 									Article Title
 								</span>
 							</span>
-							<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name">
-								<#PARAM name="PhotoArticleTitle"></textarea>
+							<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoArticleTitle"></textarea>
 						</label>
 						
 						<label for="PhotoArticleAuthor">
@@ -68,9 +65,6 @@
 							</span>
 							<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" value="<#PARAM name="PhotoArticleAuthor">">
 						</label>
-
-
-
 
 						<label for="PhotoJournalVolume">
 							<span class="field">
@@ -137,8 +131,6 @@
 								
 							</span>
 							<input id="CitedTitle" name="CitedTitle" type="text" size="20" class="f-name" value="<#PARAM name="CitedTitle">">
-				
-							</select>
 						</label>
 
 						<label for="NotWantedAfter">
@@ -164,9 +156,7 @@
 								<span class="note">Some requests may take longer due to item availability</span>
 							</span>
 							<select id="WantedBy" name="WantedBy" size="1" class="f-name">
-							<option selected>YES!</option>
-									<#PARAM name="WantedBy"></option>
-								
+								<option selected>YES!</option>
 								<option>No, I need it faster than that.</option>
 							</select>	
 						</label>
@@ -182,9 +172,7 @@
 							</span>
 							<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
 								<option selected>Yes</option>
-									<#PARAM name="AcceptNonEnglish"></option>
 								<option>No</option>
-				
 							</select>
 						</label>
 
@@ -200,9 +188,7 @@
 									Put any information here that may help us find the item, as well as any other pertinent information.
 								</span>
 							</span>
-							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name">
-								<#PARAM name="Notes">
-							</textarea>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name"><#PARAM name="Notes"></textarea>
 						</label>
 
 						<#INCLUDE filename="include_request_citedarticle.html">

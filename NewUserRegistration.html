@@ -5,17 +5,16 @@
 </head>
 <body id="type-a">
 	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
+	<div id="content-wrap" class="single-region l-page">
 		<section class="l-main">
-			<main role="main" class="three_nine-region--second">
+			<main role="main" class="single-region--middle">
 				<form action="illiad.dll" method="post" name="Registration" class="f-wrap-request">
 					<input type="hidden" name="ILLiadForm" value="Registration">
 					<#FORMSTATE>
-					<div class="req"> *
-						Indicates required field
-					</div>
+					
 					<fieldset>
-						<legend>New User Registration for ILLiad</legend>
+						<legend><h1>New User Registration for ILLiad</h1></legend>
+						<div class="req"><span class="req">*</span> Indicates required field</div>
 						<label for="FirstName">
 							<span class="field">
 								<span class="req">*</span>
@@ -52,9 +51,7 @@
 								</span>
 							</span>
 							<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="NotifyGroup"></option>
-								<option>Phone</option>
+								<option selected>Phone</option>
 								<option>E-Mail</option>
 							</select>
 						</label>
@@ -86,9 +83,7 @@
 								</span>
 							</span>
 							<select id="DeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="DeliveryGroup"></option>
-								<option>Hold for Pickup</option>
+								<option selected>Hold for Pickup</option>
 								<option>Mail to Address</option>
 							</select>
 						</label>
@@ -100,9 +95,7 @@
 								</span>
 							</span>
 							<select id="DeliveryGroup" name="LoanDeliveryGroup" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="LoanDeliveryGroup"></option>
-								<option>Hold for Pickup</option>
+								<option selected>Hold for Pickup</option>
 								<option>Mail to Address</option>
 							</select>
 						</label>
@@ -114,9 +107,7 @@
 								</span>
 							</span>
 							<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" >
-								<option selected>
-									<#PARAM name="WebDeliveryGroup"></option>
-								<option>Yes</option>
+								<option selected>Yes</option>
 								<option>No</option>
 							</select>
 						</label>
@@ -251,8 +242,7 @@
 									An ID will be REQUIRED to pick items up.
 								</span>
 							</span>
-							<textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" >
-								<#PARAM name="AuthorizedUsers"></textarea>
+							<textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" ><#PARAM name="AuthorizedUsers"></textarea>
 						</label>
 
 						<label for="NVTGC">
@@ -303,7 +293,6 @@
 
 						<div class="f-submit-wrap" align="right">
 							<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit"  />
-							<input type="reset" name="ResetButton" value="Clear Form" class="f-submit"  />
 							<input type="submit" name="SubmitButton" value="Cancel - Exit ILLiad System" class="f-submit"  />
 						</div>
 					</fieldset>

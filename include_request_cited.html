@@ -2,26 +2,23 @@
 					
 <label for="CitedIn">
 	<span class="field">
-		<span class="<#ERROR name="ERRORCitedIn">"><b>Where did you find this item cited?</b></span><br />
-
-		<span class="note">Examples are WorldCat, Science Direct, Google Books, or a specific journal or book.</br><font size=1><font color="#CC0000">This note field contains a maximum of 34 characters. Please use note field if pasting a URL.</font></font></span></span>
+		<span class="<#ERROR name="ERRORCitedIn">">Where did you find this item cited?</span>
+		<span class="note">Examples are WorldCat, Science Direct, Google Books, or a specific journal or book.<span class="note-warning">This note field contains a maximum of 34 characters.</span></span>
 	</span>
-	<textarea id="CitedIn" name="CitedIn" rows="2" cols="40" class="f-name" tabindex="40"><#PARAM name="CitedIn"></textarea><br />
+	<textarea id="CitedIn" name="CitedIn" rows="2" cols="40" class="f-name"><#PARAM name="CitedIn"></textarea>
 </label>
 
 
 <label for="CitedPages">
 	<span class="field">
 	<span class="req">*</span>
-	<span class="<#ERROR name="ERRORCitedPages">"><b>Why are you making this request?</b></span>
+	<span class="<#ERROR name="ERRORCitedPages">">Why are you making this request?</span>
 	</span>
-	<select id="CitedPages" name="CitedPages" type="text" size="1" class="f-name" tabindex="41"> 
-		<option selected><#PARAM name="CitedPages"></option>
-							<option>Princeton does not own this item </option>
-							<option>Item's status is missing or lost in the Main Catalog </option>
-							<option>Princeton owns this title, but lacks the volume/issue I need </option>
-							<option>Princeton owns this title, but it is checked out </option>
-							<option>Item's status is on order in the Main Catalog </option>
-
-						</select><br />				
+	<select id="CitedPages" name="CitedPages" type="text" size="1" class="f-name"> 
+		<option selected>Princeton does not own this item </option>
+		<option>Item's status is missing or lost in the Main Catalog </option>
+		<option>Princeton owns this title, but lacks the volume/issue I need </option>
+		<option>Princeton owns this title, but it is checked out </option>
+		<option>Item's status is on order in the Main Catalog </option>
+	</select>				
 </label>
