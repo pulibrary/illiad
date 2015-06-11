@@ -5,28 +5,26 @@
 </head>
 <body id="type-b">
 	<#INCLUDE filename="include_header.html">
-	<section class="panel-display--three_nine l-page">
+	<div id="content-wrap" class="panel-display--three_nine l-page">
 		<section class="l-main">
 			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
 				<#INCLUDE filename="include_menu.html">
 			</nav>
 			<main role="main" class="three_nine-region--second">
 				<div id="ill_requests">
-					
 					<h1>Outstanding Requests</h1>
 
 					<nav id="ill_filters"></nav>
 
-					<script type="text/javascript"> illplus_requests(); </script>
+				    <script type="text/javascript"> illplus_requests(); </script>
 
 					<section class="tabledata">
-						<#TABLE name="ViewOutstandingRequests" noDataAction="ShowMessageRow" noDataMessage="No Requests" 
-					 column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+						<#TABLE name="ViewAllRequests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
 					</section>
 				</div>
 			</main>
 		</section>
-	</section>
+	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>
 </html>

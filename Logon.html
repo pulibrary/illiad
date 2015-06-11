@@ -10,75 +10,18 @@
 
 	<link rel="stylesheet" type="text/css" href="css/pul-base.normalize.css" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="css/pul-base.illiad.min.css" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="only screen and (max-device-width: 480px)" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.16.custom.css" />
-	<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" href="ILLiadPlus/illiadplus.css" type="text/css" /> 
+	<link rel="stylesheet" href="css/style.css">
 
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/illiad.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+	 
+	<!-- <script type="text/javascript" src="js/illiad.js"></script> -->
+	<script type="text/javascript" src="ILLiadPlus/illiadplus.js"></script>
+
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
 	<![endif]-->
-	<style>
-#nav > li {
-	font-size: 1.1rem;
-	font-weight: bold;
-	padding: 0.5em 0;
-}
-
-#nav > li > ul {
-	font-weight: normal;
-	font-size: 0.9rem;
-	padding: 1em 0 0 1em;
-}
-
-.site-title--child {
-	font-size: 2em;
-}
-
-#searchType {
-	padding: 0;
-	background: none;
-	border: none;
-}
-
-#searchType label {
-	display: inline;
-}
-
-fieldset {
-	background: none;
-	border: none;
-	padding: 0;
-}
-
-fieldset legend {
-	margin-bottom: 1.25em;
-}
-
-.row-header th {
-	font-size: 1.7em;
-	font-weight: normal;
-	padding: 0 0 1em 0;
-}
-
-table {
-	margin: 0;
-}
-.hidden {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-}
-.six_six-region--first form {
-	margin-top: 1.25em;
-}
-</style>
 </head>
 <body id="type-a">
 	<header role="banner" class="wrapper--branding">
@@ -195,22 +138,20 @@ table {
 				<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
 					<input type="hidden" name="ILLiadForm" value="Logon">
 					<div id="logonform">
-						<fieldset>
-							<legend><h1>Login To Your Account</h1></legend>
-							<label for="username">
-								<span class="field"> Username
-								</span>
-								<input id="username" name="Username" type="text" class="f-name" />
-							</label>
-							<label for="password">
-								<span class="field"> Password
-								</span>
-								<input id="password" name="Password" type="password" class="f-name" />
-							</label>
-							<div class="f-submit-wrap">
-								<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" />
-							</div>
-						</fieldset>
+						<h1>Login To Your Account</h1>
+						<label for="username">
+							<span class="field"> Username
+							</span>
+							<input id="username" name="Username" type="text" class="f-name" />
+						</label>
+						<label for="password">
+							<span class="field"> Password
+							</span>
+							<input id="password" name="Password" type="password" class="f-name" />
+						</label>
+						<div class="f-submit-wrap">
+							<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" />
+						</div>
 					</div>
 				</form>
 				<a href="illiad.dll?Action=10&Form=84">Forgot Password?</a> | <a href="illiad.dll?Action=10&Form=79">First Time Users</a>
