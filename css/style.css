@@ -87,16 +87,16 @@
 	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
 }
 .ac-container input:checked ~ .ac-group.li-2{
-	height: 124px;
+	height: auto;
 }
 .ac-container input:checked ~ .ac-group.li-3{
-	height: 176px;
+	height: auto;
 }
 .ac-container input:checked ~ .ac-group.li-6{
-	height: 312px;
+	height: auto;
 }
 .ac-container input:checked ~ .ac-group.li-7{
-	height: 364px;
+	height: auto;
 }
 
 a.nav-group:link, a.nav-group:visited {
@@ -126,7 +126,7 @@ a.nav-group:hover {
 .button--logoff {
 	margin-bottom: 1em;
 }
-fieldset {
+form {
 	position: relative;
 }
 .three_nine-region--second label {
@@ -227,6 +227,7 @@ input[type=submit]:hover, .search-bar .f-submit:hover:not(:disabled) {
 .notification-detail tr > td:first-child,
 .transaction-table tr > td:first-child {
 	font-weight: bold;
+	padding-right: 1em;
 }
 .notification-detail table,
 .transaction-table table,
@@ -249,4 +250,115 @@ input[type=submit]:hover, .search-bar .f-submit:hover:not(:disabled) {
 }
 p.record--title {
 	margin: 0;
+}
+
+.statusError, .validationError {
+	color: red;
+	font-weight: bold;
+}
+.statusNormal {
+	display: none;
+}
+
+.nav {
+  text-align: left;
+  /*width: 234px;*/
+  list-style: none;
+  padding: 0px;
+  position: relative;
+  border: 1px solid #ddd;
+  /*font-family: 'Droid Serif', serif;*/
+  border-radius: 3px;
+  margin-bottom: 2em;
+}
+.nav-group {
+	font-weight: bold;
+	color: white;
+	background: #477adc;
+	font-family: 'Droid Serif', serif;
+}
+
+.nav a {
+  display: block;
+  font-size: 14px;
+  padding: 15px 5px 15px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav > li > ul > li > a, .nav-group{
+  /*border-left: 4px solid #f1f1f1;*/
+}
+
+.nav > li > ul > li > a:hover {
+  /*border-left: 4px solid blue;*/
+  background: #f5f4f1;
+}
+
+.arrow {
+  float: right;
+  padding: 0px 10px
+}
+
+.site-title--child {
+	font-size: 2em;
+}
+
+#searchType {
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+#searchType label {
+	display: inline;
+}
+
+fieldset {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.row-header th {
+	font-size: 1.7em;
+	font-weight: normal;
+	padding: 0 0 1em 0;
+}
+
+table {
+	margin: 0;
+}
+.hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+.six_six-region--first form {
+	margin-top: 1.25em;
+}
+h1 {
+	margin-bottom: 1.75rem;
+	font-size: 1.75em;
+}
+.ill_requests {
+	margin-bottom: 1.75em;
+}
+
+aside h2 {
+	margin-top: 0;
+	font-size: 1.75em;
+}
+
+.search-bar {
+	margin-top: 1.75em;
+}
+section.ill_requests li:nth-child(even) {
+	background: #f1f1f1;
+}
+label {
+	font-weight: normal;
 }

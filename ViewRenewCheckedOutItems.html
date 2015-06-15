@@ -13,12 +13,17 @@
 			<main role="main" class="three_nine-region--second">
 				<div id="ill_requests">
 				    <h1>Checked Out Items</h1>
+				    <p>If the lending library grants renewals for this item, the Renewal link will only appear once. For subsequent renewals or questions please email <a href="mailto:ILSBorr@princeton.edu">ILSBorr@princeton.edu</a>.</p>
 
 				    <script type="text/javascript"> illplus_requests(); </script>
 
-				    <section class="tabledata">
-						<#TABLE name="ViewRenewCheckedOutItems" >
-					</section>
+				    <!-- <section class="tabledata">
+						<#TABLE name="ViewRenewCheckedOutItems" noDataAction="ShowMessageRow" noDataMessage="No Items">
+					</section> -->
+					<section class="tabledata">
+				        <h2 id="#checkedout">Checked Out Items</h2>
+				        <#TABLE name="ViewRenewCheckedOutItems" column="TransactionNumber:Request #" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status" column="DueDate:Due Date" orderBy="DueDate ASC">
+				    </section>
 				</div>
 			</main>
 		</section>

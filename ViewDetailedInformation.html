@@ -11,16 +11,17 @@
 				<#INCLUDE filename="include_menu.html">
 			</nav>
 			<main role="main" class="three_nine-region--second">
+				<h1>Detailed Transaction Information</h1>
 				<#MENU name="transaction" separator="|">
-				<div class="default-table">
-					<#TABLE name="DetailedInformation" headerText="Transaction Information" hideColumnHeaders="true">
+				<div class="default-table transaction-table">
+					<#TABLE name="DetailedInformation" hideColumnHeaders="true">
 				</div>
 
-				<div class="default-table">
+				<div class="default-table notes-table">
 					<#TABLE name="NotesInformation" headerText="Notes" noDataAction="ShowMessageRow" noDataMessage="No Notes" column="NoteDate:Date/Time" column="AddedBy:Added By" column="Note">
 				</div>
 
-				<div class="default-table">
+				<div class="default-table tracking-table">
 					<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking" 
 			 column="DateTime:Date/Time" column="ChangedTo:Status" column="ChangedBy:Changed By">
 				</div>

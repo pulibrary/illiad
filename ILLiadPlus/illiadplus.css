@@ -17,7 +17,7 @@
 .ill_requests .ill_request h3						{ margin: 0 0 3px; line-height: 1; white-space: nowrap; }
 .ill_requests .ill_request b						{ color: #555; font-weight: normal; font-style: normal; margin-left: 2px; }
 
-.ill_requests .ill_request .ill_type				{ position: absolute; top: 14px; left: 6px; bottom: 0; width: 58px; padding: 36px 0 0; background-image: url(images/other.png); background-repeat: no-repeat; background-position: center 0; color: #999; line-height: 1.2em; text-align: center; font-size: 9px; }
+.ill_requests .ill_request .ill_type				{ position: absolute; top: 14px; left: 6px; bottom: 0; width: 58px; padding: 36px 0 0; background-image: url(images/other.png); background-repeat: no-repeat; background-position: center 0; color: #000; line-height: 1.2em; text-align: center; font-size: 9px; }
 
 .ill_requests .ill_request .ill_type.book,
 .ill_requests .ill_request .ill_type.bookchapter	{ background-image: url(images/book.png); }
@@ -39,7 +39,7 @@
 .ill_requests .ill_request_options a:hover			{ color: #999; }
 .ill_requests .ill_request_status					{ font-weight: bold; color: #aaa; border-left: 4px solid #bbb; padding: 0 0 0 5px; width: 160px; display: inline-block; }
 
-.ill_requests#checkedout .ill_request_status		{ border-color: #D8C7A7; color: #B9AA8D;  }
+.ill_requests#checkedout .ill_request_status		{ border-color: #D8C7A7; color: #89440a;  }
 .ill_requests#available .ill_request_status			{ border-color: #92BB33; color: #7C9E2C; }
 
 .ill_requests .ill_request_date						{ font-size: 11px; font-style: italic; text-align: right; color: #999; position: absolute; top: 11px; right: 0; z-index: 100; background: #fff; padding: 0 12px 0 40px; }
@@ -48,10 +48,11 @@
 .ill_requests .ill_request_number					{ color: #999; font-size: 10px; position: absolute; bottom: 10px; right: 12px; }
 
 
-#ill_requests #cancelled							{ background-color: #f9f9f9; }
-#ill_requests #cancelled h3 a						{ color: #888; }
-#ill_requests #cancelled .ill_request_author		{ color: #888; }
-#ill_requests #cancelled .ill_request_author b		{ color: inherit; }
+/*#ill_requests #cancelled							{ background-color: #f9f9f9; }*/
+/*#ill_requests #cancelled h3 a						{ color: #888; }*/
+/*#ill_requests #cancelled .ill_request_author		{ color: #888; }*/
+/*#ill_requests #cancelled .ill_request_author b		{ color: inherit; }*/
+#ill_requests #cancelled .ill_request_status 		{ color: #888; }
 
 
 #ill_filters										{ margin: 0; }

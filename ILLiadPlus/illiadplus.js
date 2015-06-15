@@ -372,78 +372,11 @@ function illplus_requests() {
 			}
 
 
-		} else { // main menu
+		} else {
 
 			appendSection("checkedout");
 			appendSection("available");
 			appendSection("inprocess");
-
-			var html = "";
-
-			html += '<ul>';
-			html += '<li><a class="selected" href="#all">Total Requests</a></li>';
-			html += '<li><a href="#checkedout">Checked Out</a></li>';
-			html += '<li><a href="#available">Available</a></li>';
-			html += '<li><a href="#inprocess">In Process</a></li>';
-			html += '</ul>';
-
-			$("nav#ill_filters").prepend(html);
-
-			// Count requests and show number in Total filter
-			$("#ill_filters a[href='#all']").prepend("<strong>" + count + "</strong> ");
-
-			// Count requests for each section and show in respective filter
-			$("#ill_requests .ill_requests").each(function() {
-				var id = $(this).attr("id");
-				var num = $(this).find("li").length;
-				$("#ill_filters a[href='#" + id + "']").prepend("<strong>" + num + "</strong> ");
-			});
-
-			// Filter sections by filter buttons
-			$("#ill_filters a").click(function() {
-
-				var section = $(this).attr("href");
-
-				if (!$(this).hasClass("selected")) {
-					$("#ill_filters a").removeClass("selected");
-					$(this).addClass("selected");
-					
-					if (section != "#all") {
-						$("#ill_requests section").hide();
-						$("#ill_requests " + section).show();
-					} else {
-						$("#ill_requests .ill_requests").show();
-					}
-				}
-
-				return false;
-			});
-
-			// Confirm cancel link
-			$(".cancel_link").click(function() {
-				var conf = confirm('Are you sure you want to cancel this request?\nClick OK to continue with cancellation.');
-				if (conf === true) {
-					return true;
-				} else {
-					return false;
-				}
-			});
-
-			// Highlight added item
-			if ($("#status span").has("a").length) {
-				var status = $('#status span').text();
-				var statusRequestNumber = status.match(/\d{7}/)[0];
-
-				$(".ill_request").each(function() {
-					var requestNumber = $(this).attr('id');
-
-					if(statusRequestNumber == requestNumber) {
-						$(this).addClass('highlight');
-					}
-				});
-			}
-
-
 		}
 
 		// Add "no requests" message to sections without items
