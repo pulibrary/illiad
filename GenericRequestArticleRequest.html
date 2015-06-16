@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-	<title>ILLiad - Article Request</title>
+	<title>ILLiad - Article Express Request</title>
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
@@ -11,13 +11,12 @@
 				<#INCLUDE filename="include_menu.html">
 			</nav>
 			<main role="main" class="three_nine-region--second">
-				<form action="illiad.dll" method="post" name="GenericREquestArticleRequest" class="f-wrap-request">
-					<input type="hidden" name="ILLiadForm" value="GenericRequestArticleRequest">
+				<form action="illiad.dll" method="post" name="ArticleRequest" class="f-wrap-request">
+					<input type="hidden" name="ILLiadForm" value="ArticleRequest">
 					<input type="hidden" name="Username" value="<#PARAM name="Username">">
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 					<input type="hidden" name="RequestType" type="hidden" value="Article">
 					<input type="hidden" name="DocumentType" type="hidden" value="ArticleExpress">
-					
 					<h1>Article Express Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
@@ -25,14 +24,13 @@
 					<label for="PhotoJournalTitle">
 						<span class="field">
 							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORPhotoJournalTitle">"> Title (Journal, Conference Proceedings, Anthology)
+							<span class="<#ERROR name="ERRORPhotoJournalTitle">"> Title of Journal or Book
 							</span>
 							
 							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 						</span>
-						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoJournalTitle"></textarea>
+						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" required><#PARAM name="PhotoJournalTitle"></textarea>
 					</label>
-
 
 					<label for="ISSN">
 						<span class="field">
@@ -45,12 +43,11 @@
 						<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" value="<#PARAM name="ISSN">">
 					</label>
 
-
 					<label for="PhotoArticleTitle">
 						<span class="field">
-							<span class="req">*</span>
+							
 							<span class="<#ERROR name="ERRORPhotoArticleTitle">">
-								Article Title
+								Title of Journal or Book
 							</span>
 						</span>
 						<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoArticleTitle"></textarea>
@@ -59,19 +56,16 @@
 					<label for="PhotoArticleAuthor">
 						<span class="field">
 							<span class="<#ERROR name="ERRORPhotoArticleAuthor">">
-								Article Author
+								Author of Article or Chapter
 							</span>
 						</span>
 						<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" value="<#PARAM name="PhotoArticleAuthor">">
 					</label>
 
-
-
-
 					<label for="PhotoJournalVolume">
 						<span class="field">
 							<span class="<#ERROR name="ERRORPhotoJournalVolume">">
-								Volume
+								Journal Volume
 							</span>
 						</span>
 						<input id="PhotoJournalVolume" name="PhotoJournalVolume" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalVolume">">
@@ -80,7 +74,7 @@
 					<label for="PhotoJournalIssue">
 						<span class="field">
 							<span class="<#ERROR name="ERRORPhotoJournalIssue">">
-								Issue Number or Designation
+								Issue Number
 							</span>
 						</span>
 						<input id="PhotoJournalIssue" name="PhotoJournalIssue" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalIssue">">
@@ -97,7 +91,6 @@
 
 					<label for="PhotoJournalYear">
 						<span class="field">
-						<span class="req">*</span>
 							<span class="<#ERROR name="ERRORPhotoJournalYear">">
 								Year
 							</span>
@@ -113,8 +106,6 @@
 						</span>
 						<input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalInclusivePages">">
 					</label>
-
-					
 
 					<label for="CallNumber">
 						<span class="field">
@@ -137,9 +128,8 @@
 
 					<label for="NotWantedAfter">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORNotWantedAfter">">
-								Not Wanted After Date
+								This material would be best by?
 							</span>
 							
 							<span class="note">(MM/DD/YYYY)</span>
@@ -147,10 +137,8 @@
 						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" value="<#PARAM name="NotWantedAfter">">
 					</label>
 
-
 					<label for="WantedBy">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORWantedBy">">
 								Shall we rush this to you in 1-2 days?
 							</span>
@@ -163,11 +151,10 @@
 						</select>	
 					</label>
 
-
 					<label for="AcceptNonEnglish">
 						<span class="field">
 							<span class="<#ERROR name="ERRORAcceptNonEnglish">">
-								Will you accept the item in a language other than English?
+								If your citation is in English but the item is found to be in another language, do you still want it?
 							</span>
 							
 							<span class="note">If yes, specify acceptable languages in the notes field.</span>

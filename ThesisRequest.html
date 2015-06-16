@@ -28,61 +28,55 @@
 							
 							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 						</span>
-						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" ><#PARAM name="LoanTitle"></textarea>
+						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" required><#PARAM name="LoanTitle"></textarea>
 					</label>
 
 					<label for="LoanAuthor">
 						<span class="field">
-							<span class="req">*</span>
+						<span class="req">*</span>
 							<span class="<#ERROR name="ERRORLoanAuthor">">
 								Author
 							</span>
 						</span>
-						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
+						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name" value="<#PARAM name="LoanAuthor">" required>
 					</label>
 
 					<label for="LoanPublisher">
 						<span class="field">
+						<span class="req">*</span>
 							<span class="<#ERROR name="ERRORLoanPublisher">">
-								School
+								Institution granting the degree
 							</span>
 						</span>
-						<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
+						<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name" value="<#PARAM name="LoanPublisher">" required>
 					</label>
 
 					<label for="LoanDate">
 						<span class="field">
-							<span class="req">*</span>
+						<span class="req">*</span>
 							<span class="<#ERROR name="ERRORLoanDate">">
 								Year
 							</span>
 						</span>
-						<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
+						<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">" required>
 					</label>
 
 					<label for="LoanEdition">
 						<span class="field">
-							<span class="req">*</span>
+						<span class="req">*</span>
 							<span class="<#ERROR name="ERRORLoanEdition">">
 								Degree
 							</span>
 						</span>
-						<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
+						<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">" required>
 					</label>
 
-					<label for="CallNumber">
-						<span class="field">
-							<span class="<#ERROR name="ERRORCallNumber">">
-								Call Number
-							</span>
-						</span>
-						<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name"  value="<#PARAM name="CallNumber">">
-					</label>
+					
 
 					<label for="ESPNumber">
 						<span class="field">
 							<span class="<#ERROR name="ERRORESPNumber">">
-								OCLC or Docline UI Number
+								OCLC (WorldCat Accession) Numer
 							</span>
 						</span>
 						<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
@@ -90,19 +84,32 @@
 
 					<label for="NotWantedAfter">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORNotWantedAfter">">
-								Not Wanted After Date
+								This material would be best by?
 							</span>
 							<span class="note">(MM/DD/YYYY)</span>
 						</span>
 						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
 					</label>
 
+					<label for="Wantedby">
+					<span class="field">
+						<span class="<#ERROR name="ERRORWantedby">">If we cannot obtain the material by the date listed 
+		above, should we continue to try and for how long?</span><br />
+						<span class="note">Select a reason from the list on the right.</span>
+					</span>
+				<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name" tabindex="10"> 
+						<option selected>Yes, until the semester's end</option>
+						<option>Yes, until this academic year's end</option>
+						<option>Yes, indefinitely</option>
+						<option>No, please cancel the request</option>	
+					</select>
+				</label>
+
 					<label for="AcceptNonEnglish">
 						<span class="field">
 							<span class="<#ERROR name="ERRORAcceptNonEnglish">">
-								Will you accept the item in a language other than English?
+								If your citation is in English but the item is found to be in another language, do you still want it?
 							</span>
 							<span class="note">If yes, specify acceptable languages in the notes field.</span>
 						</span>

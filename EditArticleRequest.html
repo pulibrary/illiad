@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-	<title>ILLiad - Edit Photocopy Request</title>
+	<title>ILLiad - Edit Article Request</title>
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
@@ -24,14 +24,13 @@
 					<label for="PhotoJournalTitle">
 						<span class="field">
 							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORPhotoJournalTitle">"> Title (Journal, Conference Proceedings, Anthology)
+							<span class="<#ERROR name="ERRORPhotoJournalTitle">"> Title of Journal or Book
 							</span>
 							
 							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 						</span>
-						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoJournalTitle"></textarea>
+						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" required><#PARAM name="PhotoJournalTitle"></textarea>
 					</label>
-
 
 					<label for="ISSN">
 						<span class="field">
@@ -47,9 +46,8 @@
 
 					<label for="PhotoArticleTitle">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORPhotoArticleTitle">">
-								Article Title
+								Title of Article or Book Chapter
 							</span>
 						</span>
 						<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoArticleTitle"></textarea>
@@ -58,19 +56,16 @@
 					<label for="PhotoArticleAuthor">
 						<span class="field">
 							<span class="<#ERROR name="ERRORPhotoArticleAuthor">">
-								Article Author
+								Author of Article or Chapter
 							</span>
 						</span>
 						<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" value="<#PARAM name="PhotoArticleAuthor">">
 					</label>
 
-
-
-
 					<label for="PhotoJournalVolume">
 						<span class="field">
 							<span class="<#ERROR name="ERRORPhotoJournalVolume">">
-								Volume
+								Journal Volume
 							</span>
 						</span>
 						<input id="PhotoJournalVolume" name="PhotoJournalVolume" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalVolume">">
@@ -79,7 +74,7 @@
 					<label for="PhotoJournalIssue">
 						<span class="field">
 							<span class="<#ERROR name="ERRORPhotoJournalIssue">">
-								Issue Number or Designation
+								Issue Number
 							</span>
 						</span>
 						<input id="PhotoJournalIssue" name="PhotoJournalIssue" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalIssue">">
@@ -96,7 +91,6 @@
 
 					<label for="PhotoJournalYear">
 						<span class="field">
-						<span class="req">*</span>
 							<span class="<#ERROR name="ERRORPhotoJournalYear">">
 								Year
 							</span>
@@ -134,9 +128,8 @@
 
 					<label for="NotWantedAfter">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORNotWantedAfter">">
-								Not Wanted After Date
+								This material would be best by?
 							</span>
 							
 							<span class="note">(MM/DD/YYYY)</span>
@@ -146,7 +139,6 @@
 
 					<label for="WantedBy">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORWantedBy">">
 								Shall we rush this to you in 1-2 days?
 							</span>
@@ -162,7 +154,7 @@
 					<label for="AcceptNonEnglish">
 						<span class="field">
 							<span class="<#ERROR name="ERRORAcceptNonEnglish">">
-								Will you accept the item in a language other than English?
+								If your citation is in English but the item is found to be in another language, do you still want it?
 							</span>
 							
 							<span class="note">If yes, specify acceptable languages in the notes field.</span>
@@ -195,4 +187,4 @@
 	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>
-</html><!-- unused -->
+</html>

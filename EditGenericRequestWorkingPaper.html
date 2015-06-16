@@ -38,7 +38,7 @@
 							</span>
 							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 						</span>
-						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" ><#PARAM name="PhotoJournalTitle"></textarea>
+						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" required><#PARAM name="PhotoJournalTitle"></textarea>
 					</label>
 
 					<label for="PhotoItemPublisher">
@@ -51,18 +51,12 @@
 					</label>
 					<label for="PhotoJournalYear">
 						<span class="field">
-						<span class="req">*</span>
 							<span class="<#ERROR name="ERRORPhotoJournalYear">">
 								Date of Publication
 							</span>
 						</span>
 						<input id="PhotoJournalYear" name="PhotoJournalYear" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoJournalYear">">
 					</label>
-
-
-
-
-
 
 					<label for="PhotoArticleTitle">
 						<span class="field">
@@ -75,9 +69,8 @@
 					</label>
 					<label for="NotWantedAfter">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORNotWantedAfter">">
-								Not Wanted After Date
+								This material would be best by?
 							</span>
 							
 							<span class="note">(MM/DD/YYYY)</span>
@@ -85,10 +78,8 @@
 						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" value="<#PARAM name="NotWantedAfter">">
 					</label>
 
-
 					<label for="WantedBy">
 						<span class="field">
-							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORWantedBy">">
 								Shall we rush this to you in 1-2 days?
 							</span>
@@ -101,18 +92,17 @@
 						</select>	
 					</label>
 
-
 					<label for="AcceptNonEnglish">
 						<span class="field">
 							<span class="<#ERROR name="ERRORAcceptNonEnglish">">
-								Will you accept the item in a language other than English?
+								If your citation is in English but the item is found to be in another language, do you still want it?
 							</span>
 							
 							<span class="note">If yes, specify acceptable languages in the notes field.</span>
 						</span>
 						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
 							<option selected>Yes</option>
-							<option>No</option>
+							<option>No</option>				
 						</select>
 					</label>
 
@@ -129,7 +119,7 @@
 						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name"><#PARAM name="Notes"></textarea>
 					</label>
 
-					<#INCLUDE filename="include_request_citedarticle.html">
+					<#INCLUDE filename="include_request_cited.html">
 					<#INCLUDE filename="include_request_buttons.html">
 				</form>
 			</main>

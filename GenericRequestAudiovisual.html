@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-	<title>ILLiad - Testing Request</title>
+	<title>ILLiad - Audio / Visual Materials Request</title>
 	<#INCLUDE filename="include_head.html">
 </head>
 <body id="type-b">
@@ -11,35 +11,36 @@
 				<#INCLUDE filename="include_menu.html">
 			</nav>
 			<main role="main" class="three_nine-region--second">
-				<form action="illiad.dll" method="post" name="GenericRequestTesting" class="f-wrap-request">
-					<input type="hidden" name="ILLiadForm" value="GenericRequestTesting">
+				<form action="illiad.dll" method="post" name="GenericRequestAudiovisual" class="f-wrap-request">
+					<input type="hidden" name="ILLiadForm" value="GenericRequestAudiovisual">
 					<input type="hidden" name="Username" value="<#PARAM name="Username">">
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 					<input name="RequestType" type="hidden" id="RequestType" value="Loan">
-					<input name="DocumentType" type="hidden" id="DocumentType" value="Testing">
+					<input name="DocumentType" type="hidden" id="DocumentType" value="Media">
 					<h1>Audio / Visual Materials Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
 					<div class="req"><span class="req">*</span> Indicates required field</div>
 					<label for="LoanAuthor">
-						<span class="<#ERROR name="ERRORLoanAuthor">">Author/Editors</span>
+						<span class="<#ERROR name="ERRORLoanAuthor">">Artist(s)</span>
 						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
 					</label>
 
 					<label for="LoanTitle">
+					<span class="req">*</span>
 						<span class="<#ERROR name="ERRORLoanTitle">">Title</span>
 							
 							<span class="note">Please do not abbreviate unless your citation is abbreviated</span> 
-						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" ><#PARAM name="LoanTitle"></textarea>
+						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" required><#PARAM name="LoanTitle"></textarea>
 					</label>
 
 					<label for="LoanPublisher">
-						<span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span>
+						<span class="<#ERROR name="ERRORLoanPublisher">">Director</span>
 						<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
 					</label>
 
 					<label for="LoanPlace">
-						<span class="<#ERROR name="ERRORLoanPlace">">Place of Publication</span>
+						<span class="<#ERROR name="ERRORLoanPlace">">Distributor</span>
 						<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPlace">">
 					</label>
 
@@ -49,7 +50,7 @@
 					</label>
 
 					<label for="LoanEdition">
-						<span class="<#ERROR name="ERRORLoanEdition">">Edition</span>
+						<span class="<#ERROR name="ERRORLoanEdition">">Format</span>
 						<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
 					</label>
 
@@ -66,18 +67,44 @@
 					</label>
 
 					<label for="ESPNumber">
-						<span class="<#ERROR name="ERRORESPNumber">">OCLC or Docline UI Number</span>
+						<span class="field">
+							<span class="<#ERROR name="ERRORESPNumber">">
+								OCLC (WorldCat Accession) Number
+							</span>
+						</span>
 						<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
 					</label>
 
 					<label for="NotWantedAfter">
-						<span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span>
-						<span class="note">(MM/DD/YYYY)</span>
-						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
+						<span class="field">
+							<span class="<#ERROR name="ERRORNotWantedAfter">">
+								This material would be best by?
+							</span>
+							
+							<span class="note">(MM/DD/YYYY)</span>
+						</span>
+						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" value="<#PARAM name="NotWantedAfter">">
 					</label>
 
+					<label for="Wantedby">
+					<span class="field">
+						<span class="<#ERROR name="ERRORWantedby">">If we cannot obtain the material by the date listed 
+		above, should we continue to try and for how long?</span><br />
+						<span class="note">Select a reason from the list on the right.</span>
+					</span>
+				<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name" tabindex="10"> 
+						<option selected>Yes, until the semester's end</option>
+						<option>Yes, until this academic year's end</option>
+						<option>Yes, indefinitely</option>
+						<option>No, please cancel the request</option>	
+					</select>
+				</label>
+
 					<label for="AcceptNonEnglish">
-						<span class="<#ERROR name="ERRORAcceptNonEnglish">">Will you accept the item in a language other than English?</span>
+						<span class="field">
+							<span class="<#ERROR name="ERRORAcceptNonEnglish">">
+								If your citation is in English but the item is found to be in another language, do you still want it?
+							</span>
 							
 						<span class="note">If yes, specify acceptable languages in the notes field.</span>
 						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
@@ -95,10 +122,16 @@
 					</label>
 
 					<label for="Notes">
-						<span class="<#ERROR name="ERRORNotes">">Notes</span>
+						<span class="field">
+							<span class="<#ERROR name="ERRORNotes">">
+								Notes
+							</span>
 							
-						<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
-						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" ><#PARAM name="Notes"></textarea>
+							<span class="note">
+								Put any information here that may help us find the item, as well as any other pertinent information.
+							</span>
+						</span>
+						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name"><#PARAM name="Notes"></textarea>
 					</label>
 
 					<#INCLUDE filename="include_request_cited.html">
