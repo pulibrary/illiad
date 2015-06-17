@@ -21,83 +21,51 @@
 					<h2>Describe the item you want</h2>
 					<div class="req"><span class="req">*</span> Indicates required field</div>
 					<label for="LoanTitle">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORLoanTitle">"> Title
-							</span>
-							
-							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
-						</span>
+						<span class="req">*</span>
+						<span class="<#ERROR name="ERRORLoanTitle">">Title</span>
+						<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" ><#PARAM name="LoanTitle"></textarea>
 					</label>
 
 					<label for="LoanAuthor">
-						<span class="field">
 						<span class="req">*</span>
-							<span class="<#ERROR name="ERRORLoanAuthor">">
-								Author
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORLoanAuthor">">Author</span>
 						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
 					</label>
 
 					<label for="LoanPublisher">
-						<span class="field">
 						<span class="req">*</span>
-							<span class="<#ERROR name="ERRORLoanPublisher">">
-								Institution granting the degree
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORLoanPublisher">">Institution granting the degree</span>
 						<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
 					</label>
 
 					<label for="LoanDate">
-						<span class="field">
 						<span class="req">*</span>
-							<span class="<#ERROR name="ERRORLoanDate">">
-								Year
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORLoanDate">">Year</span>
 						<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
 					</label>
 
 					<label for="LoanEdition">
-						<span class="field">
 						<span class="req">*</span>
-							<span class="<#ERROR name="ERRORLoanEdition">">
-								Degree
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORLoanEdition">">Degree</span>
 						<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
 					</label>
 
 					<label for="ESPNumber">
-						<span class="field">
-							<span class="<#ERROR name="ERRORESPNumber">">
-								OCLC (WorldCat Accession) Numer
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORESPNumber">">OCLC (WorldCat Accession) Numer</span>
 						<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
 					</label>
 
 					<label for="NotWantedAfter">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORNotWantedAfter">">
-								This material would be best by?
-							</span>
-							<span class="note">(MM/DD/YYYY)</span>
-						</span>
+						<span class="req">*</span>
+						<span class="<#ERROR name="ERRORNotWantedAfter">">This material would be best by?</span>
+						<span class="note">(MM/DD/YYYY)</span>
 						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
 					</label>
 
 					<label for="AcceptNonEnglish">
-						<span class="field">
-							<span class="<#ERROR name="ERRORAcceptNonEnglish">">
-								Will you accept the item in a language other than English?
-							</span>
-							<span class="note">If yes, specify acceptable languages in the notes field.</span>
-						</span>
+						<span class="<#ERROR name="ERRORAcceptNonEnglish">">Will you accept the item in a language other than English?</span>
+						<span class="note">If yes, specify acceptable languages in the notes field.</span>
 						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
 							<option selected>Yes</option>
 							<option>No</option>
@@ -105,14 +73,8 @@
 					</label>
 
 					<label for="Notes">
-						<span class="field">
-							<span class="<#ERROR name="ERRORNotes">">
-								Notes
-							</span>
-							<span class="note">
-								Put any information here that may help us find the item, as well as any other pertinent information.
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORNotes">">Notes</span>
+						<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
 						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" ><#PARAM name="Notes"></textarea>
 					</label>
 
