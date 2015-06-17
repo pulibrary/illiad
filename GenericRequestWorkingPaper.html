@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>ILLiad - Working Paper Request</title>
@@ -23,115 +24,62 @@
 					<h2>Describe the item you want</h2>
 					<div class="req"><span class="req">*</span> Indicates required field</div>
 					<label for="PhotoArticleAuthor">
-						<span class="field">
-							<span class="<#ERROR name="ERRORPhotoArticleAuthor">">
-								Author
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORPhotoArticleAuthor">">Author</span>
 						<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoArticleAuthor">">
 					</label>
-					
+
 					<label for="PhotoJournalTitle">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORPhotoJournalTitle">"> Title
-							</span>
-							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
-						</span>
-						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" ><#PARAM name="PhotoJournalTitle"></textarea>
+						<span class="req">*</span>
+						<span class="<#ERROR name="ERRORPhotoJournalTitle">">Title</span>
+						<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
+						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" required><#PARAM name="PhotoJournalTitle"></textarea>
 					</label>
 
 					<label for="PhotoItemPublisher">
-						<span class="field">
-							<span class="<#ERROR name="ERRORPhotoItemPublisher">">
-								Place of Publication
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORPhotoItemPublisher">">Place of Publication</span>
 						<input id="PhotoItemPublisher" name="PhotoItemPublisher" type="text" size="20" class="f-name"  value="<#PARAM name="PhotoItemPublisher">">
 					</label>
 					<label for="PhotoJournalYear">
-						<span class="field">
-						<span class="req">*</span>
-							<span class="<#ERROR name="ERRORPhotoJournalYear">">
-								Date of Publication
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORPhotoJournalYear">">Date of Publication</span>
 						<input id="PhotoJournalYear" name="PhotoJournalYear" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoJournalYear">">
 					</label>
 
-
-
-
-
-
 					<label for="PhotoArticleTitle">
-						<span class="field">
-							
-							<span class="<#ERROR name="ERRORPhotoArticleTitle">">
-								Working Paper Series: Title, Number
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORPhotoArticleTitle">">Working Paper Series: Title, Number</span>
 						<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" ><#PARAM name="PhotoArticleTitle"></textarea>
 					</label>
+
 					<label for="NotWantedAfter">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORNotWantedAfter">">
-								Not Wanted After Date
-							</span>
-							
-							<span class="note">(MM/DD/YYYY)</span>
-						</span>
+						<span class="<#ERROR name="ERRORNotWantedAfter">">This material would be best by?</span>
+						<span class="note">(MM/DD/YYYY)</span>
 						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" value="<#PARAM name="NotWantedAfter">">
 					</label>
 
-
 					<label for="WantedBy">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORWantedBy">">
-								Shall we rush this to you in 1-2 days?
-							</span>
-							
-							<span class="note">Some requests may take longer due to item availability</span>
-						</span>
+						<span class="<#ERROR name="ERRORWantedBy">">Shall we rush this to you in 1-2 days?</span>
+						<span class="note">Some requests may take longer due to item availability</span>
 						<select id="WantedBy" name="WantedBy" size="1" class="f-name">
 							<option selected>YES!</option>
 							<option>No, I need it faster than that.</option>
-						</select>	
-					</label>
-
-
-					<label for="AcceptNonEnglish">
-						<span class="field">
-							<span class="<#ERROR name="ERRORAcceptNonEnglish">">
-								Will you accept the item in a language other than English?
-							</span>
-							
-							<span class="note">If yes, specify acceptable languages in the notes field.</span>
-						</span>
-						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
-							<option selected>Yes</option>
-							<option>No</option>				
 						</select>
 					</label>
 
-					
+					<label for="AcceptNonEnglish">
+						<span class="<#ERROR name="ERRORAcceptNonEnglish">">If your citation is in English but the item is found to be in another language, do you still want it?</span>
+						<span class="note">If yes, specify acceptable languages in the notes field.</span>
+						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
+							<option selected>Yes</option>
+							<option>No</option>
+						</select>
+					</label>
 
 					<label for="Notes">
-						<span class="field">
-							<span class="<#ERROR name="ERRORNotes">">
-								Notes
-							</span>
-							
-							<span class="note">
-								Put any information here that may help us find the item, as well as any other pertinent information.
-							</span>
-						</span>
+						<span class="<#ERROR name="ERRORNotes">">Notes</span>
+						<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
 						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name"><#PARAM name="Notes"></textarea>
 					</label>
 
-					<#INCLUDE filename="include_request_citedarticle.html">
+					<#INCLUDE filename="include_request_cited.html">
 					<#INCLUDE filename="include_request_buttons.html">
 				</form>
 			</main>

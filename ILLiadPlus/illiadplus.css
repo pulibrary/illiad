@@ -20,15 +20,16 @@
 .ill_requests .ill_request .ill_type				{ position: absolute; top: 14px; left: 6px; bottom: 0; width: 58px; padding: 36px 0 0; background-image: url(images/other.png); background-repeat: no-repeat; background-position: center 0; color: #000; line-height: 1.2em; text-align: center; font-size: 9px; }
 
 .ill_requests .ill_request .ill_type.book,
-.ill_requests .ill_request .ill_type.bookchapter	{ background-image: url(images/book.png); }
+.ill_requests .ill_request .ill_type.articleexpress	{ background-image: url(images/book.png); }
 
 .ill_requests .ill_request .ill_type.article,
+.ill_requests .ill_request .ill_type.workingpaper,
 .ill_requests .ill_request .ill_type.thesis,
 .ill_requests .ill_request .ill_type.conference 	{ background-image: url(images/article.png); }
 
 .ill_requests .ill_request .ill_type.media			{ background-image: url(images/cd.png); }
-.ill_requests .ill_request .ill_type.musicscore		{ background-image: url(images/sheetmusic.png); }
-.ill_requests .ill_request .ill_type.newspaper		{ background-image: url(images/newspaperarticle.png); }
+.ill_requests .ill_request .ill_type.score		{ background-image: url(images/sheetmusic.png); }
+.ill_requests .ill_request .ill_type.newspaperloan		{ background-image: url(images/newspaperarticle.png); }
 .ill_requests .ill_request .ill_type.download		{ background-image: url(images/download.png); }
 
 .ill_requests .ill_request_author,
