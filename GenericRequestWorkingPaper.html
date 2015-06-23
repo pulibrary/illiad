@@ -4,7 +4,7 @@
 	<title>ILLiad - Working Paper Request</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
+<body id="type-b" class="working-paper">
 	<#INCLUDE filename="include_header.html">
 	<div id="content-wrap" class="panel-display--three_nine l-page">
 		<section class="l-main">
@@ -22,7 +22,7 @@
 					<h1>Working Paper Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
-					<div class="req"><span class="req">*</span> Indicates required field</div>
+					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
 					<label for="PhotoArticleAuthor">
 						<span class="<#ERROR name="ERRORPhotoArticleAuthor">">Author</span>
 						<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoArticleAuthor">">

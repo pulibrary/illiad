@@ -4,7 +4,7 @@
 	<title>ILLiad - Edit Working Paper Request</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
+<body id="type-b" class="working-paper">
 	<#INCLUDE filename="include_header.html">
 	<div id="content-wrap" class="panel-display--three_nine l-page">
 		<section class="l-main">
@@ -22,12 +22,12 @@
 					<h1>Edit Working Paper Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
-					<div class="req"><span class="req">*</span> Indicates required field</div>
+					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
 					<label for="PhotoArticleAuthor">
 						<span class="<#ERROR name="ERRORPhotoArticleAuthor">">Author</span>
 						<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoArticleAuthor">">
 					</label>
-					
+
 					<label for="PhotoJournalTitle">
 						<span class="req">*</span>
 						<span class="<#ERROR name="ERRORPhotoJournalTitle">"> Title</span>
@@ -44,7 +44,7 @@
 						<input id="PhotoJournalYear" name="PhotoJournalYear" type="text" size="40" class="f-name"  value="<#PARAM name="PhotoJournalYear">">
 					</label>
 
-					<label for="PhotoArticleTitle">							
+					<label for="PhotoArticleTitle">
 						<span class="<#ERROR name="ERRORPhotoArticleTitle">">Working Paper Series: Title, Number</span>
 						<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" ><#PARAM name="PhotoArticleTitle"></textarea>
 					</label>
@@ -61,7 +61,7 @@
 						<select id="WantedBy" name="WantedBy" size="1" class="f-name">
 							<option selected>YES!</option>
 							<option>No, I need it faster than that.</option>
-						</select>	
+						</select>
 					</label>
 
 					<label for="AcceptNonEnglish">
@@ -69,7 +69,7 @@
 						<span class="note">If yes, specify acceptable languages in the notes field.</span>
 						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
 							<option selected>Yes</option>
-							<option>No</option>				
+							<option>No</option>
 						</select>
 					</label>
 

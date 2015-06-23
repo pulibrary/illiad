@@ -4,7 +4,7 @@
 	<title>ILLiad - Edit Article Express Request</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
+<body id="type-b" class="article-express">
 	<#INCLUDE filename="include_header_request.html">
 	<div id="content-wrap" class="panel-display--three_nine l-page">
 		<section class="l-main">
@@ -12,8 +12,8 @@
 				<#INCLUDE filename="include_menu.html">
 			</nav>
 			<main role="main" class="three_nine-region--second">
-				<form action="illiad.dll" method="post" name="EditGenericREquestArticleRequest" class="f-wrap-request">
-					<input type="hidden" name="ILLiadForm" value="EditGenericArticleRequest">
+				<form action="illiad.dll" method="post" name="EditGenericRequestArticleRequest" class="f-wrap-request">
+					<input type="hidden" name="ILLiadForm" value="EditGenericRequestArticleRequest">
 					<input type="hidden" name="Username" value="<#PARAM name="Username">">
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 					<input type="hidden" name="RequestType" type="hidden" value="Article">
@@ -21,7 +21,7 @@
 					<h1>Edit Article Express Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
-					<div class="req"><span class="req">*</span> Indicates required field</div>
+					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
 					<label for="PhotoJournalTitle">
 						<span class="req">*</span>
 						<span class="<#ERROR name="ERRORPhotoJournalTitle">">Title of Journal or Book</span>
@@ -43,7 +43,7 @@
 						</span>
 						<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoArticleTitle"></textarea>
 					</label>
-					
+
 					<label for="PhotoArticleAuthor">
 						<span class="<#ERROR name="ERRORPhotoArticleAuthor">">
 							Author of Article or Chapter
@@ -92,7 +92,7 @@
 						</span>
 						<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name" value="<#PARAM name="CallNumber">">
 					</label>
-					
+
 					<label for="CitedTitle">
 						<span class="<#ERROR name="ERRORCitedTitle">">
 							OCLC (WorldCat Accession) Number
@@ -116,7 +116,7 @@
 						<select id="WantedBy" name="WantedBy" size="1" class="f-name">
 							<option selected>YES!</option>
 							<option>No, I need it faster than that.</option>
-						</select>	
+						</select>
 					</label>
 
 					<label for="AcceptNonEnglish">

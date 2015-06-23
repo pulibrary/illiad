@@ -22,7 +22,7 @@
 					<h1>Edit Testing Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
-					<div class="req"><span class="req">*</span> Indicates required field</div>
+					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
 					<label for="LoanAuthor">
 						<#ERROR name="ERRORLoanAuthor"> Author/Editors
 						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
@@ -30,8 +30,8 @@
 
 					<label for="LoanTitle">
 						<#ERROR name="ERRORLoanTitle"> Title
-							
-							<span class="note">Please do not abbreviate unless your citation is abbreviated</span> 
+
+							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" ><#PARAM name="LoanTitle"></textarea>
 					</label>
 
@@ -62,8 +62,8 @@
 					<label for="ISSN">
 						<#ERROR name="ERRORISSN">
 						ISBN (International Standard Book Number)
-							
-							<span class="note">If given will speed request processing</span> 
+
+							<span class="note">If given will speed request processing</span>
 						<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
 					</label>
 
@@ -81,20 +81,20 @@
 
 					<label for="NotWantedAfter">
 						<#ERROR name="ERRORNotWantedAfter">
-						
+
 							Not Wanted After Date
 							<span class="note">(MM/DD/YYYY)</span>
-						
+
 						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
 					</label>
 
 					<label for="AcceptNonEnglish">
 						<#ERROR name="ERRORAcceptNonEnglish">
-						
+
 							Will you accept the item in a language other than English?
-							
+
 							<span class="note">If yes, specify acceptable languages in the notes field.</span>
-						
+
 						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
 							<option selected>Yes</option>
 							<option>No</option>
@@ -119,13 +119,13 @@
 
 					<label for="Notes">
 						<#ERROR name="ERRORNotes">
-						
+
 							Notes
-							
+
 							<span class="note">
 								Put any information here that may help us find the item, as well as any other pertinent information.
 							</span>
-						
+
 						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" ><#PARAM name="Notes"></textarea>
 					</label>
 

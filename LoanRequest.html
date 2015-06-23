@@ -4,7 +4,7 @@
 	<title>ILLiad - Book or Journal Loan Request</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
+<body id="type-b" class="book">
 	<#INCLUDE filename="include_header_request.html">
 	<div id="content-wrap" class="panel-display--three_nine l-page">
 		<section class="l-main">
@@ -19,7 +19,7 @@
 					<h1>Book or Journal Loan Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
-					<div class="req"><span class="req">*</span> Indicates required field</div>
+					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
 					<label for="LoanAuthor">
 						<span class="<#ERROR name="ERRORLoanAuthor">">Author/Editors</span>
 						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
@@ -78,11 +78,11 @@
 					<label for="Wantedby">
 						<span class="<#ERROR name="ERRORWantedby">">If we cannot obtain the material by the date listed above, should we continue to try and for how long?</span>
 						<span class="note">Select a reason from the list on the right.</span>
-						<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name" tabindex="10"> 
+						<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name" tabindex="10">
 							<option selected>Yes, until the semester's end</option>
 							<option>Yes, until this academic year's end</option>
 							<option>Yes, indefinitely</option>
-							<option>No, please cancel the request</option>	
+							<option>No, please cancel the request</option>
 						</select>
 					</label>
 

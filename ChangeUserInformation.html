@@ -18,7 +18,7 @@
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 					<#FORMSTATE>
 					<h1>Change Personal Information</h1>
-					<div class="req"><span class="req">*</span> Indicates required field</div>
+					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
 					<label for="FirstName">
 						<span class="req">*</span>
 						<span class="<#ERROR name="ERRORFirstName">">First Name</span>
@@ -59,7 +59,7 @@
 
 					<label for="ArticleDeliveryGroup">
 						<span class="<#ERROR name="ERRORDeliveryGroup">">Preferred Article Delivery Method</span>
-						<select id="ArticleDeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >								
+						<select id="ArticleDeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >
 							<option selected>Hold for Pickup</option>
 							<option>Mail to Address</option>
 						</select>
