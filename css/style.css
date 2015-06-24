@@ -380,3 +380,6 @@ section.ill_requests li:nth-child(even) {
 label {
 	font-weight: normal;
 }
+.logon {
+	margin-bottom: 1em;
+}
