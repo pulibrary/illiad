@@ -15,7 +15,7 @@
 			<main role="main" class="three_nine-region--second">
 				<h1>Detailed Transaction Information</h1>
 				<#MENU name="transaction" separator="|">
-				<div class="default-table simple-table transaction-table">
+				<div class="default-table transaction-table">
 					<#TABLE name="DetailedInformation" hideColumnHeaders="true">
 				</div>
 
@@ -24,13 +24,13 @@
 				</div>
 
 				<div class="default-table tracking-table">
-					<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking" 
+					<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking"
 			 column="DateTime:Date/Time" column="ChangedTo:Status" column="ChangedBy:Changed By">
 				</div>
 
 				<div class="default-table billing-table">
 					<#TABLE name="BillingInformation" headerText="Billing" noDataAction="ShowMessageRow" noDataMessage="No Billing"
-			 column="ChargeDate:Date/Time" column="ChargeName:Charge" column="ChargeBase:Base" column="ChargeUnit:Unit" 
+			 column="ChargeDate:Date/Time" column="ChargeName:Charge" column="ChargeBase:Base" column="ChargeUnit:Unit"
 			 column="ChargeQty:Quantity" column="ChargeAmount:Amount" column="ChargeDesc:Description" column="ChargeNote:Note">
 				</div>
 			</main>
