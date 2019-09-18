@@ -8,171 +8,294 @@
 	<#INCLUDE filename="include_header.html">
 	<div id="content-wrap" class="panel-display--three_nine l-page">
 		<section class="l-main">
-			<#INCLUDE filename="include_menu.html">
+			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
+				<#INCLUDE filename="include_menu.html">
+			</nav>
 			<main role="main" class="three_nine-region--second">
 				<form action="illiad.dll" method="post" name="NewAuthRegistration" class="f-wrap-request">
 					<input type="hidden" name="ILLiadForm" value="NewAuthRegistration">
+					<input type="hidden" name="DeliveryGroup" value="Hold for pickup">
+					<input type="hidden" name="LoanDeliveryGroup" value="Hold for pickup">
+					<input type="hidden" name="WebDeliveryGroup" value="Yes">
+					<input type="hidden" name="NVTGC" value="ILL">
+					<input type="hidden" name="NotifyGroup" value="Electronic">
+
 					<#FORMSTATE>
-
+					
 					<h1>Change Personal Information</h1>
-					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
+					<div class="req"><span class="req">*</span> Indicates required field</div>
 					<label for="FirstName">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORFirstName">">First Name</span>
-						<input id="FirstName" name="FirstName" type="text" size="40" class="f-name"  value="<#PARAM name="FirstName">">
-					</label>
-
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORFirstName">"><b>First Name</b></span>
+						</span>
+						<input id="FirstName" name="FirstName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="FirstName">"><br />	
+					</label>		
+						
 					<label for="LastName">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORLastName">">Last Name</span>
-						<input id="LastName" name="LastName" type="text" size="40" class="f-name"  value="<#PARAM name="LastName">">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORLastName">"><b>Last Name</b></span>
+						</span>
+						<input id="LastName" name="LastName" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LastName">"><br />						
 					</label>
-
+					
 					<label for="SSN">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORSSN">">ID Number</span>
-						<input id="SSN" name="SSN" type="text" size="40" class="f-name"  value="<#PARAM name="SSN">">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORSSN">"><b>Princeton University Library Barcode</b></span>
+						</span>
+						<input id="SSN" name="SSN" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="SSN">"><br />						
 					</label>
-
-					<label for="NotifyGroup">
-						<span class="<#ERROR name="ERRORNotifyGroup">">Preferred Notification Method</span>
-						<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name" >
-							<option selected>Phone</option>
+					
+					<!--
+						<label for="NotifyGroup">
+						<span class="field">
+						<span class="req">*</span>
+							<span class="<#ERROR name="ERRORNotifyGroup">"><b>Preferred Notification Method</b></span>
+						</span>
+						<select id="NotifyGroup" name="NotifyGroup" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="NotifyGroup"></option>
 							<option>E-Mail</option>
-						</select>
+							<option>Phone</option>
+							
+						</select><br />
 					</label>
-
+					-->
+					
 					<label for="EMailAddress">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERROREMailAddress">">E-Mail Address</span>
-						<input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name"  value="<#PARAM name="EMailAddress">">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERROREMailAddress">"><b>E-Mail Address</b></span>
+						</span>
+						<input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="EMailAddress">"><br />						
 					</label>
-
+					
 					<label for="Phone">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhone">"><b>Daytime Phone</b></span>
+						</span>
+						<input id="Phone" name="Phone" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Phone">"><br />						
+					</label>
+					
+					<!-- <label for="DeliveryGroup">
+						<span class="field">
 						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORPhone">">Daytime Phone</span>
-						<input id="Phone" name="Phone" type="text" size="40" class="f-name"  value="<#PARAM name="Phone">">
+							<span class="<#ERROR name="ERRORDeliveryGroup">"><b>Preferred Article Delivery Method</b></span>
+						</span>
+						<span class="note"><i><b> When item is only available in printed format.</i></b></span>
+						<select id="DeliveryGroup" name="DeliveryGroup" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="DeliveryGroup"></option>
+							<option>Hold for Pickup</option>
+                			<option>Mail to Address</option>
+						</select><br />
 					</label>
 
-					<label for="DeliveryGroup">
-						<span class="<#ERROR name="ERRORDeliveryGroup">">Preferred Article Delivery Method</span>
-						<select id="DeliveryGroup" name="DeliveryGroup" size="1" class="f-name" >
-							<option selected>Hold for Pickup</option>
-							<option>Mail to Address</option>
-						</select>
-					</label>
-
-					<label for="LoanDeliveryGroup">
-						<span class="<#ERROR name="ERRORLoanDeliveryGroup">">Preferred Loan Delivery Method</span>
-						<select id="DeliveryGroup" name="LoanDeliveryGroup" size="1" class="f-name" >
-							<option selected>Hold for Pickup</option>
-							<option>Mail to Address</option>
-						</select>
-					</label>
-
+				
+					
 					<label for="WebDeliveryGroup">
-						<span class="<#ERROR name="ERRORWebDeliveryGroup">">Preferred Electronic Delivery if Possible (PDF file via web)</span>
-						<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" >
-							<option selected>Yes</option>
-							<option>No</option>
-						</select>
+						<span class="field">
+						<span class="req">*</span>
+							<span class="<#ERROR name="ERRORWebDeliveryGroup">"><b>Preferred Electronic Delivery if Possible (PDF file via web)</b></span>
+						</span>
+						<select id="WebDeliveryGroup" name="WebDeliveryGroup" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="WebDeliveryGroup"></option>
+							<option>Yes</option>
+                			<option>No</option>
+						</select><br />
 					</label>
-
+					-->
+					
 					<label for="Address">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORAddress">">Primary Address Line 1</span>
-						<input id="Address" name="Address" type="text" size="40" class="f-name"  value="<#PARAM name="Address">">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORAddress">"><b>Primary Address Line 1</b></span>
+						</span>
+						<input id="Address" name="Address" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Address">"><br />						
 					</label>
-
+					
 					<label for="Address2">
-						<span class="<#ERROR name="ERRORAddress2">">Primary Address Line 2</span>
-						<input id="Address2" name="Address2" type="text" size="40" class="f-name"  value="<#PARAM name="Address2">">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAddress2">"><b>Primary Address Line 2</b></span>
+						</span>
+						<input id="Address2" name="Address2" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Address2">"><br />
 					</label>
-
+					
 					<label for="City">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORCity">">Primary Address City</span>
-						<input id="City" name="City" type="text" size="40" class="f-name"  value="<#PARAM name="City">">
+						<span class="field">
+							<span class="req">*</span>							
+							<span class="<#ERROR name="ERRORCity">"><b>Primary Address City</b></span>
+						</span>
+						<input id="City" name="City" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="City">"><br />
 					</label>
-
+					
 					<label for="State">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORState">">Primary Address State</span>
-						<select id="State" name="State" size="1" class="f-name" >
-							<#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=State>" defaultValue="" defaultName="" />
-						</select>
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORState">"><b>Primary Address State</b></span>
+						</span>
+						<input id="State" name="State" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="State">"><br />
 					</label>
-
+					
 					<label for="Zip">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORZip">">Primary Address Zip</span>
-						<input id="Zip" name="Zip" type="text" size="40" class="f-name"  value="<#PARAM name="Zip">">
+						<span class="field">
+							<span class="req">*</span>						
+							<span class="<#ERROR name="ERRORZip">"><b>Primary Address Zip</b></span>
+						</span>
+						<input id="Zip" name="Zip" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Zip">"><br />
 					</label>
-
-					<label for="SAddress">
-						<span class="<#ERROR name="ERRORSAddress">">Secondary Address Line 1</span>
-						<input id="SAddress" name="SAddress" type="text" size="40" class="f-name"  value="<#PARAM name="SAddress">">
-					</label>
-
-					<label for="SAddress2">
-						<span class="<#ERROR name="ERRORSAddress2">">Secondary Address Line 2</span>
-						<input id="SAddress2" name="SAddress2" type="text" size="40" class="f-name"  value="<#PARAM name="SAddress2">">
-					</label>
-
-					<label for="SCity">
-						<span class="<#ERROR name="ERRORSCity">">Secondary Address City</span>
-						<input id="SCity" name="SCity" type="text" size="40" class="f-name"  value="<#PARAM name="SCity">">
-					</label>
-
-					<label for="SState">
-						<span class="<#ERROR name="ERRORSState">">Secondary Address State</span>
-						<select id="SState" name="SState" size="1" class="f-name" >
-							<#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=SState>" defaultValue="" defaultName="" />
-						</select>
-					</label>
-
-					<label for="SZip">
-						<span class="<#ERROR name="ERRORSZip">">Secondary Address Zip</span>
-						<input id="SZip" name="SZip" type="text" size="40" class="f-name"  value="<#PARAM name="SZip">">
-					</label>
-
+					
+					
 					<label for="StatusGroup">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORStatus">">Status</span>
-						<select id="StatusGroup" name="StatusGroup" size="1" class="f-name" >
-							<#OPTION name="custom" groupname="StatusGroup" selectedValue="<#PARAM name=StatusGroup>" defaultValue="" defaultName="" />
-						</select>
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORStatus">"><b>Status</b></span>
+						</span>
+						<select id="StatusGroup" name="StatusGroup" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="StatusGroup"></option>
+							<option selected>CGIFN=^VARStatusGroup^</option>
+							<option value="F - Faculty">Faculty</option>
+							<option value="GS - Graduate Student">Graduate Student</option>
+							<option value="U - Undergraduate">Undergraduate</option>
+							<option value="F - Research Scholar">Research Scholar</option>
+							<option value="F - Senior Research Scholar">Senior Research Scholar</option>
+							<option value="GS - Visiting Research Scholar">Visiting Research Scholar</option>
+							<option value="F - Senior Professional Specialist">Senior Professional Specialist</option>
+							<option value="GS - Postdoctoral Fellow">Postdoctoral Fellow</option>
+							<option value="GS - Post doc Research Associate">Post Doc Research Associate</option>
+							<option value="F - Postdoctoral Fellow -- Teaching">Postdoctoral Fellow -- Teaching</option>
+							<option value="GS - Professional Research Staff">Professional Research Staff</option>
+							<option value="GS - Professional Technical Staff">Professional Technical Staff</option>
+							<option value="GS - Visiting Fellow">Visiting Fellow</option>
+							<option value="F - Visiting Lecturer">Visiting Lecturer</option>
+							<option value="GS - Library Staff">Library Staff</option>
+							<option value="GS - University Staff">University Staff</option>
+							<option value="F - Visiting Faculty">Visiting Faculty</option>
+							<option value="O - Retiree">Retiree</option>
+							<option value="O - Faculty spouse/domestic partner">Faculty spouse/domestic partner</option>
+							<option value="O - Graduate student spouse/domestic partner">Graduate student spouse/domestic partner</option>
+							<option value="O - Staff spouse/domestic partner">Staff spouse/domestic partner</option>
+							<option value="O - Continuing Education Student">Continuing Education Student</option>
+						</select><br />
 					</label>
-
+					
 					<label for="Department">
+						<span class="field">
 						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORDepartment">">Department</span>
-						<select id="Department" name="Department" size="1" class="f-name" >
-							<#OPTION name="custom" groupname="Department" selectedValue="<#PARAM name=Department>"  defaultValue="" defaultName=""/>
-						</select>
-					</label>
+							<span class="<#ERROR name="ERRORDepartment">"><b>Department</b></span>
+						</span>
+						<select id="Department" name="Department" size="1" class="f-name" tabindex="4">
+							<option selected><#PARAM name="Department"></option>
+							<option selected><#PARAM name="Department"></option>
+							<option>None</option>
+		    <option>University Administrative</option>
+                <option>African-American Studies</option>
+		<option>Andlinger Center for Energy and the Environment</option>
+                <option>Anthropology</option>
+                <option>Architecture</option>
+                <option>Art and Archaeology</option>
+                <option>Art Museum</option>
+                <option>Astrophysical Sciences</option>
+                <option>Atmospheric and Oceanic Sciences</option>
+                <option>Bendheim Center for Finance</option>
+                <option>Center for Human Values</option>
+                <option>Chemical Engineering</option>
+                <option>Chemistry</option>
+                <option>Chinese</option>
+                <option>Civil and Environmental Engineering</option>
+                <option>Classics</option>
+                <option>Comparative Literature</option>
+                <option>Computer Science</option>
+                <option>Creative Writing</option>
+                <option>East Asian Studies</option>
+                <option>Ecology and Evolutionary Biology</option>
+                <option>Economics</option>
+                <option>Electrical Engineering</option>
+                <option>English</option>
+                <option>Engineering and Applied Science</option>
+                <option>Environmental Studies</option>
+                <option>French and Italian</option>
+                <option>Geosciences</option>
+                <option>Germanic Languages and Literatures</option>
+                <option>Hellenic Studies</option>
+                <option>History</option>
+                <option>History of Science</option>
+                <option>Humanities Council</option>
+                <option>Index of Christian Art</option>
+                <option>Industrial Relations Section</option>
+                <option>Institute for Integrative Genomics</option>
+                <option>Judaic Studies</option>
+                <option>Latin American Studies</option>
+                <option>Library</option>
+                <option>Linguistics</option>
+                <option>Mathematics</option>
+                <option>Materials Science and Engineering</option>
+                <option>Mechanical and Aerospace Engineering</option>
+                <option>Molecular Biology</option>
+                <option>Music</option>
+                <option>Near Eastern Studies</option>
+                <option>Neuroscience</option>
+                <option>Office of Population Research</option>
+                <option>Operations Research and Financial Engineering</option>
+                <option>Philosophy</option>
+                <option>Physics</option>
+                <option>Plasma Physics</option>
+                <option>Plasma Science and Technology</option>
+                <option>Politics</option>
+                <option>Population Studies</option>
+                <option>Princeton Environmental Institute</option>
+                <option>Princeton Materials Institute</option>
+                <option>Psychology</option>
+                <option>Religion</option>
+                <option>Russian Studies</option>
+                <option>Slavic Languages and Literatures</option>
+                <option>Sociology</option>
+                <option>Spanish and Portuguese Languages and Cultures</option>
+                <option>Teacher Preparation</option>
+                <option>Theater and Dance</option>
+                <option>Thomas Jefferson Papers</option>     
+                <option>Visual Arts</option>
+                <option>Woodrow Wilson School</option>
+                <option>Writing Program (Faculty Only)</option>
 
-					<label for="AuthorizedUsers">
-						<span class="<#ERROR name="ERRORAuthorizedUsers">">Authorized Users</span>
-						<span class="note">List the full names of anyone you wish to be allowed to pick up your ILL items. An ID will be REQUIRED to pick items up.</span>
-						<textarea id="AuthorizedUsers" name="AuthorizedUsers" rows="2" cols="40" class="f-name" ><#PARAM name="AuthorizedUsers"></textarea>
+						</select><br />
 					</label>
-
-					<label for="NVTGC">
-						<span class="<#ERROR name="ERRORNVTGC">">Delivery Location</span>
-						<select id="NVTGC" name="NVTGC" size="1" class="f-name" >
-							<#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name=NVTGC>"  defaultValue="" defaultName=""/>
-						</select>
+					
+					
+					
+					
+					<label for="Site">
+						<span class="field">
+						<span class="req">*</span>
+							<span class="<#ERROR name="ERRORSite">"><b>Delivery Location</b></span>
+						</span>
+						<select id="Site" name="Site" size="1" class="f-name" tabindex="4">
+							<option selected="<#PARAM name="Site">"option>
+							<option value="Firestone">Firestone - Circulation</option>
+                <option value="Architecture">Architecture Library</option>
+            
+                <option value="East Asian">East Asian Library</option>
+                <option value="Engineering">Engineering Library</option>
+                
+		    <option value="Lewis">Lewis Science Library</option>	
+                <option value="Marquand">Marquand Library (Art/Archeology)</option>
+               
+                <option value="Music">Mendel Music Library</option>
+                <option value="PPL">Plasma Physics Library</option>
+                <option value="Stokes">Stokes Library (Wallace Hall)</option>
+						</select><br />
 					</label>
-
-					<div class="f-submit-wrap" align="right">
-						<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit"  />
-						<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit"  />
+										               
+                    <div class="f-submit-wrap" align="right">
+						<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" tabindex="60" />
+						<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit" tabindex="62" />
 					</div>
-					<input type="hidden" id="BillingCategory" name="BillingCategory" value="<#PARAM name="BillingCategory">"></form>
-			</main>
-		</section>
-	</div>
-	<#INCLUDE filename="include_footer.html">
+				</fieldset>
+		</form>		
+      	<#INCLUDE filename="include_footer.html">
+    </div>    
+  </div>
+</div>
 </body>
 </html>
