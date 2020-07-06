@@ -16,10 +16,11 @@
 					<input type="hidden" name="ILLiadForm" value="LoanRequest">
 					<input type="hidden" name="Username" value="<#PARAM name="Username">">
 					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-					<h1>Book or Journal Loan Request</h1>
+					<h1>Digital Book or Journal Loan Request</h1>
 					<#STATUS>
 					<h2>Describe the item you want</h2>
 					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
+					<div><span class="req">* If wish to obtain chapter(s) or article(s) from this title, please specify this information in the notes field.</span></div>
 					<label for="LoanAuthor">
 						<span class="<#ERROR name="ERRORLoanAuthor">">Author/Editors</span>
 						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
@@ -47,6 +48,22 @@
 						<span class="note">(Date of publication for book, Date span needed for journal loan)</span>
 						<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
 					</label>
+						
+
+					<label for="ItemInfo3">
+						<span class="<#ERROR name="ItemInfo3">">Volume</span>
+						<input id="ItemInfo3" name="ItemInfo3" type="text" size="40" class="f-name"  value="<#PARAM name="ItemInfo3">">
+					</label>
+					
+					<label for="ItemInfo4">
+						<span class="<#ERROR name="ItemInfo4">">Issue</span>
+						<input id="ItemInfo4" name="ItemInfo4" type="text" size="40" class="f-name"  value="<#PARAM name="ItemInfo4">">
+					</label>
+
+
+
+
+
 
 					<label for="LoanEdition">
 						<span class="<#ERROR name="ERRORLoanEdition">">Edition</span>
