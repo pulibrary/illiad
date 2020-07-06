@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>ILLiad - Newspaper Article Request</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
+<![endif]-->
+</head>
+<body id="type-b">
+<div id="wrap">
+  <#INCLUDE filename="include_header_request.html">
+  <div id="content-wrap">
+  	<#INCLUDE filename="include_menu.html">
+    <div id="content">
+		<form action="illiad.dll" method="post" name="GenericRequestNewspaperArticle" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="GenericRequestNewspaperArticle">
+			<input type="hidden" name="RequestType" value="Article">
+			<input type="hidden" name="DocumentType" value="Newspaper">
+			<input type="hidden" name="Username" value="<#PARAM name="Username">">
+			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+				<div class="req"><b>*</b> Indicates required field</div>
+				<fieldset>			
+					<h3>Newspaper Article Request</h3>
+					<#STATUS>
+					<h2>Describe the item you want  <font color="#CC0000">(Please use Roman characters only)</font>  </h2>				
+					<label for="PhotoJournalTitle">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhotoJournalTitle">"><b>Title</b></span><br />
+							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
+						</span>
+						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" tabindex="1"><#PARAM name="PhotoJournalTitle"></textarea><br />
+					</label>		
+						<label for="PhotoArticleTitle">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhotoArticleTitle">"><b>Article Title</b></span>
+						</span>
+						<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" tabindex="2"><#PARAM name="PhotoArticleTitle"></textarea><br />
+					</label>
+
+					<label for="PhotoArticleAuthor">
+						<span class="field">
+							<span class="<#ERROR name="ERRORPhotoArticleAuthor">"><b>Article Author</b></span>
+						</span>
+						<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="PhotoArticleAuthor">"><br />						
+					</label>
+
+<label for="PhotoJournalVolume">
+						<span class="field">
+	<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhotoJournalVolume">"><b>City and State of Publication</b></span>
+						</span>
+						<input id="PhotoJournalVolume" name="PhotoJournalVolume" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="PhotoJournalVolume">"><br />						
+					</label>
+					
+					<label for="PhotoJournalIssue">
+						<span class="field">
+							<span class="<#ERROR name="ERRORPhotoJournalIssue">"><b>Country of Publication (if other than US)</b></span>
+						</span>
+						<input id="PhotoJournalIssue" name="PhotoJournalIssue" type="text" size="40" class="f-name" tabindex="5" value="<#PARAM name="PhotoJournalIssue">"><br />						
+					</label>
+
+										
+					<label for="PhotoJournalMonth">
+						<span class="field">
+						<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhotoJournalMonth">"><b>Month/Day</b></span>
+						</span>
+						<input id="PhotoJournalMonth" name="PhotoJournalMonth" type="text" size="40" class="f-name" tabindex="6" value="<#PARAM name="PhotoJournalMonth">"><br />						
+					</label>
+					
+					<label for="PhotoJournalYear">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhotoJournalYear">"><b>Year</b></span>
+						</span>
+						<input id="PhotoJournalYear" name="PhotoJournalYear" type="text" size="40" class="f-name" tabindex="7" value="<#PARAM name="PhotoJournalYear">"><br />						
+					</label>
+					
+					<label for="PhotoJournalInclusivePages">
+						<span class="field">
+							<span class="<#ERROR name="ERRORPhotoJournalInclusivePages">"><b>Inclusive Pages</b></span>
+						</span>
+						<input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" type="text" size="40" class="f-name" tabindex="8" value="<#PARAM name="PhotoJournalInclusivePages">"><br />						
+					</label>
+					
+					<label for="ISSN">
+						<span class="field">
+							<span class="<#ERROR name="ERRORISSN">"><b>ISSN</b></span><br />
+							<span class="note">If given will speed request processing</span>
+						</span>
+						<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" tabindex="9" value="<#PARAM name="ISSN">"><br />						
+					</label>
+					
+					<label for="CallNumber">
+						<span class="field">
+							<span class="<#ERROR name="ERRORCallNumber">"><b>Call Number</b></span>
+						</span>
+						<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name" tabindex="10" value="<#PARAM name="CallNumber">"><br />						
+					</label>
+					
+					<label for="CitedTitle">
+						<span class="field">
+							<span class="<#ERROR name="ERRORCitedTitle">"><b>OCLC (WorldCat Accession) Number</b></span>
+						</span>
+						<input id="CitedTitle" name="CitedTitle" type="text" size="20" class="f-name" tabindex="11" value="<#PARAM name="CitedTitle">"><br />						
+					</label>
+											
+						<label for="NotWantedAfter">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORNotWantedAfter">"><b>This material would be best by?</b></span><br />
+							<span class="note">(MM/DD/YYYY)</span>
+						</span>
+						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" tabindex="12" value="<#PARAM name="NotWantedAfter">"><br />						
+					</label>
+					
+
+					<label for="Wantedby">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORWantedby">"><b>If we cannot obtain the material by the date listed 
+			above, should we continue to try and for how long?</b></span><br />
+							<span class="note">Select a reason from the list on the right.</span>
+						</span>
+					<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name" tabindex="13"> 
+						<option selected><#PARAM name="WantedBy"></option>
+							<option>Yes, until the semester's end</option>
+							<option>Yes, until this academic year's end</option>
+							<option>Yes, indefinitely</option>
+							<option>No, please cancel the request</option>	
+						</select><br />
+					</label>
+					
+					<label for="AcceptNonEnglish">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAcceptNonEnglish">"><b>If your citation is in English but the item is found to be in another language, do you still want it?</b></span><br />
+							<span class="note">If yes, specify acceptable languages in the notes field.</span>
+						</span>
+						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" tabindex="14">
+							<option selected><#PARAM name="AcceptNonEnglish"></option>
+							<option>No</option>
+							<option>Yes</option>
+						</select><br />
+					</label>
+
+					
+					<label for="Notes">
+						<span class="field">
+							<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
+							<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</br><font size=1><font color="#CC0000">This note field contains a maximum of 255 characters.</font></font></span>
+						</span>
+
+						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="15"><#PARAM name="Notes"></textarea><br />
+					</label>
+					
+					<#INCLUDE filename="include_request_cited.html">                
+                    <#INCLUDE filename="include_request_buttons.html">
+				</fieldset>
+		</form>		
+      	<#INCLUDE filename="include_footer.html">
+    </div>    
+  </div>
+</div>
+</body>
+</html>
