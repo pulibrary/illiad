@@ -1,45 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad Main Menu</title>
-	<#INCLUDE filename="include_head.html">
+    <title>ILLiad Main Menu | Princeton University Library</title>
+    <#INCLUDE filename="include_head.html">
+    <link href="<#ACTION action='2' type='40' value='RSSID' valueType='lookup' absolutePath='true' includeSessionID='false'>" rel='alternate' type='application/rss+xml' title='ILLiad Alerts'>
 </head>
-<body id="type-c">
-	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<div id="ill_requests">
-				    <h1>Outstanding Requests</h1>
 
-				    <!-- <nav id="ill_filters" role="navigation"></nav> -->
-
-				    <script type="text/javascript"> illplus_requests(); </script>
-
-				    <!-- <section class="tabledata">
-						<#TABLE name="ViewOutstandingRequests"noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
-					</section> -->
-					<section class="tabledata">
-				        <h2 id="#checkedout">Checked Out Items</h2>
-				        <#TABLE name="ViewRenewCheckedOutItems" column="TransactionNumber:Request #" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status" column="DueDate:Due Date" orderBy="DueDate ASC">
-				    </section>
-
-				    <section class="tabledata">
-				        <h2 id="#available">Electronic Items</h2>
-				        <#TABLE name="ElectronicDelivery" column="TransactionNumber:Request #" column="Type" column="PhotoArticleTitle:Title" column="PhotoArticleAuthor:Author" column="Status" column="Expires" column="PhotoJournalTitle:Journal" column="View" column="Delete">
-				    </section>
-
-				    <section class="tabledata">
-				        <h2 id="#inprocess">Outstanding Requests</h2>
-				        <#TABLE name="ViewOutstandingRequests" column="TransactionNumber:Request #" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status" column="Date" orderBy="TransactionNumber DESC">
-				    </section>
-				</div>
-			</main>
-		</section>
-	</div>
-	<#INCLUDE filename="include_footer.html">
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+    
+    <div id="content" class="container"  >
+        
+        <div id="main-electronic-delivery">
+            <h2 class="header-special"><span aria-hidden="true" class="fas fa-file-alt fa-1x"></span> Electronically Received Articles</h2>
+            <#DATAREPEATER name="ElectronicDelivery" TemplateFile="templates/DataRow_ElectronicDelivery.html" noDataAction="You have no electronic delivery requests">
+        </div> 
+        
+        <div id="main-renew-checked-out-items">
+            <h2 class="header-special"><span aria-hidden="true" class="fas fa-book-open fa-1x"></span> Checked Out Items</h2>
+            <#DATAREPEATER name="ViewRenewCheckedOutItems" TemplateFile="templates/DataRow_CheckedOutItems.html" noDataAction="You have no items">            
+        </div>
+        
+        <div id="main-outstanding-requests">
+            <h2 class="header-special"><span aria-hidden="true" class="fas fa-list-alt fa-1x"></span> Outstanding Requests</h2>            
+            <#DATAREPEATER name="ViewOutstandingRequests" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no requests" orderby="TransactionNumber">
+        </div>
+    </div>
+    <#INCLUDE filename="include_footer.html">
 </body>
 </html>
+
+

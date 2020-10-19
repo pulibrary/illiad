@@ -1,20 +1,109 @@
-<h2>Where did you learn about this item?</h2>
-					
-<label for="CitedIn">
-	<span class="<#ERROR name="ERRORCitedIn">">Where did you find this item cited?</span>
-	<span class="note">Examples are WorldCat, Science Direct, Google Books, or a specific journal or book.</span>
-	<textarea id="CitedIn" name="CitedIn" rows="2" cols="40" class="f-name"><#PARAM name="CitedIn"></textarea>
-</label>
 
+<div class="form-group col-md-9">
+	<label for="AcceptNonEnglish">
+		<span class="field">
+			<span class="<#ERROR name='ERRORAcceptNonEnglish'>">
+				  If your citation is in English but the item is found to be in another language, do you still want it?
+			</span>
+			<br>
+			<span class="small-notes">If yes, specify acceptable languages in the notes field.</span>
+		</span>
+	</label>
+	<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="custom-select">
+		<option selected>Yes</option>
+		<option>No</option>
+	</select>
+</div>
 
-<label for="CitedPages">
-	<span class="<#ERROR name="ERRORCitedPages">">Why are you making this request?</span>
-	<select id="CitedPages" name="CitedPages" type="text" size="1" class="f-name"> 
-		<option selected>COVID-19 Campus Closure</option>
-		<option>Princeton does not own this item </option>
-		<option>Item's status is missing or lost in the Main Catalog </option>
-		<option>Princeton owns this title, but lacks the volume/issue I need </option>
-		<option>Princeton owns this title, but it is checked out </option>
-		<option>Item's status is on order in the Main Catalog </option>
-	</select>				
-</label>
+<div class="form-group col-md-9">
+	<label for="Notes">
+		<span class="field">
+			<span class="<#ERROR name='ERRORNotes'>">  
+				Notes   
+			</span><br>
+			<span class="small-notes">
+				Put any information here that may help us find the item, as well as any other pertinent information.
+			</span>
+		</span>
+	</label>
+	<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control" value="<#PARAM name='Notes'>"></textarea><br>
+</div>
+
+</section>
+
+<section name="request-citation-info">
+
+	<h2 class="page-header">When would you like this item?</h2>
+
+	<div class="form-group col-md-9">
+		<label for="NotWantedAfter">
+			<span class="field">
+				<span class="<#ERROR name='ERRORNotWantedAfter'>">
+					  This material would be best by
+				</span>
+				</br>
+				<span class="small-notes">
+					(MM/DD/YYYY)
+				</span>
+			</span>
+		</label>
+		<input type="text" class="form-control" name="NotWantedAfter" id="NotWantedAfter" value="<#PARAM name='NotWantedAfter'>">
+	</div>
+
+	<div class="form-group col-md-9">
+		<label for="WantedBy">
+			<span class="field">
+				<span class="<#ERROR name='ERRORWantedBy'>">
+					If we cannot obtain the material by the date listed above, should we continue to try and for how long?
+				</span>
+				<br>
+				<span class="small-notes">Some requests may take longer due to item availability</span>
+			</span>
+		</label>
+		<select id="WantedBy" name="WantedBy" size="1" class="custom-select">
+			<option selected>Yes, until the semester's end</option>
+			<option>Yes, until this academic year's end</option>
+			<option>Yes, indefinitely</option>
+			<option>No, please cancel the request</option>
+		</select>
+	</div>
+
+</section>
+<section name="request-citation-info">
+
+	<h2 class="page-header">Where did you learn about this item?</h2>
+
+	<div class="form-group col-md-9">
+		<label for="CitedIn">
+			<span class="field">
+				<span class="<#ERROR name='ERRORCitedIn'>">  
+					Where did you find this item cited?
+				</span>
+				<br/>
+				<span class="small-notes">
+					Examples are Dissertation Abstracts, Dialog (specify which database), or a specific journal or book.
+				</span>
+			</span>	
+		</label>
+		<input type="text" class="form-control" name="CitedIn" id="CitedIn" value="<#PARAM name='CitedIn'>">
+	</div>
+
+	<div class="form-group col-md-9">
+		<label for="CitedIn">
+			<span class="field">
+				<span class="<#ERROR name='ERRORCitedIn'>">  
+					Why are you making this request?
+				</span>
+			</span>	
+		</label>
+		<select id="CitedPages" name="CitedPages" type="text" size="1" class="custom-select"> 
+			<option selected>COVID-19 Campus Closure</option>
+			<option>Princeton does not own this item </option>
+			<option>Item's status is missing or lost in the Main Catalog </option>
+			<option>Princeton owns this title, but lacks the volume/issue I need </option>
+			<option>Princeton owns this title, but it is checked out </option>
+			<option>Item's status is on order in the Main Catalog </option>
+		</select>
+	</div>
+
+</section>

@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad - Cancelled Requests</title>
+	<title>ILLiad - Cancelled Requests | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
+
+<body>
 	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<div id="ill_requests">
-				    <h1>Cancelled Requests</h1>
+	<#INCLUDE filename="include_menu.html">
 
-				    <script type="text/javascript"> illplus_requests(); </script>
+	<div id="content" class="container"  >
+		<h2 class="page-header"><span aria-hidden="true" class="fas fa-ban fa-1x"></span> Cancelled Requests</h2>							
+		<#DATAREPEATER name="ViewResubmitCancelledItems" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no cancelled requests" orderby="TransactionNumber DESC">
 
-				    <section class="tabledata">
-						<#TABLE name="ViewResubmitCancelledItems" >
-					</section>
-				</div>
-			</main>
-		</section>
 	</div>
+
 	<#INCLUDE filename="include_footer.html">
 </body>
 </html>

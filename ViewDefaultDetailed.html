@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad - Transaction	<#PARAM name="TransactionNumber"></title>
+	<title>ILLiad - Transaction <#PARAM name='TransactionNumber'>  | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
-	<#INCLUDE filename="include_header.html">
-	<section class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<h1>Detailed Transaction Information</h1>
-				<#MENU name="transaction" separator="|">
-				<div class="default-table transaction-table">
-					<#TABLE name="DetailedInformation" hideColumnHeaders="true">
-				</div>
 
-				<div class="default-table notes-table">
-					<#TABLE name="NotesInformation" headerText="Notes" noDataAction="ShowMessageRow" noDataMessage="No Notes" column="NoteDate:Date/Time" column="AddedBy:Added By" column="Note">
-				</div>
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+    
+	<div id="content" class="container"  >
+		<#INCLUDE filename='include_TransactionMenu.html'>
 
-				<div class="default-table tracking-table">
-					<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking" 
-			 column="DateTime:Date/Time" column="ChangedTo:Status" column="ChangedBy:Changed By">
-				</div>
-			</main>
-		</section>
-	</section>
+		<div id="detailedTransactionInformation-<#PARAM name='TransactionNumber'>">
+			<h2 class="header-detailed">Request Information</h2>
+			<#INCLUDE filename='include_detailedTransactionInformation.html'>
+		</div>
+
+		<div id="notes-<#PARAM name='TransactionNumber'>">
+			<h2 class="header-detailed">Notes</h2>
+			<div class="list-group">
+				<#DATAREPEATER name="NotesInformation" TemplateFile="templates/DataRow_DefaultNote.html" noDataAction="This request has no notes">
+			</div>
+		</div>
+
+		<div id="notes-<#PARAM name='TransactionNumber'>">
+			<h2 class="header-detailed">Tracking</h2>
+			<div class="list-group">
+					<#TABLE name="TrackingInformation" noDataAction="ShowMessageRow" noDataMessage="This request has no tracking information" column="DateTime:Changed Date" column="ChangedTo:Status" column="ChangedBy:Changed By">
+			</div>
+		</div>
+					
+	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>
 </html>
+

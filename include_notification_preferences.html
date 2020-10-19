@@ -1,0 +1,87 @@
+<div id="NotificationPreferences" style="clear: left;">
+	<script type="text/javascript" src="js/userNotificationPreferences.js"></script>
+    <input type="hidden" name="UseGranularNotifications" value="Yes">
+    <div class="notificationPreferences">
+        <div class="form-group col-md-10">
+            <div id="AccountPreferences">
+                <h3>Account Notification Preferences</h3>
+				<br>
+				
+				<div class="row">
+					<div class="col-3 offset-5 offset-sm-6"><h4>Email</h4></div>
+				</div>
+				
+				<div class="row">
+					<div class="col-3 offset-6">
+						<a data-notification-check="Email" data-notification-action="all"><input class="btn btn-primary btn-md" type="button" onclick='SelectAll("notification1")' value="All" disabled/></a>
+						<a data-notification-check="Email" data-notification-action="none"><input class="btn btn-primary btn-md" type="button" onclick='UnSelectAll("notification1")' value="None" disabled/></a>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-6">Notify me when my account has been cleared</div>
+					<div class="col-3"><input class="notification1" type="checkbox" id="Placeholder_ClearedUser_Email" name="Placeholder_ClearedUser_Email" checked="checked" disabled="disabled"></div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-6">Notify me when I request a password reset</div>
+					<div class="col-3"><input class="notification1" type="checkbox" id="Placeholder_PasswordReset_Email" name="Placeholder_PasswordReset_Email" checked="checked" disabled="disabled"></div>
+				</div>
+            </div>
+			<br>
+			
+            <div id="RequestPreferences">
+                <h3>Request Notification Preferences</h3>
+				<br>
+				
+				<div class="row">
+					<div class="col-3 offset-5 offset-sm-6"><h4>Email</h4></div>
+				</div>
+			
+				<div class="row">
+					<div class="col-3 offset-6">
+						<a data-notification-check="Email" data-notification-action="all"><input class="btn btn-primary btn-md" type="button" onclick='SelectAll("notification3")' value="All"/></a>
+						<a data-notification-check="Email" data-notification-action="none"><input class="btn btn-primary btn-md" type="button" onclick='UnSelectAll("notification3")' value="None"/></a>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-6">Notify me when my request is ready for pickup</div>
+					<div class="col-3"><input type="checkbox" class="notification3" id="Notification_RequestPickup_Email" name="Notification_RequestPickup_Email" value="Yes" <#CHECKED name='Notification_RequestPickup_Email' default='True'>></div>
+				</div>
+				<br>
+			
+				<div class="row">
+					<div class="col-6">Notify me when my request has been shipped</div>
+					<div class="col-3"><input type="checkbox" class="notification3" id="Notification_RequestShipped_Email" name="Notification_RequestShipped_Email" value="Yes" <#CHECKED name='Notification_RequestShipped_Email' default='True'>></div>
+				</div>
+				<br>
+				
+				<div class="row">
+					<div class="col-6">Notify me when my request has been delivered electronically</div>
+					<div class="col-3"><input type="checkbox" class="notification3" id="Notification_RequestElectronicDelivery_Email" name="Notification_RequestElectronicDelivery_Email" value="Yes" <#CHECKED name='Notification_RequestElectronicDelivery_Email' default='True'>></div>
+				</div>
+				<br>
+				
+				<div class="row">
+					<div class="col-6">Notify me when my checked out material is overdue</div>
+					<div class="col-3"><input type="checkbox" class="notification3" id="Notification_RequestOverdue_Email" name="Notification_RequestOverdue_Email" value="Yes" <#CHECKED name='Notification_RequestOverdue_Email' default='True'>></div>
+				</div>
+				<br>
+				
+				<div class="row">
+					<div class="col-6">Notify me when my request has been cancelled</div>
+					<div class="col-3"><input type="checkbox" class="notification3" id="Notification_RequestCancelled_Email" name="Notification_RequestCancelled_Email" value="Yes" <#CHECKED name='Notification_RequestCancelled_Email' default='True'>></div>
+				</div>
+				<br>
+				
+				<div class="row">
+					<div class="col-6">Notify me when the library has other information about my request</div>
+					<div class="col-3"><input type="checkbox" id="Placeholder_RequestOther_Email" name="Placeholder_RequestOther_Email" checked="checked" disabled="disabled"></div>
+				</div>
+				<br>
+				
+			</div>
+		</div>
+	</div>
+</div>

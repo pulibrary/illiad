@@ -15,7 +15,7 @@ p {margin: 0 0 1em}
 img {border:none;display:block;margin: .5em 0}
 dt {font-weight:bold}
 
-#nav, #search, #nav, #breadcrumb, #poweredby {display:none}
+nav #menu, #search, nav #menu, #breadcrumb, #poweredby {display:none}
 
 /* =LINKS */
 a {border:none}

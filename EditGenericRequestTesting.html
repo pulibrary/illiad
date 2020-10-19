@@ -1,140 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad - Edit Testing Request</title>
+	<title>ILLiad - Edit Testing Request | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
+
+<body>
 	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<form action="illiad.dll" method="post" name="EditGenericRequestTesting" class="f-wrap-request">
-					<input type="hidden" name="ILLiadForm" value="EditGenericRequestTesting">
-					<input type="hidden" name="Username" value="<#PARAM name="Username">">
-					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-					<input type="hidden" name="TransactionNumber" value="<#PARAM name="TransactionNumber">">
-					<input name="RequestType" type="hidden" id="RequestType" value="Loan">
-					<input name="DocumentType" type="hidden" id="DocumentType" value="Testing">
-					<h1>Edit Testing Request</h1>
-					<#STATUS>
-					<h2>Describe the item you want</h2>
-					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
-					<label for="LoanAuthor">
-						<#ERROR name="ERRORLoanAuthor"> Author/Editors
-						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">">
-					</label>
-
-					<label for="LoanTitle">
-						<#ERROR name="ERRORLoanTitle"> Title
-
-							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
-						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" ><#PARAM name="LoanTitle"></textarea>
-					</label>
-
-					<label for="LoanPublisher">
-						<#ERROR name="ERRORLoanPublisher">
-						Publisher
-						<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
-					</label>
-
-					<label for="LoanPlace">
-						<#ERROR name="ERRORLoanPlace">
-						Place of Publication
-						<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPlace">">
-					</label>
-
-					<label for="LoanDate">
-						<#ERROR name="ERRORLoanDate">
-						Date of Publication
-						<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
-					</label>
-
-					<label for="LoanEdition">
-						<#ERROR name="ERRORLoanEdition">
-						Edition
-						<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
-					</label>
-
-					<label for="ISSN">
-						<#ERROR name="ERRORISSN">
-						ISBN (International Standard Book Number)
-
-							<span class="note">If given will speed request processing</span>
-						<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
-					</label>
-
-					<label for="CallNumber">
-						<#ERROR name="ERRORCallNumber">
-						Call Number
-						<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name"  value="<#PARAM name="CallNumber">">
-					</label>
-
-					<label for="ESPNumber">
-						<#ERROR name="ERRORESPNumber">
-						OCLC or Docline UI Number
-						<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
-					</label>
-
-					<label for="NotWantedAfter">
-						<#ERROR name="ERRORNotWantedAfter">
-
-							Not Wanted After Date
-							<span class="note">(MM/DD/YYYY)</span>
-
-						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name"  value="<#PARAM name="NotWantedAfter">">
-					</label>
-
-					<label for="AcceptNonEnglish">
-						<#ERROR name="ERRORAcceptNonEnglish">
-
-							Will you accept the item in a language other than English?
-
-							<span class="note">If yes, specify acceptable languages in the notes field.</span>
-
-						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
-							<option selected>Yes</option>
-							<option>No</option>
-						</select>
-					</label>
-
-					<label for="AcceptAlternateEdition">
-						<#ERROR name="ERRORAcceptAlternateEdition">
-						Will you accept an alternate edition of this item?
-						<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" >
-							<option selected>Yes</option>
-							<option>No</option>
-						</select>
-					</label>
-
-					<label for="AccountNo">
-						<#ERROR name="ERRORAccountNo">
-						Account Number
-						<select id="AccountNo" name="AccountNo" size="1" class="f-name" >
-							<#OPTION name="ValidAccounts"></select>
-					</label>
-
-					<label for="Notes">
-						<#ERROR name="ERRORNotes">
-
-							Notes
-
-							<span class="note">
-								Put any information here that may help us find the item, as well as any other pertinent information.
+	<#INCLUDE filename="include_menu.html">  
+	
+	<div id="content" class="container"  >
+		<form action="illiad.dll" method="post" name="EditGenericRequestTesting">
+			<input type="hidden" name="ILLiadForm" value="EditGenericRequestTesting">
+			<input type="hidden" name="RequestType" value="Loan">
+			<input type="hidden" name="Username" value="<#PARAM name='Username'>">
+			<input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
+			<input type="hidden" name="TransactionNumber" value="<#PARAM name='TransactionNumber'>">
+			<input type="hidden" name="ESPNumber" value="<#PARAM name='ESPNumber'>">
+			<input type="hidden" name="CallNumber" value="<#PARAM name='CallNumber'>">
+			<input type="hidden" name="NotWantedAfter" value="<#PARAM name='NotWantedAfter'>">
+			
+			<fieldset>
+				<h2 class="page-header">Edit Testing Request</h2>
+				<section name="editgenericrequesttesting-info">
+					
+					<div class="form-group col-md-9">
+						<label for="LoanTitle">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanTitle'>">
+									Title
+									<span class="req">(required)</span>
+								</span>
+								<br/>
+								<span class="small-notes">
+									Please do not abbreviate unless your citation is abbreviated
+								</span> 
 							</span>
-
-						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" ><#PARAM name="Notes"></textarea>
-					</label>
-
-					<#INCLUDE filename="include_request_cited.html">
+						</label>
+						<input type="text" class="form-control" name="LoanTitle" id="LoanTitle" value="<#PARAM name='LoanTitle'>">
+					</div>
+					
+					<div class="form-group col-md-9">  
+						<label for="LoanAuthor">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanAuthor'>">
+									Author/Editors
+									<span class="req">(required)</span>
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanAuthor" id="LoanAuthor" value="<#PARAM name='LoanAuthor'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanPublisher">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPublisher'>">
+									Publisher
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPublisher" id="LoanPublisher" value="<#PARAM name='LoanPublisher'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanPlace">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPlace'>">
+									Place of Publication
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPlace" id="LoanPlace" value="<#PARAM name='LoanPlace'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanDate">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanDate'>">
+									Date of Publication
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanDate" id="LoanDate" value="<#PARAM name='LoanDate'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanEdition">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanEdition'>">
+									Edition
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanEdition" id="LoanEdition" value="<#PARAM name='LoanEdition'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="ISSN">
+							<span class="field">
+								<span class="<#ERROR name='ERRORISSN'>">
+									ISBN (International Standard Book Number)
+								</span>
+								<br>
+								<span class="small-notes">
+									If given will speed request processing
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+					</div>
+					
+					<!--<div class="form-group col-md-9">
+						<label for="CallNumber">					
+							<span class="field">
+								<span class="<#ERROR name='ERRORCallNumber'>">
+									Call Number
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="CallNumber" id="CallNumber" value="<#PARAM name='CallNumber'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="ESPNumber">
+							<span class="field">
+								<span class="<#ERROR name='ERRORESPNumber'>">
+									OCLC or Docline UI Number
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ESPNumber" id="ESPNumber" value="<#PARAM name='ESPNumber'>">
+					</div>-->
+					
+					<div class="form-group col-md-9">
+						<label for="AcceptAlternateEdition">
+							<span class="field">
+								<span class="<#ERROR name='ERRORAcceptAlternateEdition'>">
+									Will you accept an alternate edition of this item?
+								</span>
+							</span>
+						</label>
+						<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="custom-select mr-sm-2">
+							<option selected><#PARAM name='AcceptAlternateEdition'></option>
+							<option>No</option>
+						</select>
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="Notes">
+							<span class="field">
+								<span class="<#ERROR name='ERRORNotes'>">  
+									Notes   
+								</span><br>
+								<span class="small-notes">
+									Put any information here that may help us find the item, as well as any other pertinent information.</span>
+								</span>
+							</label>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control" value="<#PARAM name='Notes'>"></textarea><br>
+						</div>
+					</section>
+					<#INCLUDE filename="include_request_cited.html">                
 					<#INCLUDE filename="include_request_buttons.html">
-				</form>
-			</main>
-		</section>
+				</fieldset>
+			</form>
+		</div>
 	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>
 </html>
+

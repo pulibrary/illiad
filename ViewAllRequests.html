@@ -1,31 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad - All Request</title>
-	<#INCLUDE filename="include_head.html">
+    <title>ILLiad - All Requests | Princeton University Library</title>
+    <#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
-	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<div id="ill_requests">
-				    <h1>All Requests</h1>
 
-				    <nav id="ill_filters"></nav>
-
-				    <script type="text/javascript"> illplus_requests(); </script>
-
-				    <section class="tabledata">
-						<#TABLE name="ViewAllRequests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
-					</section>
-				</div>
-			</main>
-		</section>
-	</div>
-	<#INCLUDE filename="include_footer.html">
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+    
+    <div id="content" class="container"  >
+        <h2 class="page-header"><span aria-hidden="true" class="fas fa-list-alt fa-1x"></span> All Requests</h2>	  
+		
+        <#DATAREPEATER name="ViewAllRequests" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no requests" orderby="TransactionNumber DESC">
+        
+    </div>
+    <#INCLUDE filename="include_footer.html">
 </body>
 </html>

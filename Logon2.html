@@ -1,46 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
+	<meta charset="utf-8">
 	<meta http-equiv="Pragma" content="no-cache">
-	<title>ILLiad Logon</title>
+	<title>ILLiad Logon | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-a">
+
+<body>
+
 	<#INCLUDE filename="include_header.html">
-	<section class="panel-display--six_six l-page">
-		<main role="main" class="l-main">
-			<section class="six_six-region--first">
-				<!-- <div id="status">
-					Enter your user information below. Then press the Logon to ILLiad button to continue.
-				</div> -->
-				<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
+
+	<div class="alerts-bar">
+		<div class="container" id="webAlerts"></div>
+	</div>
+
+	<div class="container">
+		<div id="status" class="container"><#STATUS></div>
+		<div class="row">
+			<div class="col-md-6">
+				<form action="<#DLL>" method="post" name="Logon">
 					<input type="hidden" name="ILLiadForm" value="Logon">
 					<#FORMSTATE>
-					<div id="logonform" class="logon">
-						<h1>Login To Your Account</h1>
+
+					<h2>Login to Your Account</h2>
+
+					<div class="logon-field form-group col-md-8">
 						<label for="username">
-							 Username
-							<input id="username" name="Username" type="text" class="f-name" />
+							Username
 						</label>
-						<label for="password">
-							 Password
-							<input id="password" name="Password" type="password" class="f-name" />
-						</label>
-						<div class="f-submit-wrap">
-							<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" />
-						</div>
+						<input type="text" class="form-control" name="username" id="username" value="">
 					</div>
+
+					<div class="logon-field form-group col-md-8">
+						<label for="password">
+							Password
+							</label>
+						<input type="password" name="password" class="form-control" id="password" autocomplete="off">
+					</div>
+					<button class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Logon to ILLiad">Logon to ILLiad</button>
 				</form>
-				<a href="illiad.dll?Action=10&Form=84">Forgot Password?</a> | <a href="illiad.dll?Action=10&Form=79">First Time Users</a>
-			</section>
-			<aside role="complementary" class="six_six-region--second">
-			<h2>Existing Users</h2>
-			<p>If your ILS account username is the same as your Princeton Net ID account you will now login to the system with your Princeton Net ID Account Password. If your ILS account username is different than your Princeton Net ID or you don't have a Princeton Net ID you will login to the system you login with the same credentials you've used before.</p>
-			<h2>New Users</h2>
-			<p>If your are a Princeton Net ID account holder login to the system with your Princeton Net ID Account Password. You will be taken to a brief registration form that will ask you to fill in your campus contact details. If you do not have a Princeton Net ID account use the ILS self-registration form. If you have any questions about these changes or problems logging into the system contact ILS services via email [ilsborr@princeton.edu] at anytime or via phone [609-258-3272] during the office's business hours.</p>
-			</aside>
-		</main>
-	</section>
+			
+
+				<div  class="container" aria-label="Account creation and password reset">
+					<form action="illiad.dll?Action=10&Form=79" method="post" name="RegisterForm" id="RegisterForm">
+						<#FORMSTATE>
+						<div class="forgot-password-link">
+							<a href="<#ACTION action='10' form='84'>">
+								<span aria-hidden="true" class="fas fa-question-circle"></span>  Forgot Password?
+							</a>
+						</div>
+						<div class="first-time-link">
+							<a href="#" onclick="RegisterForm.submit(); return false;">
+								<span aria-hidden="true" class="fas fa-user-plus"></span>  First Time Users
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<h2>Existing Users</h2>
+				<p>If your ILS account username is the same as your Princeton Net ID account, please login to the system with your Princeton Net ID Account Password. If your ILS account username is different than your Princeton Net ID or if you don't have a Princeton Net ID, please login to the system with the same credentials you've used before.</p>
+				<h2>New Users</h2>
+				<p>If your are a Princeton Net ID account holder, please login to the system with your Princeton Net ID Account Password. You will be taken to a brief registration form that will ask you to fill in your campus contact details. If you do not have a Princeton Net ID account use the ILS self-registration form. If you have any questions about these changes, or problems logging into the system, please email [ilsborr@princeton.edu] at any time or call [609-258-3272] during regular office hours.</p>
+			</div>
+		</div>
+	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>
 </html>
+	
