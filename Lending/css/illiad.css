@@ -4,25 +4,18 @@ LEGAL
 Copyright 2020 Atlas Systems, Inc. http://www.atlas-sys.com
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: franklin-gothic-urw,"Helvetica Neue",Arial,sans-serif;
 }
 
 /*These are CSS classes for the headers*/
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Open Sans', sans-serif;
-}
-
 h1,h2,h3,h4,h5 {
-    color:#08415c;
+    color:#1a1a1a;
 }
 
 h1 {
     font-size: 48px;
     padding: 10px;
-    text-align: center;
 }
 
 h2 {
@@ -57,7 +50,7 @@ img {
 }
 
 .card-title {
-    color: #08415c;
+    color: #1a1a1a;
     font-size: 22px;
     padding: 10px 0 0;
 }
@@ -68,32 +61,31 @@ label {
 }
 
 p {
-    color: #868e96;
     font-size: 16px;
     padding: 10px;
 
 }
 
 a {
-    color: #08415c;
+    color: #1a1a1a;
     text-decoration: none;
 }
 
 ul {
-    color: #868e96;
+    color: #717070;
     font-size: 16px;
     padding: 0 0 0 25px;
     word-wrap: normal;
 }
 
 .small-notes {
-    color: #868e96;
+    color: #717070;
     font-size: 14px;
     padding: 4px 0 0;
 }
 
 .common-note {
-    color: #868e96;
+    color: #717070;
     font-size: 16px;
     padding: 6px 0px;
 }
@@ -110,7 +102,7 @@ ul {
 }
 
 form section {
-    background-color: #e2e3e5;
+    background-color: #f8f9fa;
     margin-bottom: 40px;
     padding: 15px;
 }
@@ -176,39 +168,43 @@ form section {
 }
 
 .btn-primary {
-    background-color: #08415c;
+    background-color: #1a1a1a;
     color: #fff;
     margin: 10px 5px 10px 0;
 }
 
 .btn-primary:disabled {
-    background-color: #08415c;
+    background-color: #1a1a1a;
 }
 
 .btn-secondary {
-    background-color: #e2e3e5;
-    color: #08415c;
+    background-color: #f8f9fa;
+    color: #1a1a1a;
     margin: 10px 5px 10px 0;
 }
 
 .btn-primary:hover {
-    background-color: #52b3d9;
+    background-color: #e2e3e5;
     color: #05171f;
     text-decoration: underline;
 }
 
 .btn-secondary:hover, .dropdown-item:focus, .dropdown-item:not(.disabled):hover {
-    background-color: #a4a5a5;
+    background-color: #f8f9fa;
     color: #05171f;
     text-decoration: underline;
 }
 
+.btn.fa-search {
+    color: #1a1a1a;
+}
+
 .badge-primary {
-    background-color: #08415c;
+    background-color: #1a1a1a;
 }
 
 .selectOptions {
-    color: #08415c;
+    color: #1a1a1a;
     padding: 20px 12px 6px;
 }
 
@@ -220,7 +216,7 @@ form section {
 }
 
 .btn-alert:hover {
-    color: #08415c;
+    color: #1a1a1a;
 }
 
 .alerts-bar{
@@ -231,10 +227,9 @@ form section {
 
 /*These are CSS styling classes for the navigation bar*/
 .main-navbar {
-    background-color: #08415c;
+    background-color: #fff;
     color: #000;
     padding: 5px;
-    font: bold 26px 'Open Sans', sans-serif;
     font-kerning: auto;
 }
 
@@ -243,12 +238,7 @@ nav li {
 }
 
 nav li a {
-    font: bolder 18px 'Open Sans', sans-serif;
     text-decoration: none;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #e0e0e0;
 }
 
 .dropdown-item {
@@ -257,7 +247,7 @@ nav li a {
 
 /*These are the CSS Styling classes for search*/
 #no-results-message {
-    color: #868e96;
+    color: #000;
     font-size: 16px;
     padding: 4px 0 0;
 }
@@ -376,11 +366,29 @@ a.offscreen:focus{
 }
 
 .btn-outline-primary:hover{
-    background-color:#52b3d9;
+    background-color:#e2e3e5;
     color: #000;
-    border-color: #52b3d9;
+    border-color: #e2e3e5;
 }
 
 #searchType, #SearchTypeAll {
     display: inline !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+section .page-header,
+section h2 {
+    padding: 15px 1rem;
+    font-size: 26px;
+}
+
+section .alert {
+    margin: 0 1rem 1rem;
+}
+
+#content {
+    padding-bottom: 3rem;
 }

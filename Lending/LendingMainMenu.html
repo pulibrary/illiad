@@ -1,29 +1,34 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+
 <head>
-<title>ILLiad Main Menu</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
-<!--[if lte IE 6]>
-<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
-<![endif]-->
-<link href="<#ACTION action="2" type="40" value="RSSID" valueType="lookup" absolutePath="true" includeSessionID="false">" rel="alternate" type="application/rss+xml" title="ILLiad Alerts" />
-<link href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="true" includeSessionID="false">" rel="alternate" type="application/rss+xml" title="ILLiad Notifications" />
+    <title>ILLiad Main Menu</title>
+    <#INCLUDE filename="include_head.html">
+
+    <link href="<#ACTION action='2' type='40' value='RSSID' valueType='lookup' absolutePath='true' includeSessionID='false'>" rel='alternate' type='application/rss+xml' title='ILLiad Alerts'>
 </head>
-<body id="type-c">
-<div id="wrap">
-	<#INCLUDE filename="include_header.html">
-    <div id="content-wrap">
-        <#INCLUDE filename="include_menu.html">
-        <div id="content">
-            <div class="default-table">
-                <#TABLE name="ViewOutstandingLendingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="Title" column="Author" column="TransactionStatus:Status">
-            </div>
-            <#INCLUDE filename="include_footer.html">
-        </div>
-        <div id="sidebar">
-			<a href="<#ACTION action="2" type="40" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">">Subscribe to Alerts Feed</a>
-            <br />
-            <#ALERTS> </div>
+
+<body>
+    <#INCLUDE filename="include_header.html">
+    <#INCLUDE filename="include_menu.html">
+
+    <div id="content" class="container" role="heading" aria-label="Content">
+
+        <h1 class="sr-only visually-hidden">Main Menu</h1>
+
+        <div id="table-main-shipped-items">
+            <h2 class="header-special"><span aria-hidden="true" class="fas fa-file-alt fa-1x"></span> Shipped Requests</h2>
+            <#DATAREPEATER name="ViewShippedItems" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no shipped requests" orderby="TransactionNumber DESC">
+        </div> 
+
+        <div id="table-main-outstanding-requests">
+            <h2 class="header-special"><span aria-hidden="true" class="fas fa-file-alt fa-1x"></span> Outstanding Requests</h2>
+            <#DATAREPEATER name="ViewOutstandingLendingRequests" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no outstanding delivery requests" orderby="TransactionNumber DESC">
+        </div> 
+        
+        <#INCLUDE filename="include_footer.html">
     </div>
+
 </body>
+
 </html>

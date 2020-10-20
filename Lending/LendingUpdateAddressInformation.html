@@ -1,134 +1,154 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+
 <head>
-<title>ILLiad - Change Address Information</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-<!--[if lte IE 6]>
-<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
-<![endif]-->
+	<title>ILLiad - Change Address Information</title>
+	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
-<div id="wrap">
-  <#INCLUDE filename="include_header.html">
-  <div id="content-wrap">
-  	<#INCLUDE filename="include_menu.html">
-    <div id="content">
-		<form action="illiadlending.dll" method="post" name="LendingUpdateAddressInformation" class="f-wrap-request">
-			<input type="hidden" name="ILLiadForm" value="LendingUpdateAddressInformation">
-				<div class="req"><b>*</b> Indicates required field</div>
-				<fieldset>			
-					<h3>Change Address Information</h3>						
-					<label for="LibraryName">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORLibraryName">"><b>Library Name</b></span>
+
+<body>
+	<#INCLUDE filename="include_header.html"> 
+    <#INCLUDE filename="include_menu.html">  
+
+	<div id="content" class="container" role="heading" aria-label="Content">
+		<form action="illiadlending.dll" method="post" name="ChangeUserInformation">
+			<input type="hidden" name="ILLiadForm" value="ChangeUserInformation">
+			<input type="hidden" name="Username" value="<#PARAM name='Username'>">
+			<input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
+			
+			<fieldset>
+
+				<h1 class="page-header">Change User Information</h1>
+				<section name="change-address-information-info">
+
+					<div class="form-group col-md-6">			
+						<label for="LibraryName">
+							<span class="<#ERROR name='ERRORLibraryName'>">
+								Library Name   
+								<span class="req">(required)</span>
+							</span>
 						</span>
-						<input id="LibraryName" name="LibraryName" type="text" size="40" class="f-name" value="<#PARAM name="LibraryName">"><br />	
-					</label>		
-										
-					<label for="Address1">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORAddress1">"><b>Primary Address Line 1</b></span>
-						</span>
-						<input id="Address1" name="Address1" type="text" size="40" class="f-name" value="<#PARAM name="Address1">"><br />						
-					</label>
+						<input id="LibraryName" name="LibraryName" type="text"class="form-control" size="40" value="<#PARAM name='LibraryName'>">
+					</div>				
 					
-					<label for="Address2">
-						<span class="field">
-							<span class="<#ERROR name="ERRORAddress2">"><b>Primary Address Line 2</b></span>
-						</span>
-						<input id="Address2" name="Address2" type="text" size="40" class="f-name" value="<#PARAM name="Address2">"><br />
-					</label>
-					
-					<label for="Address3">
-						<span class="field">
-							<span class="<#ERROR name="ERRORAddress3">"><b>Primary Address Line 3</b></span>
-						</span>
-						<input id="Address3" name="Address3" type="text" size="40" class="f-name" value="<#PARAM name="Address3">"><br />
-					</label>
-					
-					<label for="Address4">
-						<span class="field">
-							<span class="<#ERROR name="ERRORAddress4">"><b>Primary Address Line 4</b></span>
-						</span>
-						<input id="Address4" name="Address4" type="text" size="40" class="f-name" value="<#PARAM name="Address4">"><br />
-					</label>
-					
-					<label for="BAddress1">
-						<span class="field">
-							<span class="<#ERROR name="ERRORBAddress1">"><b>Billing Address Line 1</b></span>
-						</span>
-						<input id="BAddress1" name="BAddress1" type="text" size="40" class="f-name" value="<#PARAM name="BAddress1">"><br />						
-					</label>
-					
-					<label for="BAddress2">
-						<span class="field">
-							<span class="<#ERROR name="ERRORBAddress2">"><b>Billing Address Line 2</b></span>
-						</span>
-						<input id="BAddress2" name="BAddress2" type="text" size="40" class="f-name" value="<#PARAM name="BAddress2">"><br />
-					</label>
-					
-					<label for="BAddress3">
-						<span class="field">
-							<span class="<#ERROR name="ERRORBAddress3">"><b>Billing Address Line 3</b></span>
-						</span>
-						<input id="BAddress3" name="BAddress3" type="text" size="40" class="f-name" value="<#PARAM name="BAddress3">"><br />
-					</label>
-					
-					<label for="BAddress4">
-						<span class="field">
-							<span class="<#ERROR name="ERRORBAddress4">"><b>Billing Address Line 4</b></span>
-						</span>
-						<input id="BAddress4" name="BAddress4" type="text" size="40" class="f-name" value="<#PARAM name="BAddress4">"><br />
-					</label>
-					
-					<label for="BorrowingDeptEmail">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORBorrowingDeptEmail">"><b>E-Mail Address</b></span>
-						</span>
-						<input id="BorrowingDeptEmail" name="BorrowingDeptEmail" type="text" size="40" class="f-name" value="<#PARAM name="BorrowingDeptEmail">"><br />						
-					</label>
-					
-					<label for="Phone">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORPhone">"><b>Daytime Phone</b></span>
-						</span>
-						<input id="Phone" name="Phone" type="text" size="40" class="f-name" value="<#PARAM name="Phone">"><br />						
-					</label>
-					
-					<label for="Fax">
-						<span class="field">
-							<span class="<#ERROR name="ERRORFax">"><b>Fax</b></span>
-						</span>
-						<input id="Fax" name="Fax" type="text" size="40" class="f-name" value="<#PARAM name="Fax">"><br />						
-					</label>
-					
-					<label for="ArielAddress">
-						<span class="field">
-							<span class="<#ERROR name="ERRORArielAddress">"><b>Ariel Address</b></span>
-						</span>
-						<input id="ArielAddress" name="ArielAddress" type="text" size="40" class="f-name" value="<#PARAM name="ArielAddress">"><br />						
-					</label>
-					
-					<label for="OdysseyAddress">
-						<span class="field">
-							<span class="<#ERROR name="ERROROdysseyAddress">"><b>OdysseyAddress</b></span>
-						</span>
-						<input id="OdysseyAddress" name="OdysseyAddress" type="text" size="40" class="f-name" value="<#PARAM name="OdysseyAddress">"><br />						
-					</label>
-										               
-                    <div class="f-submit-wrap" align="right">
-						<input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" />
-						<input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit" />
+					<div class="form-group col-md-5">
+						<label for="Address1">
+							<span class="<#ERROR name='ERRORAddress1'>">
+								Address Line 1
+							</span>
+						</label>
+						<input type="text" size="40" class="form-control" name="Address1" id="Address1" value="<#PARAM name='Address1'>">
 					</div>
-				</fieldset>
+					
+					<div class="form-group col-md-5">
+						<label for="Address2">
+							<span class="<#ERROR name='ERRORAddress2'>">
+								Address Line 2
+							</span>
+						</label>
+						<input type="text" size="40" class="form-control" name="Address2" id="Address2" value="<#PARAM name='Address2'>">
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="Address3">
+							<span class="<#ERROR name='ERRORAddress3'>">
+								Address Line 3   
+							</span>
+						</label>
+						<input id="Address3" name="Address3" type="text" size="40" class="form-control" value="<#PARAM name='Address3'>">
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="Address4">
+							<span class="<#ERROR name='ERRORAddress4'>">
+								Address Line 4
+							</span>
+						</label>
+						<input id="Address4" name="Address4" type="text" size="40" class="form-control" value="<#PARAM name='Address4'>"><br>
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="BAddress1">
+							<span class="<#ERROR name='ERRORBAddress1'>">
+								Billing Address Line 1   
+							</span>
+						</label>
+						<input id="BAddress1" name="BAddress1" type="text" size="40" class="form-control" value="<#PARAM name='BAddress1'>">
+					</div>
+						
+					<div class="form-group col-md-5">
+						<label for="BAddress2">
+							<span class="<#ERROR name='ERRORBAddress2'>">
+								Billing Address Line 2
+							</span>
+						</label>
+						<input id="BAddress2" name="BAddress2" type="text" size="40" class="form-control" value="<#PARAM name='BAddress2'>">
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="BAddress3">
+							<span class="<#ERROR name='ERRORBAddress3'>">
+								Billing Address Line 3   
+							</span>
+					</label>
+						<input id="BAddress3" name="BAddress3" type="text" size="40" class="form-control" value="<#PARAM name='BAddress3'>">
+					</div>
+
+					<div class="form-group col-md-5">
+						<label for="BAddress4">
+							<span class="<#ERROR name='ERRORBAddress4'>">
+								Billing Address Line 4   
+							</span>
+						</label>
+						<input id="BAddress4" name="BAddress4" type="text" size="40" class="form-control" value="<#PARAM name='BAddress4'>">
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="BorrowingDeptEmail"></label>
+							<span class="<#ERROR name='ERRORBorrowingDeptEmail'>">
+								E-Mail Address
+								<span class="req">(required)</span>
+							</span>
+						</label>
+						<input id="BorrowingDeptEmail" name="BorrowingDeptEmail" type="text" size="40" class="form-control" value="<#PARAM name='BorrowingDeptEmail'>">
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="Phone">
+							<span class="<#ERROR name='ERRORPhone'>">
+								Daytime Phone
+								<span class="req">(required)</span>
+							</span>		
+						</label>
+						<input id="Phone" name="Phone" type="text" size="40" class="form-control" value="<#PARAM name='Phone'>">
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="Fax">
+							<span class="<#ERROR name='ERRORFax'>">
+								Fax
+							</span>
+						</label>
+						<input id="Fax" name="Fax" type="text" size="40" class="form-control" value="<#PARAM name='Fax'>">
+					</div>
+					
+					<div class="form-group col-md-5">
+						<label for="OdysseyAddress">
+							<span class="<#ERROR name='ERROROdysseyAddress'>">
+								OdysseyAddress 
+							</span>
+						</label>
+						<input id="OdysseyAddress" name="OdysseyAddress" type="text" size="40" class="form-control" value="<#PARAM name='OdysseyAddress'>">
+					</div>
+				</section>
+
+				<div align="right">
+					<input class="btn btn-primary btn-md" type="submit" name="SubmitButton" value="Submit Information">
+					<input class="btn btn-secondary btn-md" type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu">
+				</div>
+			</fieldset>
 		</form>		
-      	<#INCLUDE filename="include_footer.html">
-    </div>    
-  </div>
-</div>
+		<#INCLUDE filename="include_footer.html">
+	</div>
 </body>
 </html>

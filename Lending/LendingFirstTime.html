@@ -1,84 +1,155 @@
-<html>
-<head>
-<meta http-equiv="Pragma" content="no-cache">
-<title>ILLiad Logon</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-<!--[if lte IE 6]>
-<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
-<![endif]-->
-</head>
-<body id="type-a">
-<div id="wrap">
-  <div id="header"> <span id="site-name">ILLiad</span>
-    <div id="status">
-		By pressing the button below, you acknowledge and agree to all of the terms and conditions below.<br />
-		Please pay particular attention to the copyright statement and the ILLiad FAQ.<br />
-		After reading this information, you can press the "First Time Users Click Here" button below.
-	</div>
-  </div>
-  <div id="content-wrap">
-    <div id="content">		
-		<form action="illiadlending.dll" method="post" name="Logon" class="f-wrap-1">
-			<input type="hidden" name="ILLiadForm" value="Logon">
-			<div id="logonform">				
-				<fieldset>			
-					<h3>First Time User Registration for Interlibrary Loan</h3>			
-					
-					<p>
-					To request an item through Interlibrary Loan, you must first identify yourself to the library's ILLiad system. To do this you fill out a registration form using your Web browser.<br />
-    				Registration has three purposes:
-					</p>
-    				
-					<ul>
-        				<li>Entering your personal information into the ILLiad system means you will not have to supply the information again when making future requests.</li>
-        				<li>Having your e-mail and regular mail addresses on file with Interlibrary Loan enables us to notify you promptly and deliver materials accurately when 
-							your request arrives in the library.</li>
-        				<li>By specifying a Username and Password of your choosing, you will have secure access to information about your requests. You will also be able to review
-            				the list of items you have requested in the past.</li>
-    				</ul>
-					
-    				<h2>About your Username and Password</h2>
-    				<p>
-					During registration, you will be asked to choose a Username and Password. You will use this Username and Password when logging on to the ILLiad system in the future.</p>
-    				
-					<b>Username</b><br />
-					Choose anything you like, such as your name, abbreviations, or an alphanumeric code.<br />
-					
-					<b>Password</b><br />
-					Choose anything you like. We recommend that you follow good security practice and choose a password that is different from those you use to access other systems.<br />
-					ILLiad will encrypt your password, so it will remain secure. Only you will know your password.
-					
-    				<hr />
-    				
-					<h2>Important Copyright Information</h2>
-    				<p>WARNING CONCERNING COPYRIGHT RESTRICTIONS</p>
-    				<p>The copyright law of the United States (Title 17, United States Code) governs the making of photocopies or other reproductions of copyrighted materials.</p>
-					<p>Under certain conditions specified in the law, libraries and archives are authorized to furnish a photocopy or other reproduction. One of these specified conditions is that the
-    				   photocopy or reproduction is not to be &quot;used for any purpose other than private study, scholarship, or research&quot;. If a user makes a request for, or later uses,
-    				   a photocopy or reproduction for purposes in excess of &quot;fair use&quot;, that user may be liable for copyright infringement.</p>
-    				<p>This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment of the order would involve violation of copyright law.</p>
-    				
-					<hr />
-    				
-					<h2>ILLiad FAQ (Frequently Asked Questions)</h2>
-    				<p>Before registering, you may wish to read the ILLiad <a href="illiadlending.dll?action=10&form=12" target="_self">FAQ</a>. The FAQ may answer other questions you have about the ILLiad interlibrary loan system.</p>
-			
-					<p>By pressing this button you acknowledge and agree to all of the terms and conditions above. Please pay particular attention to the copyright statement and the ILLiad FAQ. After reading
-    				   this information, you can press the &quot;First Time Users Click Here&quot; button to continue.</p>
-					   
-					<div class="f-submit-wrap">
-						<input type="submit" name="SubmitButton" value="First Time Users Click Here" class="f-submit" /><br />
-					</div>
-				</fieldset>
-			</div>
-		</form>
+<!DOCTYPE html>
+<html lang="en-US">
 
-      	<div id="footer">
-			Copyright &copy; 2016 <a href="http://www.atlas-sys.com">Atlas Systems, Inc.</a> All Rights Reserved.
-      	</div>
-    </div>    
-  </div>
-</div>
+<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>ILLiad Logon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="iphone-icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="css/illiad.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/library.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/cookieconsent.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/atlasUtility.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js" integrity="sha256-VrmtNHAdGzjNsUNtWYG55xxE9xDTz4gF63x/prKXKH0=" crossorigin="anonymous"></script>
+    <script src="js/lendingWebAlerts.js"></script>
+    <script src="js/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="js/atlasCookieConsent.js"></script>
+
+<body>
+
+    <div id="header">
+        <div>
+            <a href="#content" accesskey="S" onclick="$('#content').focus();" class="offscreen">Skip to Main Content</a>
+        </div>
+        <div class="site-name">
+            <div class="library">
+                <a href="https://library.princeton.edu"><img src="css/images/pul-logo.svg" alt="Princeton University Library"></a>
+            </div>
+            <div class="app">
+                Article Express and Interlibrary Loan
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    <div id="status" class="container">
+
+        <h1>First Time Users</h1>
+        By pressing the button below, you acknowledge and agree to all of the terms and conditions below.
+        Please pay particular attention to the copyright statement and the ILLiad FAQ.
+        After reading this information, you can press the "First Time Users Click Here" button below.
+    </div>
+
+
+    <div id="content" class="container" role="heading" aria-label="Content">
+        <form action="illiadlending.dll" method="post" name="Logon">
+            <input type="hidden" name="ILLiadForm" value="Logon">
+
+            <div class="info-block">
+                <h2 class="page-header">First Time User Registration for ILLiad</h2>
+
+                <p>
+                    <span class="new-line">
+                        To request an item, you must first identify yourself to the library's ILLiad system.
+                        To do this you fill out a registration form using your Web browser.
+                    </span>
+                    <span class="new-line">Registration has three purposes:</span>
+                </p>
+
+                <ul>
+                    <li>Entering your personal information into the ILLiad system means you will not have to supply the information
+                        again when making future requests.</li>
+                        <li>Having your email and regular mail addresses on file with ILLiad enables us to notify you
+                            promptly and deliver materials accurately.</li>
+                    <li>By specifying a Username and Password of your choosing, you will have secure access to information about
+                        your requests. You will also be able to review the list of items you have requested in the past.</li>
+                </ul>
+
+                <h2 class="page-header">About your Username and Password</h2>
+                <p>
+                    During registration, you will be asked to choose a Username and Password. You will use this Username and Password when logging
+                    on to the ILLiad system in the future.
+                </p>
+
+                <p>
+                    <strong class="new-line">Username</strong>
+                    <span class="new-line">
+                        Choose anything you like, such as your name, abbreviations, or an alphanumeric code.
+                    </span>
+
+                    <strong class="new-line">Password</strong>
+                    <span class="new-line">
+                        Choose anything you like. We recommend that you follow good security practice and choose a password
+                        that is different from those you use to access other systems.
+                    </span>
+                    <span class="new-line">
+                        ILLiad will encrypt your password, so it will remain secure. Only you will know your password.
+                    </span>
+                </p>
+            </div>
+
+            <div class="info-block">
+                <h2 class="page-header">Important Copyright Information</h2>
+                <p>WARNING CONCERNING COPYRIGHT RESTRICTIONS</p>
+                <p>
+                    The copyright law of the United States (Title 17, United States Code) governs the making of articles or
+                    other reproductions of copyrighted materials.
+                </p>
+                <p>
+                    Under certain conditions specified in the law, libraries and archives are authorized to furnish an article
+                    or other reproduction. One of these specified conditions is that the article or reproduction is not
+                    to be &quot;used for any purpose other than private study, scholarship, or research&quot;. If a user
+                    makes a request for, or later uses, an article or reproduction for purposes in excess of &quot;fair
+                    use&quot;, that user may be liable for copyright infringement.
+                </p>
+                <p>
+                    This institution reserves the right to refuse to accept a copying order if, in its judgment, fulfillment
+                    of the order would involve violation of copyright law.
+                </p>
+            </div>
+
+            <h2 class="page-header">ILLiad FAQ (Frequently Asked Questions)</h2>
+            <p>
+                Before registering, you may wish to read the ILLiad
+                <a href="illiadlending.dll?Action=10&Form=12">FAQ</a>. The FAQ may answer other questions you have about the ILLiad interlibrary loan system.
+            </p>
+
+            <p>
+                By pressing this button you acknowledge and agree to all of the terms and conditions above. Please pay particular
+                attention to the copyright statement and the ILLiad FAQ. After reading this information, you can press
+                the &quot;First Time Users Click Here&quot; button to continue.
+            </p>
+
+            <div class="container">
+                <button class="btn btn-primary" type="submit" name="SubmitButton" value="First Time Users Click Here">First Time Users Click Here</button>
+            </div>
+
+        </form>
+        <footer class="foot">
+            <span class="new-line">Powered by <a href="illiadlending.dll?Action=10&Form=1">ILLiad</a></span>
+            <span class="new-line">
+                &copy; 2020 <a href="http://www.atlas-sys.com"> Atlas Systems, Inc.</a> All Rights Reserved.
+            </span>
+            <span class="new-line">
+                <a href="illiadlending.dll?Action=10&Form=3">Site Map</a>
+            </span>
+        </footer>
+
+    </div>
+
 </body>
+
 </html>
