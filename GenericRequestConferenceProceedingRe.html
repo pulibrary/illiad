@@ -1,116 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad - Conference Proceedings Request</title>
+	<title>ILLiad - Digital Conference Proceedings Request | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b" class="conference">
-	<#INCLUDE filename="include_header_request.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<form action="illiad.dll" method="post" name="GenericRequestConferenceProceedingRe" class="f-wrap-request">
-					<input type="hidden" name="ILLiadForm" value="GenericRequestConferenceProceedingRe">
-					<input type="hidden" name="Username" value="<#PARAM name="Username">">
-					<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-					<input name="RequestType" type="hidden" id="RequestType" value="Loan">
-					<input name="DocumentType" type="hidden" id="DocumentType" value="Conference">
-					<h1>Digital Conference Proceedings Request</h1>
-					<#STATUS>
-					<h2>Describe the item you want</h2>
-					<div class="req-indicator"><span class="req">*</span> Indicates required field</div>
-					<label for="LoanAuthor">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORLoanAuthor">">Conference Name</span>
-						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="<#PARAM name="LoanAuthor">" required>
-					</label>
 
-					<label for="LoanTitle">
-						<span class="req">*</span>
-						<span class="<#ERROR name="ERRORLoanTitle">">Title of Proceedings</span>
-						<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
-						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" required><#PARAM name="LoanTitle"></textarea>
-					</label>
+<body>
+	<#INCLUDE filename="include_header.html">
+	<#INCLUDE filename="include_menu.html">  
+	
+	<div id="content" class="container"  >
+		<form action="illiad.dll" method="post" name="GenericRequestConferenceProceedingRe">
+			<input type="hidden" name="ILLiadForm" value="GenericRequestConferenceProceedingRe">
+			<input type="hidden" name="RequestType" value="Loan">
+			<input name="DocumentType" type="hidden" id="DocumentType" value="Conference">
+			<input type="hidden" name="Username" value="<#PARAM name='Username'>">
+			<input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
 
-					<label for="LoanEdition">
-						<span class="<#ERROR name="ERRORLoanEdition">">Editiors</span>
-						<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value="<#PARAM name="LoanEdition">">
-					</label>
+			<input type="hidden" name="TransactionNumber" value="<#PARAM name='TransactionNumber'>">
+			
+			<fieldset>
+				<h1 class="page-header">Digital Conference Proceedings Request</h1>
+				
+				<section name="genericrequesttesting-info">
 
-					<label for="LoanPublisher">
-						<span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span>
-						<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPublisher">">
-					</label>
+					<h2 class="page-header">Describe the item</h2>
+					
+					<div class="form-group col-md-9">  
+						<label for="LoanAuthor">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanAuthor'>">
+									Conference Name
+									<span class="req">(required)</span>
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanAuthor" id="LoanAuthor" value="<#PARAM name='LoanAuthor'>" required>
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="LoanTitle">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanTitle'>">
+									Title of Proceedings
+									<span class="req">(required)</span>
+								</span>
+								<br/>
+								<span class="small-notes">
+									Please do not abbreviate unless your citation is abbreviated
+								</span> 
+							</span>
+						</label>
+						<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="form-control" required><#PARAM name="LoanTitle"></textarea>
+					</div>
 
-					<label for="LoanDate">
-						<span class="<#ERROR name="ERRORLoanDate">">Date of Publication</span>
-						<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name"  value="<#PARAM name="LoanDate">">
-					</label>
+					<div class="form-group col-md-9">
+						<label for="LoanEdition">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanEdition'>">
+									Editors
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanEdition" id="LoanEdition" value="<#PARAM name='LoanEdition'>">
+					</div>
 
-					<label for="LoanPlace">
-						<span class="<#ERROR name="ERRORLoanPlace">">Place and Date of Conference</span>
-						<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name"  value="<#PARAM name="LoanPlace">">
-					</label>
+					<div class="form-group col-md-9">
+						<label for="LoanPublisher">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPublisher'>">
+									Publisher
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPublisher" id="LoanPublisher" value="<#PARAM name='LoanPublisher'>">
+					</div>
 
-					<label for="ISBN">
-						<span class="<#ERROR name="ERRORISSN">">ISBN (International Standard Book Number)</span>
-						<span class="note">If given will speed request processing</span>
-						<input id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="<#PARAM name="ISSN">">
-					</label>
+					<div class="form-group col-md-9">
+						<label for="LoanDate">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanDate'>">
+									Date of Publication
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanDate" id="LoanDate" value="<#PARAM name='LoanDate'>">
+					</div>
 
-					<label for="ESPNumber">
-						<span class="<#ERROR name="ERRORESPNumber">">OCLC (WorldCat Accession) Number</span>
-						<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name"  value="<#PARAM name="ESPNumber">">
-					</label>
+					<div class="form-group col-md-9">
+						<label for="LoanPlace">
+							<span class="field">
+								<span class="<#ERROR name='ERRORLoanPlace'>">
+									Place and Date of Conference
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="LoanPlace" id="LoanPlace" value="<#PARAM name='LoanPlace'>">
+					</div>
 
-					<label for="NotWantedAfter">
-						<span class="<#ERROR name="ERRORNotWantedAfter">">This material would be best by?</span>
-						<span class="note">(MM/DD/YYYY)</span>
-						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" value="<#PARAM name="NotWantedAfter">">
-					</label>
+					<div class="form-group col-md-9">
+						<label for="ISSN">
+							<span class="field">
+								<span class="<#ERROR name='ERRORISSN'>">
+									ISBN (International Standard Book Number)
+								</span>
+								<br>
+								<span class="small-notes">
+									If given will speed request processing
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+					</div>
 
-					<label for="Wantedby">
-						<span class="<#ERROR name="ERRORWantedby">">If we cannot obtain the material by the date listed	above, should we continue to try and for how long?</span>
-						<span class="note">Select a reason from the list on the right.</span>
-						<select id="WantedBy" name="Wantedby" type="text" size="1" class="f-name" tabindex="10">
-							<option selected>Yes, until the semester's end</option>
-							<option>Yes, until this academic year's end</option>
-							<option>Yes, indefinitely</option>
-							<option>No, please cancel the request</option>
-						</select>
-					</label>
-
-					<label for="AcceptNonEnglish">
-						<span class="<#ERROR name="ERRORAcceptNonEnglish">">If your citation is in English but the item is found to be in another language, do you still want it?</span>
-						<span class="note">If yes, specify acceptable languages in the notes field.</span>
-						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" >
-							<option selected>Yes</option>
-							<option>No</option>
-						</select>
-					</label>
-
-					<label for="AcceptAlternateEdition">
-						<span class="<#ERROR name="ERRORAcceptAlternateEdition">">Will you accept an alternate edition of this item?</span>
-						<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" >
-							<option selected>Yes</option>
-							<option>No</option>
-						</select>
-					</label>
-
-					<label for="Notes">
-						<span class="<#ERROR name="ERRORNotes">">Notes</span>
-						<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
-						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name"><#PARAM name="Notes"></textarea>
-					</label>
-
-					<#INCLUDE filename="include_request_cited.html">
-					<#INCLUDE filename="include_request_buttons.html">
-				</form>
-			</main>
-		</section>
+					<div class="form-group col-md-9">
+						<label for="ESPNumber">
+							<span class="field">
+								<span class="<#ERROR name='ERRORESPNumber'>">
+									OCLC (WorldCat Accession) Number
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ESPNumber" id="ESPNumber" value="<#PARAM name='ESPNumber'>">
+					</div>
+							
+				<#INCLUDE filename="include_request_cited.html">                
+				<#INCLUDE filename="include_request_buttons.html">
+			</fieldset>
+		</form>
 	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>

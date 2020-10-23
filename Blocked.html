@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad Logon</title>
+	<title>ILLiad - Blocked User | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-a">
-	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<main role="main" class="three_nine-region--second">
-			<h1>Error</h1>
-			<p>Your login was unsuccessful. It may help to clear browser cache, close all browser windows, and try again. If you are still unable to access your account please contact Resource Sharing at  ilsborr@princeton.edu  for assistance.</p>
-			</main>
-		</section>
+
+<body>
+	<div id="wrap">
+		<div id="header">
+			<span id="site-name">ILLiad</span>
+			<div id="status" aria-atomic="true"><#STATUS></div>
+		</div>
+		
+		<div id="content-wrap">
+			<div id="content">
+				Please contact the Interlibrary Loan office during normal business hours to reinstate your service.
+			</div>    
+		</div>
 	</div>
-	<#INCLUDE filename="include_footer.html">
+
+<#INCLUDE filename="include_footer.html">
 </body>
 </html>

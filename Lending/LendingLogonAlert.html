@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<title>ILLiad Logon</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
+<![endif]-->
+</head>
+<body id="type-a">
+<div id="wrap">
+  <div id="header"> 
+<div id="title-name"><strong><center>Princeton University Interlibrary Services Lending</center></strong></div>
+
+
+
+  </div>
+  <div id="content-wrap">
+<div id="status">Enter your user information below.<br />
+      Then press the Logon to ILLiad button to continue. </div>
+    <div id="content">
+		<form action="illiadlending.dll" method="post" name="LendingLogon" class="f-wrap-1">
+			<input type="hidden" name="ILLiadForm" value="LendingLogon">
+			<div id="logonform">
+							
+				<fieldset>
+					<h3><font color="#CC0000">Princeton University Interlibrary Loan is moving.  Requests placed on the afternoon of Thursday October 13th until Tuesday October 18th will be delayed.</font></h3>				
+					<h3>Logon</h3>			
+					<label for="username">
+						<span class="field">
+														<b>Username</b>
+						</span>
+						<input id="username" name="Username" type="text" class="f-name" tabindex="1" /><br />
+					</label>			
+					<label for="password">
+						<span class="field">
+							
+							<b>Password</b>
+						</span>
+						<input id="password" name="Password" type="password" class="f-name" tabindex="2" /><br />
+					</label>
+							
+					<div class="f-submit-wrap">
+<script type="text/javascript">
+function show_alert()
+{
+alert("Princeton University Interlibrary Loan is moving.  Requests placed on the afternoon of Thursday October 13th until Tuesday October 18th will be delayed.  ");
+}
+</script>
+						<input type="submit" name="SubmitButton" onclick="show_alert()" value="Logon to ILLiad" class="f-submit" tabindex="12" /><br />
+					</div>
+				</fieldset>
+			</div>
+		</form>
+
+		<a href="illiadlending.dll?Action=10&Form=84">Forgot Password?</a><br />
+		<a href="http://library.princeton.edu/services/ilslendingform.php">First Time User Registration</a>
+		<div id="footer">
+			Copyright © 1998-2006 <a href="http://www.atlas-sys.com">Atlas Systems, Inc.</a> All Rights Reserved.
+      	</div>
+    </div>    
+  </div>
+</div>
+</body>
+</html>

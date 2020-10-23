@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad - Notifications</title>
+	<title>ILLiad - Notifications | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
-	<link href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="true" includeSessionID="false">
-	" rel="alternate" type="application/rss+xml" title="ILLiad Notifications" />
+	<link href="<#ACTION action='2' type='41' value='RSSID' valueType='lookup' absolutePath='true' includeSessionID='false'>"
+		rel="alternate" type="application/rss+xml" title="ILLiad Notifications">
 </head>
-<body id="type-b">
-	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<h1>Notifications</h1>
-				<p><a href="<#ACTION action="2" type="41" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">">Subscribe to Notifications Feed</a></p>
-				<div class="default-table notification-table">
-					<#TABLE name="ViewNotifications" maxRows="20" noDataAction="ShowMessageRow" noDataMessage="No Notifications">
-				</div>
-			</main>
-		</section>
+
+<body>
+  	<#INCLUDE filename="include_header.html">
+	<#INCLUDE filename="include_menu.html">
+
+	<div id="content" class="container"  >
+
+		<h2 class="page-header">Notifications</h2>
+
+		<div class="table">
+			<#TABLE name="ViewNotifications" noDataAction="ShowMessageRow" noDataMessage="You have no notifications">
+		</div>
+
 	</div>
 	<#INCLUDE filename="include_footer.html">
 </body>
 </html>
+

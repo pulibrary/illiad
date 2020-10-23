@@ -1,34 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-	<title>ILLiad - Checked Out Items</title>
+	<title>ILLiad - Checked Out Items | Princeton University Library</title>
 	<#INCLUDE filename="include_head.html">
 </head>
-<body id="type-b">
+
+<body>
 	<#INCLUDE filename="include_header.html">
-	<div id="content-wrap" class="panel-display--three_nine l-page">
-		<section class="l-main">
-			<nav role="navigation" aria-label="illiad navigation" class="three_nine-region--first">
-				<#INCLUDE filename="include_menu.html">
-			</nav>
-			<main role="main" class="three_nine-region--second">
-				<div id="ill_requests">
-				    <h1>Checked Out Items</h1>
-				    <p>If the lending library grants renewals for this item, the Renewal link will only appear once. For subsequent renewals or questions please email <a href="mailto:ILSBorr@princeton.edu">ILSBorr@princeton.edu</a>.</p>
+	<#INCLUDE filename="include_menu.html">
+	
+	<div id="content" class="container"  >
+			
+		<h2 class="page-header">Checked Out Items</h2>	
 
-				    <script type="text/javascript"> illplus_requests(); </script>
+		<#DATAREPEATER name="ViewRenewCheckedOutItems" TemplateFile="templates/DataRow_DefaultRequest.html" noDataAction="You have no items">
 
-				    <!-- <section class="tabledata">
-						<#TABLE name="ViewRenewCheckedOutItems" noDataAction="ShowMessageRow" noDataMessage="No Items">
-					</section> -->
-					<section class="tabledata">
-				        <h2 id="#checkedout">Checked Out Items</h2>
-				        <#TABLE name="ViewRenewCheckedOutItems" column="TransactionNumber:Request #" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status" column="DueDate:Due Date" orderBy="DueDate ASC">
-				    </section>
-				</div>
-			</main>
-		</section>
-	</div>
+	</div> 
 	<#INCLUDE filename="include_footer.html">
 </body>
 </html>
+
