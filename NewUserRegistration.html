@@ -117,16 +117,7 @@
 							</span>
 						</label>
 						<select id="Site" name="Site" size="1" class="custom-select mr-sm-2">
-							<option selected="<#PARAM name='Site'>"><#PARAM name='Site'></option>
-							<option value="Firestone">Firestone - Circulation</option>
-							<option value="Architecture">Architecture Library</option>
-							<option value="East Asian">East Asian Library</option>
-							<option value="Engineering">Engineering Library</option>
-							<option value="Lewis">Lewis Science Library</option>	
-							<option value="Marquand">Marquand Library (Art/Archeology)</option>
-							<option value="Music">Mendel Music Library</option>
-							<option value="PPL">Plasma Physics Library</option>
-							<option value="Stokes">Stokes Library (Wallace Hall)</option>
+							<#OPTION name="custom" groupname="Site" selectedValue="<#PARAM name='Site'>">
 						</select>
 						</div>
 					</section>

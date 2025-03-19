@@ -243,6 +243,13 @@ nav li a {
 
 .dropdown-item {
     font-size: 14px;
+    text-indent: 8px;
+}
+
+.dropdown-header {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
 }
 
 /*These are the CSS Styling classes for search*/
