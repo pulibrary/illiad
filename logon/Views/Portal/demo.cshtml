@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Princeton University Library | Article Express and Interlibrary Loan </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="iphone-icon.png">
+    <link rel="icon" href="https://library.princeton.edu/sites/default/files/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.typekit.net/iqr7cwv.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/illiad/css/cookieconsent.min.css">
+    <link rel="stylesheet" type="text/css" href="/illiad/css/illiad.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/illiad/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/illiad/css/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="/illiad/css/library.css" media="screen">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/illiad/js/atlasUtility.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js" integrity="sha256-VrmtNHAdGzjNsUNtWYG55xxE9xDTz4gF63x/prKXKH0=" crossorigin="anonymous"></script>
+    <script src="/illiad/js/webAlerts.js"></script>
+    <script src="/illiad/js/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="/illiad/js/atlasCookieConsent.js"></script>
+</head>
+<body>
+    <div id="header">
+	<div>
+		<a href="#content" accesskey="S" onclick="$('#content').focus();" class="offscreen">Skip to Main Content</a>
+	</div>
+	<div class="site-name">
+		<div class="library">
+			<a href="https://library.princeton.edu"><img src="/illiad/css/images/pul-logo.svg" alt="Princeton University Library"></a>
+		</div>
+		<div class="app">
+			Article Express and Interlibrary Loan
+		</div>
+	</div>
+	
+</div>
+<div class="alerts-bar">
+            <div class="container" id="webAlerts"></div>
+        </div>
+        
+<div class="container">
+            
+    <div class="row">
+        <div class="col-md-6">
+
+    <h2>Atlas Auth Portal</h2>
+
+    <p>The Atlas Auth Portal facilitates channeling of end users to group specific authentication pages, and supports automatic forwarding of users that have logged in via the portal previously.  
+    The samples below provide two options for configuring the portal: form based access and link based access.  Both configurations support passing query string data through the portal on to the selected destination.
+    </p>
+
+    <h4>Option One: Form Based Access</h4>
+    <p>The button below, along with the corresponding code segment, demonstrates how a form can be used to select the desired destination.  Take note of the two hidden input parameters in the form.  
+    These input fields hold the redirectURL and originalQuery parameters that are needed by the portal to properly forward the user.  
+    The value of the authType input must match the name of one of the keys set in the config settings.
+    The redirect url is defined in the settings and should be set by the site administrator, up to and including the "?" character that begins the query string.</p>
+    <form method="post" action="@Url.Action("Enter")">
+        <input type="hidden" name="authType" value="AtlasAuth" />
+        <input type="hidden" name="originalQuery" value="@ViewBag.QueryString" />
+
+        <input type="submit" value="Enter Here"/>
+    </form>
+
+    <pre>
+&lt;form method=&quot;post&quot; action=&quot;@@Url.Action(&quot;Enter&quot;)&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;authType&quot; value=&quot;AtlasAuth&quot; /&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;originalQuery&quot; value=&quot;@@ViewBag.QueryString&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Enter Here&quot; /&gt;
+&lt;/form&gt;
+    </pre>
+    </div>
+    <div class="col-md-6">
+
+    <h4>Option Two: Link Based Access</h4>
+    <p>This option is quite a bit simpler, as the portal is able to do most of the work for you.  Simply copy the code shown in the href attribute of the anchor code shown below into your own anchor tag, replacing the "AtlasAuth" part with the name of the key storing your destination URL.  This will direct the portal to generate the correct href value for your destination URL.</p>
+    <a href="@ViewBag.CreateEnterLink("RemoteAuth")">Enter Here</a>
+    <pre>
+&lt;a href=&quot;@@ViewBag.CreateEnterLink(&quot;RemoteAuth&quot;)&quot;&gt;Enter Here&lt;/a&gt;
+    </pre>
+
+    <h4>Automatic Redirection</h4>
+    The Atlas Auth Portal supports automatic redirection for users that have previously used the portal and currently have a valid session cookie for the destination.  
+    When a user is sent to the portal, it will attempt to determine if the user has a destination session cookie and a destination URL cookie, the latter of which is set by the portal once a user selects a destination for the first time.  
+    If both of these cookies exist, the portal will automatically forward the user to the destination URL specified in their existing cookie.
+    In order to enable this, two conditions must be met.
+    <ol>
+        <li>The Atlas Auth Portal must be configured such that it has access to the login cookies created by the destination.  Generally this simply means that it must be configured to use the same domain as the sites that are being used as possible destinations.</li>
+        <li>The web.config file in the primary directory of the Atlas Auth Portal application must have a "SessionCookieName" appsetting entry that identifies the name of the cookie used by the destination application to store login information.  By default, the portal uses "SessionID" as the cookie name.</li>
+    </ol>
+
+    Note:  Though the portal does need access to the session cookies set by the destination application, no login information is actually inspected or used by the portal.  The portal simply checks to see if the cookie exists, and, if so, assumes the user is still logged in.
+    </div>
+    </div>
+    </div>
+</body>
+</html>
