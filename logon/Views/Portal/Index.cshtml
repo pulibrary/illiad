@@ -8,26 +8,25 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="apple-touch-icon" href="iphone-icon.png">
-    <link rel="icon" href="https://library.princeton.edu/sites/default/files/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://use.typekit.net/iqr7cwv.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="/illiad/css/cookieconsent.min.css">
-    <link rel="stylesheet" type="text/css" href="/illiad/css/illiad.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/illiad/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="/illiad/css/print.css" media="print">
-    <link rel="stylesheet" type="text/css" href="/illiad/css/library.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/logon/css/cookieconsent.min.css">
+    <link rel="stylesheet" type="text/css" href="/logon/css/illiad.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/logon/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/logon/css/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="/logon/css/library.css" media="screen">
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="/illiad/js/atlasUtility.js"></script>
+    <script src="./js/atlasUtility.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js" integrity="sha256-VrmtNHAdGzjNsUNtWYG55xxE9xDTz4gF63x/prKXKH0=" crossorigin="anonymous"></script>
-    <script src="/illiad/js/webAlerts.js"></script>
-    <script src="/illiad/js/cookieconsent.min.js" data-cfasync="false"></script>
-    <script src="/illiad/js/atlasCookieConsent.js"></script>
+    <script src="./js/webAlerts.js"></script>
+    <script src="./js/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="./js/atlasCookieConsent.js"></script>
 </head>
 <body>
 <div id="header">
@@ -36,7 +35,7 @@
 	</div>
 	<div class="site-name">
 		<div class="library">
-			<a href="https://library.princeton.edu"><img src="/illiad/css/images/pul-logo.svg" alt="Princeton University Library"></a>
+			<a href="https://library.princeton.edu"><img src="./css/images/pul-logo.svg" alt="Princeton University Library"></a>
 		</div>
 		<div class="app">
 			Article Express and Interlibrary Loan
@@ -57,14 +56,15 @@
             <h2>Princeton Faculty, Students, Staff</h2>
             <div class="mt-2 mb-2 text">All current Princeton University faculty, students, and staff with an active NetID.</div>
 
-            <a href="@ViewBag.CreateEnterLink("RemoteAuth")">Enter Here</a>
-    
+            <!--
+            <a href="@ViewBag.CreateEnterLink("RemoteAuth")">Login in with your University Account</a>
+            -->
 
             <form method="post" action="@Url.Action("Enter")">
                 <input type="hidden" name="authType" value="RemoteAuth" />
                 <input type="hidden" name="originalQuery" value="@ViewBag.QueryString" />
 
-                <input type="submit" value="Enter Here"/>
+                <input type="submit" value="Login in with your University Account"/>
             </form>
 
         </div>
@@ -73,13 +73,14 @@
             <h2>Affliates</h2>
             <div class="mt-2 mb-2 text">All affliates who are authorized to use Article Express and Interlibrary Loan but who do not have an active Princeton University NetID.</div>
 
-            <a href="@ViewBag.CreateEnterLink("AtlasAuth")">Enter Here</a>
-
+            <!--
+            <a href="@ViewBag.CreateEnterLink("AtlasAuth")">Login in with your ILLiad Account</a>
+            -->
             <form method="post" action="@Url.Action("Enter")">
                 <input type="hidden" name="authType" value="AtlasAuth" />
                 <input type="hidden" name="originalQuery" value="@ViewBag.QueryString" />
 
-                <input type="submit" value="Enter Here"/>
+                <input type="submit" value="Login in with your ILLiad Account"/>
             </form>
         </div>
    
