@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+.site-name {
+    display: flex;
+    justify-content: center;
+    background: #1a1a1a;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.site-name .library {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.site-name .library:after {
+    top: 50%;
+    right: 0;
+    height: 40px;
+    content: " ";
+    position: absolute;
+    transform: translateY(-50%);
+    border-left: 1px solid #e2e9ee;
+}
+
+.site-name .library img {
+    max-width: 150px;
+    height: auto;
+}
+
+.site-name .app {
+    color: #fff;
+    font-size: 24px;
+}
