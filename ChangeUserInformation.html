@@ -73,7 +73,9 @@
 							<span class="field">
 								<span class="<#ERROR name='ERRORPhone'>">
 									Daytime Phone
+									<!--
 									<span class="req">(required)</span>
+								-->
 								</span>
 							</span>
 						</label>
@@ -127,17 +129,9 @@
 							</span>
 						</label>
 						<select id="Site" name="Site" size="1" class="custom-select mr-sm-2">
-							<option selected="<#PARAM name='Site'>"><#PARAM name='Site'></option>
-							<option value="Firestone">Firestone - Circulation</option>
-							<option value="Architecture">Architecture Library</option>
-							<option value="East Asian">East Asian Library</option>
-							<option value="Engineering">Engineering Library</option>
-							<option value="Lewis">Lewis Science Library</option>	
-							<option value="Marquand">Marquand Library (Art/Archeology)</option>
-							<option value="Music">Mendel Music Library</option>
-							<option value="PPL">Plasma Physics Library</option>
-							<option value="Stokes">Stokes Library (Wallace Hall)</option>
-						</select>
+                                <#OPTION name="custom" groupname="Site" selectedValue="<#PARAM name='Site'>">						
+                            </select>
+                        <br/>
 						</div>
 					</section>
 					
@@ -148,7 +142,6 @@
 								<span class="field">
 									<span class="<#ERROR name='ERRORAddress'>">
 										Address Line 1
-										<span class="req">(required)</span>
 									</span>
 								</span>
 							</label>
@@ -171,7 +164,6 @@
 								<span class="field">
 									<span class="<#ERROR name='ERRORCity'>">
 										Address City
-										<span class="req">(required)</span>
 									</span>
 								</span>
 							</label>
@@ -183,7 +175,6 @@
 								<span class="field">
 									<span class="<#ERROR name='ERRORState'>">
 										Address State 
-										<span class="req">(required)</span>
 									</span>
 								</span>
 							</label>
@@ -197,7 +188,6 @@
 								<span class="field">
 									<span class="<#ERROR name='ERRORZip'>">
 										Address Zip 
-										<span class="req">(required)</span>
 									</span>
 								</span>
 							</label>

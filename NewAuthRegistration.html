@@ -11,6 +11,7 @@
     <#INCLUDE filename="include_menu.html">
 	
     <div id="content" class="container"  >
+        <#INCLUDE filename="include_copyright.html">
         <form action="illiad.dll" method="post" name="NewAuthRegistration">
             <input type="hidden" name="ILLiadForm" value="NewAuthRegistration">
             <input type="hidden" name="DeliveryGroup" value="Hold for pickup">
@@ -68,18 +69,21 @@
                         <input type="text" class="form-control" name="EMailAddress" id="EMailAddress" value="<#PARAM name='EMailAddress'>">
                     </div>
 
+                    <!--
                     <div class="form-group col-md-5">
                         <label for="Phone">
                             <span class="field">
                                 <span class="<#ERROR name='ERRORPhone'>">
                                     Daytime Phone
+                                    
                                     <span class="req">(required)</span>
+                                
                                 </span>                               
                             </span>
                             </label>
                         <input type="text" class="form-control" name="Phone" id="Phone" value="<#PARAM name='Phone'>">
                     </div>
-                
+                    
                     <div class="form-group col-md-5">
                         <label for="MobilePhone">
                             <span class="field">
@@ -90,12 +94,14 @@
                         </label>
                         <input type="text" class="form-control" name="MobilePhone" id="MobilePhone" value="<#PARAM name='MobilePhone'>">
                     </div>
+                    -->
 
                     <div class="form-group col-md-5">
                         <label for="Department">
                             <span class="field">
                                 <span class="<#ERROR name='ERRORDepartment'>">
                                     Department
+                                    <span class="req">(required)</span>
                                 </span>
                             </span>
                             <select id="Department" name="Department" size="1" class="custom-select mr-sm-2">
@@ -135,6 +141,7 @@
 
                 </section>
 
+                <!--
                 <section name="address-info">
 
                     <h3 class="section-header">Address Information</h3>
@@ -191,6 +198,7 @@
                     </div>
 
                 </section>
+                -->
 
                 <section name="delivery-method-info" class="hidden">
                     <h3>Delivery Methods</h3>
@@ -251,4 +259,3 @@
     <#INCLUDE filename="include_footer.html">
 </body>
 </html>
-
